@@ -1,0 +1,28 @@
+{#- Compact list of posts/projects. Expects `entries`, optional `showYear`. -#}
+{%- set lastYear = "" %}
+<ul class="entry-list{% if compact %} compact{% endif %}">
+{%- for e in entries %}
+  {%- set y = e.date | isoDate | truncate(4, true, "") %}
+  {%- if showYear and y != lastYear %}
+  </ul><h2 class="year">{{ y }}</h2><ul class="entry-list">
+  {%- set lastYear = y %}
+  {%- endif %}
+  <li class="h-entry"{% if e.data.area %} data-area="{{ e.data.area }}"{% endif %}>
+    <a class="u-url entry-link" href="{{ e.url }}">
+      {%- if e.data.image and not compact %}
+      <img class="u-photo thumb" src="{{ e.data.image }}" alt="" loading="lazy" decoding="async" width="96" height="72">
+      {%- endif %}
+      <span class="entry-body">
+        <span class="entry-meta">
+          <time class="dt-published" datetime="{{ e.date | isoDate }}">{{ e.date | isoDate | truncate(10, true, "") }}</time>
+          {%- if e.data.area %} <span class="tag">{{ site.areas[e.data.area].name }}</span>{% endif %}
+        </span>
+        <span class="p-name entry-title">{{ e.data.title }}</span>
+        {%- if e.data.summary and not compact %}
+        <span class="p-summary entry-summary">{{ e.data.summary }}</span>
+        {%- endif %}
+      </span>
+    </a>
+  </li>
+{%- endfor %}
+</ul>

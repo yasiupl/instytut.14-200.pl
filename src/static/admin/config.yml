@@ -1,0 +1,137 @@
+# Sveltia CMS – browser editing for instytut.14-200.pl. Docs: https://github.com/sveltia/sveltia-cms
+# Every save is a commit to GitHub; Vercel deploys it in about a minute.
+backend:
+  name: github
+  repo: yasiupl/instytut.14-200.pl
+  branch: main
+  # Without base_url, editors sign in with a GitHub token ("Sign In with Token").
+  # For a "Sign In with GitHub" button, deploy sveltia-cms-auth (Cloudflare Worker) and set:
+  # base_url: https://sveltia-cms-auth.<account>.workers.dev
+  commit_messages:
+    create: "Nowy wpis: {{slug}}"
+    update: "Edycja: {{slug}}"
+    delete: "Usunięcie: {{slug}}"
+    uploadMedia: "Nowy plik: {{path}}"
+    deleteMedia: "Usunięcie pliku: {{path}}"
+
+site_url: https://instytut.14-200.pl
+display_url: https://instytut.14-200.pl
+logo_url: /assets/icon.svg
+locale: pl
+
+media_folder: src/assets/img
+public_folder: /assets/img
+
+# Same as the rest of the site: WebP, at most 1600 px.
+media_libraries:
+  default:
+    config:
+      max_file_size: 15000000
+      transformations:
+        raster_image:
+          format: webp
+          quality: 80
+          width: 1600
+          height: 1600
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# Fields shared by all collections
+_fields:
+  area: &area
+    { label: "Obszar", name: area, widget: select, required: false,
+      options: [ { label: "Laboratorium (biologia)", value: lab }, { label: "Pracownia politechniczna", value: pracownia } ] }
+  date: &date
+    { label: "Data", name: date, widget: datetime, time_format: false, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD" }
+  summary: &summary
+    { label: "Jedno zdanie na listę", name: summary, widget: string, required: false,
+      hint: "Pokazuje się na liście wpisów i w podglądzie linku." }
+  description: &description
+    { label: "Opis dla wyszukiwarek", name: description, widget: text, required: false,
+      hint: "Puste = takie samo jak „Jedno zdanie na listę”." }
+  image: &image
+    { label: "Obrazek (miniatura)", name: image, widget: image, required: false }
+  redirects: &redirects
+    { label: "Stare adresy (przekierowania)", name: redirect_from, widget: list, required: false,
+      hint: "Np. /stara-strona. Nie usuwaj – stare linki przestaną działać." }
+  body: &body
+    { label: "Treść", name: body, widget: markdown,
+      hint: "Wideo: {% youtube \"ID\", \"tytuł\" %}. Formularz: {% form \"adres\", \"napis na przycisku\" %}." }
+
+collections:
+  - name: aktualnosci
+    label: Aktualności
+    label_singular: Wpis
+    folder: src/aktualnosci
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{title}}"
+    preview_path: "aktualnosci/{{slug}}/"
+    sortable_fields: { fields: [date, title], default: { field: date, direction: descending } }
+    summary: "{{date}} · {{title}}"
+    fields:
+      - { label: "Tytuł", name: title, widget: string }
+      - *date
+      - *area
+      - *summary
+      - *description
+      - *image
+      - *redirects
+      - *body
+
+  - name: projekty
+    label: Projekty
+    label_singular: Projekt
+    folder: src/projekty
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{title}}"
+    preview_path: "projekty/{{slug}}/"
+    sortable_fields: { fields: [date, title], default: { field: date, direction: descending } }
+    summary: "{{date}} · {{title}}"
+    fields:
+      - { label: "Tytuł", name: title, widget: string }
+      - *date
+      - *area
+      - *summary
+      - *description
+      - *image
+      - { label: "Adres strony", name: permalink, widget: string, required: false,
+          hint: "Puste = /projekty/<nazwa-pliku>/. Zmiana adresu psuje linki." }
+      - *redirects
+      - { label: "Ukryj z listy projektów", name: eleventyExcludeFromCollections, widget: hidden, required: false }
+      - { label: "Podstrona", name: unlisted, widget: hidden, required: false }
+      - { label: "Język", name: lang, widget: hidden, required: false }
+      - *body
+
+  - name: strony
+    label: Strony
+    label_singular: Strona
+    folder: src/pages
+    extension: md
+    format: frontmatter
+    create: false
+    delete: false
+    summary: "{{title}} ({{permalink}})"
+    fields:
+      - { label: "Tytuł", name: title, widget: string }
+      - *description
+      - *area
+      - *image
+      - { label: "Adres strony", name: permalink, widget: string, hint: "Nie zmieniaj – psuje linki." }
+      - { label: "Język", name: lang, widget: select, options: [pl, en], default: pl }
+      - *redirects
+      - { label: "Data", name: date, widget: string, required: false }
+      - { label: "Wstęp (strony z listą)", name: intro, widget: text, required: false }
+      - { label: "Zdanie na listę", name: summary, widget: string, required: false }
+      - { label: "Szablon", name: layout, widget: hidden, required: false }
+      - { label: "Lista", name: listOf, widget: hidden, required: false }
+      - { label: "Mapa", name: map, widget: hidden, required: false }
+      - { label: "Linki w nowej karcie", name: linksNewTab, widget: hidden, required: false }
+      - { label: "Tagi", name: tags, widget: hidden, required: false }
+      - *body

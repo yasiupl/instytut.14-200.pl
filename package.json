@@ -1,0 +1,18 @@
+{
+  "name": "instytut-14-200-pl",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Iławski Instytut Idei – static website",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "postbuild": "node scripts/vercel-config.mjs",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^2.0.4"
+  }
+}

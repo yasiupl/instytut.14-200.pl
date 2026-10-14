@@ -1,0 +1,185 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "_site",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/poprzyj-otwarte-pracownie-eksperymentu",
+      "destination": "/aktualnosci/otwarte-pracownie-eksperymentu/",
+      "permanent": true
+    },
+    {
+      "source": "/poprzyj-otwarte-pracownie-eksperymentu/otwarte-pracownie-eksperymentu",
+      "destination": "/aktualnosci/otwarte-pracownie-eksperymentu/",
+      "permanent": true
+    },
+    {
+      "source": "/kurs-na-przyszłość-20252026",
+      "destination": "/kurs-na-przyszlosc-2025-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/kurs-na-przysz%C5%82o%C5%9B%C4%87-20252026",
+      "destination": "/kurs-na-przyszlosc-2025-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/synbio_lab",
+      "destination": "/laboratorium/",
+      "permanent": true
+    },
+    {
+      "source": "/publications/deer-ked-lipoptena-cervi-attack-human-field-genetic-study",
+      "destination": "/publications/deer-ked-lipoptena-cervi/",
+      "permanent": true
+    },
+    {
+      "source": "/regulaminrodo",
+      "destination": "/regulamin-rodo/",
+      "permanent": true
+    },
+    {
+      "source": "/wakacyjny-kurs-na-przyszłość-2025",
+      "destination": "/wakacyjny-kurs-na-przyszlosc-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/wakacyjny-kurs-na-przysz%C5%82o%C5%9B%C4%87-2025",
+      "destination": "/wakacyjny-kurs-na-przyszlosc-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/współpraca",
+      "destination": "/wspolpraca/",
+      "permanent": true
+    },
+    {
+      "source": "/wsp%C3%B3%C5%82praca",
+      "destination": "/wspolpraca/",
+      "permanent": true
+    },
+    {
+      "source": "/badania-strzyzak",
+      "destination": "/projekty/badania-strzyzak/",
+      "permanent": true
+    },
+    {
+      "source": "/nasze-badania-zachowania-i-geny-strzyżaka-z-iławskich-lasów",
+      "destination": "/projekty/badania-strzyzak/",
+      "permanent": true
+    },
+    {
+      "source": "/nasze-badania-zachowania-i-geny-strzy%C5%BCaka-z-i%C5%82awskich-las%C3%B3w",
+      "destination": "/projekty/badania-strzyzak/",
+      "permanent": true
+    },
+    {
+      "source": "/bioilawa-2022",
+      "destination": "/projekty/bioilawa-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/bioiława-2022",
+      "destination": "/projekty/bioilawa-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/bioi%C5%82awa-2022",
+      "destination": "/projekty/bioilawa-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/biosurfers-1",
+      "destination": "/projekty/biosurfers-1/",
+      "permanent": true
+    },
+    {
+      "source": "/biosurfers-1-zestaw-do-praktycznej-nauki-biologii-syntetycznej",
+      "destination": "/projekty/biosurfers-1/",
+      "permanent": true
+    },
+    {
+      "source": "/kodowanie-tekstu-w-dna",
+      "destination": "/projekty/kodowanie-tekstu-w-dna/",
+      "permanent": true
+    },
+    {
+      "source": "/las_zagadkas_2",
+      "destination": "/projekty/las_zagadkas_2/",
+      "permanent": true
+    },
+    {
+      "source": "/lasy",
+      "destination": "/projekty/lasy/",
+      "permanent": true
+    },
+    {
+      "source": "/swietliki-na-kamionce-2024",
+      "destination": "/projekty/swietliki-na-kamionce-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/świetliki-na-kamionce-2024",
+      "destination": "/projekty/swietliki-na-kamionce-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/%C5%9Bwietliki-na-kamionce-2024",
+      "destination": "/projekty/swietliki-na-kamionce-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/swietliki-na-kamionce-2026",
+      "destination": "/projekty/swietliki-na-kamionce-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/świetliki-na-kamionce-2026-iława",
+      "destination": "/projekty/swietliki-na-kamionce-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/%C5%9Bwietliki-na-kamionce-2026-i%C5%82awa",
+      "destination": "/projekty/swietliki-na-kamionce-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/zielen365",
+      "destination": "/projekty/zielen365/",
+      "permanent": true
+    },
+    {
+      "source": "/lasy/path",
+      "destination": "/projekty/lasy/path/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(feed.xml|feed.json)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+---
+layout: base.njk
+---
+<section class="hero" aria-labelledby="hero-title">
+  <h1 id="hero-title">{{ site.title }}</h1>
+  <p class="lead">Edukacja przyrodnicza i techniczna w Iławie: od biologii syntetycznej po budowanie własnych projektów.</p>
+  <p class="small">{{ site.address.street }}, {{ site.address.locality }} · <a href="/kontakt/">jak do nas trafić</a></p>
+</section>
+
+<section class="areas" aria-label="Czym się zajmujemy">
+  {%- for key, a in site.areas %}
+  <a class="area-card" data-area="{{ key }}" href="{{ a.url }}">
+    <span class="eyebrow">{{ a.kind }}</span>
+    <span class="area-name">{{ a.name }}</span>
+    <span class="area-text">{{ a.text }}</span>
+    <span class="more" aria-hidden="true">→</span>
+  </a>
+  {%- endfor %}
+</section>
+
+<section class="h-feed" aria-labelledby="news-title">
+  <h2 id="news-title" class="p-name section-title">Aktualności <a class="feed-link" href="/feed.xml">RSS</a></h2>
+  {%- set entries = collections.news | reverse | head(5) %}
+  {%- include "partials/entry-list.njk" %}
+  <p class="all"><a href="/aktualnosci/">Wszystkie aktualności →</a></p>
+</section>
+
+<section aria-labelledby="proj-title">
+  <h2 id="proj-title" class="section-title">Projekty</h2>
+  {%- set entries = collections.projekt | reverse | head(6) %}
+  {%- set compact = true %}
+  {%- include "partials/entry-list.njk" %}
+  <p class="all"><a href="/projekty/">Wszystkie projekty →</a></p>
+</section>

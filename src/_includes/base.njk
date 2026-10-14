@@ -1,0 +1,111 @@
+<!doctype html>
+{%- set pageLang = lang or site.lang %}
+{%- set pageTitle = title if (title and title != site.title) else "" %}
+{%- set pageDesc = description or site.description %}
+{%- set canonical = page.url | absUrl %}
+<html lang="{{ pageLang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if pageTitle %}{{ pageTitle }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b0f0c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f5ef" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="{{ canonical }}">
+  <link rel="icon" href="{{ site.logo }}" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ pageTitle or site.title }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:type" content="{{ 'article' if 'news' in (tags or []) else 'website' }}">
+  <meta property="og:locale" content="{{ 'en_GB' if pageLang == 'en' else 'pl_PL' }}">
+  {%- if image %}
+  <meta property="og:image" content="{{ image | absUrl }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {%- endif %}
+
+  {#- IndieWeb #}
+  <link rel="webmention" href="{{ site.webmention.endpoint }}">
+  <link rel="pingback" href="{{ site.webmention.pingback }}">
+  {%- for m in site.me %}
+  <link rel="me" href="{{ m.url }}">
+  {%- endfor %}
+  {%- if site.fediverse.active %}
+  {#- ActivityPub: profile verification and author attribution for link previews on Mastodon & co. #}
+  <link rel="me" href="{{ site.fediverse.profile }}">
+  <meta name="fediverse:creator" content="{{ site.fediverse.handle }}">
+  {%- endif %}
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} – aktualności" href="/feed.xml">
+  <link rel="alternate" type="application/feed+json" title="{{ site.title }} – aktualności" href="/feed.json">
+
+  <link rel="stylesheet" href="/assets/style.css">
+  {%- if map %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+  <script src="/assets/map/dojazd.js" defer></script>
+  {%- endif %}
+  <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="/assets/site.js" defer></script>
+  <script type="application/ld+json">{{ {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": site.title,
+    "url": site.url,
+    "logo": site.url + site.logo,
+    "email": site.email,
+    "address": { "@type": "PostalAddress", "streetAddress": site.address.street, "postalCode": site.address.postalCode, "addressLocality": site.address.locality, "addressCountry": "PL" },
+    "sameAs": site.me | pluck("url")
+  } | dump | safe }}</script>
+</head>
+<body{% if area %} data-area="{{ area }}"{% endif %}>
+  <a class="skip" href="#main">{{ "Skip to content" if pageLang == "en" else "Przejdź do treści" }}</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/" rel="home">
+        <span class="mark" aria-hidden="true">i<span>_</span></span>
+        <span class="brand-name">Iławski Instytut Idei</span>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Motyw: systemowy" title="Zmień motyw">auto</button>
+    </div>
+    <nav class="wrap" aria-label="{{ 'Main' if pageLang == 'en' else 'Główna nawigacja' }}">
+      <ul class="nav">
+        {%- for item in site.nav %}
+        <li><a href="{{ item.url }}"{% if item.lang %} hreflang="{{ item.lang }}" lang="{{ item.lang }}"{% endif %}{% if page.url == item.url or (item.url != "/" and page.url.startsWith(item.url)) %} aria-current="page"{% endif %}{% if item.area %} data-area="{{ item.area }}"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap" tabindex="-1">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="h-card">
+        <p>
+          <a class="p-name u-url u-uid" href="{{ site.url }}/" rel="me">{{ site.title }}</a><br>
+          <span class="p-adr h-adr"><span class="p-street-address">{{ site.address.street }}</span>,
+          <span class="p-postal-code">{{ site.address.postalCode }}</span> <span class="p-locality">{{ site.address.locality }}</span></span><br>
+          <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+          <img class="u-logo" src="{{ site.logo }}" alt="" hidden>
+        </p>
+      </div>
+      <ul class="links">
+        <li><a href="/feed.xml">RSS / Atom</a></li>
+        <li><a href="/feed.json">JSON Feed</a></li>
+        <li><a href="/fediverse/" title="{{ site.fediverse.handle }}">Fediwersum</a></li>
+        {%- for m in site.me %}
+        <li><a href="{{ m.url }}" rel="me">{{ m.name }}</a></li>
+        {%- endfor %}
+        <li><a href="/regulamin-rodo/">Regulamin / RODO</a></li>
+      </ul>
+      <p class="small">Strona statyczna, bez śledzenia. Obserwuj nas przez <a href="/fediverse/">fediwersum</a>, RSS lub <a href="https://indieweb.org/">IndieWeb</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

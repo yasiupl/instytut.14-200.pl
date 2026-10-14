@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<header class="page-head">
+  <h1>{{ title }}</h1>
+  {%- if intro %}<p class="lead">{{ intro }}</p>{% endif %}
+  {%- if listOf == "news" %}<p class="small"><a href="/feed.xml">RSS / Atom</a> · <a href="/fediverse/">Fediwersum</a></p>{% endif %}
+</header>
+<section class="h-feed">
+  <span class="p-name" hidden>{{ site.title }} – {{ title }}</span>
+  {%- set entries = collections[listOf] | reverse %}
+  {%- set showYear = true %}
+  {%- include "partials/entry-list.njk" %}
+</section>
+{{ content | safe }}

@@ -1,0 +1,6 @@
+{
+  "layout": "page.njk",
+  "lang": "pl",
+  "tags": ["projekt"],
+  "kind": "projekt"
+}

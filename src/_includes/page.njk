@@ -1,0 +1,48 @@
+---
+layout: base.njk
+---
+{%- set isEntry = ('news' in (tags or [])) or ('projekt' in (tags or [])) %}
+{%- set parent = "/aktualnosci/" if 'news' in (tags or []) else ("/projekty/" if 'projekt' in (tags or []) else "") %}
+<article class="{{ 'h-entry' if isEntry else '' }}"{% if lang and lang != site.lang %} lang="{{ lang }}"{% endif %}>
+  <header class="page-head">
+    <p class="eyebrow">
+      {%- if parent %}<a class="up" href="{{ parent }}">{{ "Aktualności" if parent == "/aktualnosci/" else "Projekty" }}</a>{% endif %}
+      {%- if parent and area %} · {% endif %}
+      {%- if area %}<a class="area" href="{{ site.areas[area].url }}">{{ site.areas[area].name }}</a>{% endif %}
+    </p>
+    <h1 class="p-name">{{ title }}</h1>
+    {%- if isEntry %}
+    <p class="meta"><time class="dt-published" datetime="{{ date | isoDate }}">{{ date | plDate }}</time>
+      · <a class="u-url" href="{{ page.url }}">#</a>
+      · <a class="p-author h-card" href="{{ site.url }}/">{{ site.title }}</a></p>
+    {%- endif %}
+  </header>
+  <div class="e-content prose">
+    {{ content | safe }}
+  </div>
+  {%- if parent %}
+  {%- set coll = collections.news if parent == "/aktualnosci/" else collections.projekt %}
+  {%- set prev = coll | getPreviousCollectionItem(page) %}
+  {%- set next = coll | getNextCollectionItem(page) %}
+  <nav class="pager" aria-label="{{ 'Sąsiednie wpisy' }}">
+    {%- if next %}<a rel="next" href="{{ next.url }}"><span class="small">← nowszy</span><br>{{ next.data.title }}</a>{% else %}<span></span>{% endif %}
+    {%- if prev %}<a rel="prev" href="{{ prev.url }}"><span class="small">starszy →</span><br>{{ prev.data.title }}</a>{% endif %}
+  </nav>
+  {%- endif %}
+  {%- if isEntry %}
+  <footer class="interact">
+    <h2>{{ "Reactions" if lang == "en" else "Reakcje z sieci" }}</h2>
+    <p class="small">{{ "This page accepts" if lang == "en" else "Ta strona przyjmuje" }} <a href="https://indieweb.org/Webmention">webmentions</a>.
+      {{ "Share it on the fediverse or reply from your own site." if lang == "en" else "Udostępnij ją w fediwersum albo odpowiedz ze swojej strony." }}</p>
+    <div class="webmentions" data-target="{{ page.url | absUrl }}" aria-live="polite"></div>
+    <form class="wm-form" action="{{ site.webmention.endpoint }}" method="post">
+      <label for="wm-source">{{ "URL of your reply" if lang == "en" else "Adres URL twojej odpowiedzi" }}</label>
+      <div class="row">
+        <input id="wm-source" type="url" name="source" required placeholder="https://…">
+        <input type="hidden" name="target" value="{{ page.url | absUrl }}">
+        <button type="submit">{{ "Send" if lang == "en" else "Wyślij" }}</button>
+      </div>
+    </form>
+  </footer>
+  {%- endif %}
+</article>

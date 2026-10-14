@@ -1,0 +1,21 @@
+---
+pagination:
+  data: collections.redirects
+  size: 1
+  alias: r
+permalink: "{{ r.from }}/index.html"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Przeniesiono: {{ r.title }}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ r.to | absUrl }}">
+<meta http-equiv="refresh" content="0; url={{ r.to }}">
+</head>
+<body>
+<p>Ta strona ma nowy adres: <a href="{{ r.to }}">{{ r.to | absUrl }}</a></p>
+</body>
+</html>

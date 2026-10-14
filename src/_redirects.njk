@@ -1,0 +1,16 @@
+---
+permalink: /_redirects
+eleventyAllowMissingExtension: true
+eleventyExcludeFromCollections: true
+---
+# Old Google Sites URLs → new pages
+{%- for r in collections.redirects %}
+{{ r.from }}  {{ r.to }}  301
+{{ r.from }}/  {{ r.to }}  301
+{%- set enc = r.from | urlencode | replace("%2F", "/") %}
+{%- if enc != r.from %}
+{{ enc }}  {{ r.to }}  301
+{{ enc }}/  {{ r.to }}  301
+{%- endif %}
+{%- endfor %}
+/www/*  /:splat  301

@@ -1,0 +1,27 @@
+---
+permalink: /feed.json
+eleventyExcludeFromCollections: true
+---
+{%- set items = [] -%}
+{%- for post in collections.news | reverse -%}
+{%- set items = (items.push({
+  "id": post.url | absUrl,
+  "url": post.url | absUrl,
+  "title": post.data.title,
+  "summary": post.data.description,
+  "image": (post.data.image | absUrl) if post.data.image else undefined,
+  "language": post.data.lang,
+  "date_published": post.date | isoDate,
+  "content_html": post.content
+}), items) -%}
+{%- endfor -%}
+{{ {
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": site.title,
+  "home_page_url": site.url + "/",
+  "feed_url": site.url + "/feed.json",
+  "description": site.description,
+  "language": site.lang,
+  "authors": [{ "name": site.title, "url": site.url + "/" }],
+  "items": items
+} | dump | safe }}

@@ -1,0 +1,259 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "building",
+    "name": "Iławski Instytut Idei, ul. Królowej Jadwigi 18B"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       19.5654263,
+       53.5931906
+      ],
+      [
+       19.5654599,
+       53.5931575
+      ],
+      [
+       19.5654747,
+       53.5931629
+      ],
+      [
+       19.5655926,
+       53.5930477
+      ],
+      [
+       19.5656073,
+       53.5930532
+      ],
+      [
+       19.5657037,
+       53.5929616
+      ],
+      [
+       19.5658365,
+       53.5930109
+      ],
+      [
+       19.5657859,
+       53.5930594
+      ],
+      [
+       19.5657759,
+       53.5930558
+      ],
+      [
+       19.5657618,
+       53.5930692
+      ],
+      [
+       19.5657754,
+       53.5930742
+      ],
+      [
+       19.5656669,
+       53.5931777
+      ],
+      [
+       19.5656423,
+       53.5931689
+      ],
+      [
+       19.5655687,
+       53.5932416
+      ],
+      [
+       19.5654263,
+       53.5931906
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "route",
+    "id": "tunel",
+    "name": "Od tunelu na ul. Królowej Jadwigi",
+    "length": "ok. 260 m"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      19.567616,
+      53.593345
+     ],
+     [
+      19.567133,
+      53.59317
+     ],
+     [
+      19.566704,
+      53.593291
+     ],
+     [
+      19.566451,
+      53.593201
+     ],
+     [
+      19.566044,
+      53.593619
+     ],
+     [
+      19.565566,
+      53.593396
+     ],
+     [
+      19.565282,
+      53.593201
+     ],
+     [
+      19.565539,
+      53.592956
+     ],
+     [
+      19.565722,
+      53.592988
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "route",
+    "id": "sobieskiego",
+    "name": "Od ul. Sobieskiego (przy wiadukcie)",
+    "length": "ok. 140 m"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      19.564504,
+      53.592829
+     ],
+     [
+      19.565202,
+      53.592628
+     ],
+     [
+      19.565802,
+      53.592733
+     ],
+     [
+      19.565539,
+      53.592956
+     ],
+     [
+      19.565722,
+      53.592988
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "route",
+    "id": "tunel",
+    "branch": "north",
+    "name": "Od ul. Królowej Jadwigi, od strony Kasy Stefczyka",
+    "length": "ok. 220 m"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      19.56669,
+      53.594123
+     ],
+     [
+      19.56667,
+      53.59414
+     ],
+     [
+      19.566567,
+      53.594135
+     ],
+     [
+      19.566179,
+      53.594094
+     ],
+     [
+      19.566116,
+      53.594021
+     ],
+     [
+      19.56587,
+      53.593885
+     ],
+     [
+      19.565776,
+      53.593794
+     ],
+     [
+      19.56576,
+      53.593736
+     ],
+     [
+      19.565887,
+      53.593649
+     ],
+     [
+      19.56604,
+      53.593624
+     ],
+     [
+      19.566044,
+      53.593619
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "route",
+    "id": "sobieskiego",
+    "branch": "south",
+    "name": "Od ul. Sobieskiego, od strony torów",
+    "length": "ok. 140 m"
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      19.564548,
+      53.592257
+     ],
+     [
+      19.565202,
+      53.592628
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "entrance",
+    "name": "Wejście – od południowej strony budynku 18B"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.565722,
+     53.592988
+    ]
+   }
+  }
+ ]
+}
