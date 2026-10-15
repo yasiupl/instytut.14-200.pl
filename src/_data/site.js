@@ -30,7 +30,7 @@ export default {
   //   active: false – the account does not exist yet; the site shows "w przygotowaniu" and no fediverse meta.
   //   active: true  – rel="me" + fediverse:creator point to the account.
   fediverse: {
-    active: false,
+    active: true,
     handle: "@instytut@14-200.pl",
     profile: "https://social.14-200.pl/@instytut",
   },
