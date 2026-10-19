@@ -142,6 +142,19 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 }
 .prose blockquote p:last-child { margin-bottom: 0; }
 
+/* AI use labels (/polityka-ai/): dashed border = "not only human hands" */
+.ai-note, .ai-content {
+  margin: 0 0 1.5rem; padding: .75rem 1rem;
+  border: 1px dashed var(--muted); border-radius: var(--radius);
+}
+.ai-note { font-size: .9375rem; color: var(--muted); }
+.ai-note p { margin: 0; }
+.ai-note strong { color: var(--fg); }
+.ai-content > :last-child { margin-bottom: 0; }
+.ai-label { margin: 0 0 .5rem; font-size: .8125rem; color: var(--muted); font-family: var(--mono); }
+.ai-label::before { content: "AI · "; }
+.ai-tag { font: .75rem var(--mono); color: var(--muted); border: 1px dashed var(--muted); border-radius: 3px; padding: 0 .3rem; }
+
 /* media */
 img, iframe, video { max-width: 100%; }
 .prose img {

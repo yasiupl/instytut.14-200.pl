@@ -54,6 +54,24 @@ export default function (eleventyConfig) {
 </p>
 </figure>`);
 
+  // AI use labels (see site.ai and /polityka-ai/). The notice is part of the content, so feeds carry it too.
+  const aiNotice = (level, note) => {
+    const l = site.ai.levels[level];
+    if (!l) throw new Error(`Unknown ai level "${level}", expected one of: ${Object.keys(site.ai.levels).join(", ")}`);
+    return `<aside class="ai-note" aria-label="Wykorzystanie AI"><p><strong>${l.label}.</strong> ${escapeAttr(note || l.text)}
+<a href="${site.url}${site.ai.policy}">Jak korzystamy z AI</a></p></aside>\n\n`;
+  };
+  eleventyConfig.addPreprocessor("ai-notice", "md", (data, content) =>
+    data.ai ? aiNotice(data.ai, data.ai_note) + content : content
+  );
+  // A single AI-assisted fragment inside a human-written text. Blank lines keep the inner Markdown rendered.
+  eleventyConfig.addPairedShortcode("ai", (content, note = "") => `<div class="ai-content">
+<p class="ai-label">Fragment przygotowany z pomocą AI${note ? ": " + escapeAttr(note) : ""}</p>
+
+${content.trim()}
+
+</div>`);
+
   eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString());
   eleventyConfig.addFilter("plDate", (d) =>
     new Date(d).toLocaleDateString("pl-PL", { year: "numeric", month: "long", day: "numeric" })

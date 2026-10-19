@@ -16,6 +16,7 @@
         <span class="entry-meta">
           <time class="dt-published" datetime="{{ e.date | isoDate }}">{{ e.date | isoDate | truncate(10, true, "") }}</time>
           {%- if e.data.area %} <span class="tag">{{ site.areas[e.data.area].name }}</span>{% endif %}
+          {%- if e.data.ai %} <span class="ai-tag" title="{{ site.ai.levels[e.data.ai].label }}">AI</span>{% endif %}
         </span>
         <span class="p-name entry-title">{{ e.data.title }}</span>
         {%- if e.data.summary and not compact %}

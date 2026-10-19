@@ -51,6 +51,27 @@ export default {
     },
   },
 
+  // AI use policy (/polityka-ai/). A page or post opts in with `ai: redakcja | wspolpraca | generowane`
+  // in front matter (optional `ai_note` says what exactly AI did); a notice is then prepended to its content.
+  // Single fragments inside a human-written text: {% ai "what AI did" %}…{% endai %}.
+  ai: {
+    policy: "/polityka-ai/",
+    levels: {
+      redakcja: {
+        label: "AI: redakcja",
+        text: "Tekst napisał człowiek. Narzędzie AI pomogło w korekcie, skrótach lub tłumaczeniu.",
+      },
+      wspolpraca: {
+        label: "AI: współpraca",
+        text: "Część tekstu powstała z pomocą narzędzia AI. Człowiek zaplanował treść, sprawdził ją i poprawił.",
+      },
+      generowane: {
+        label: "AI: tekst wygenerowany",
+        text: "Tekst w większości napisało narzędzie AI na podstawie ludzkich założeń. Człowiek go sprawdził i odpowiada za treść.",
+      },
+    },
+  },
+
   nav: [
     { url: "/laboratorium/", label: "Laboratorium", area: "lab" },
     { url: "/pracownia/", label: "Pracownia", area: "pracownia" },

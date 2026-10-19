@@ -57,9 +57,18 @@ _fields:
   redirects: &redirects
     { label: "Stare adresy (przekierowania)", name: redirect_from, widget: list, required: false,
       hint: "Np. /stara-strona. Nie usuwaj – stare linki przestaną działać." }
+  ai: &ai
+    { label: "Udział AI", name: ai, widget: select, required: false,
+      options: [ { label: "Redakcja (korekta, skróty, tłumaczenie)", value: redakcja },
+                 { label: "Współpraca (część tekstu z pomocą AI)", value: wspolpraca },
+                 { label: "Tekst wygenerowany przez AI", value: generowane } ],
+      hint: "Puste = bez AI. Zasady: /polityka-ai/" }
+  ai_note: &ai_note
+    { label: "Co dokładnie zrobiło AI", name: ai_note, widget: string, required: false,
+      hint: "Opcjonalnie, np. „Tłumaczenie na angielski: DeepL, poprawione ręcznie”." }
   body: &body
     { label: "Treść", name: body, widget: markdown,
-      hint: "Wideo: {% youtube \"ID\", \"tytuł\" %}. Formularz: {% form \"adres\", \"napis na przycisku\" %}." }
+      hint: "Wideo: {% youtube \"ID\", \"tytuł\" %}. Formularz: {% form \"adres\", \"napis na przycisku\" %}. Fragment z AI: {% ai \"co zrobiło AI\" %}…{% endai %}." }
 
 collections:
   - name: aktualnosci
@@ -81,6 +90,8 @@ collections:
       - *description
       - *image
       - *redirects
+      - *ai
+      - *ai_note
       - *body
 
   - name: projekty
@@ -107,6 +118,8 @@ collections:
       - { label: "Ukryj z listy projektów", name: eleventyExcludeFromCollections, widget: hidden, required: false }
       - { label: "Podstrona", name: unlisted, widget: hidden, required: false }
       - { label: "Język", name: lang, widget: hidden, required: false }
+      - *ai
+      - *ai_note
       - *body
 
   - name: strony
@@ -134,4 +147,6 @@ collections:
       - { label: "Mapa", name: map, widget: hidden, required: false }
       - { label: "Linki w nowej karcie", name: linksNewTab, widget: hidden, required: false }
       - { label: "Tagi", name: tags, widget: hidden, required: false }
+      - *ai
+      - *ai_note
       - *body
