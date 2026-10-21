@@ -130,7 +130,7 @@
    "properties": {
     "kind": "route",
     "id": "sobieskiego",
-    "name": "Od ul. Sobieskiego (przy wiadukcie)",
+    "name": "Od ul. Sobieskiego, od strony jeziora",
     "length": "ok. 140 m"
    },
    "geometry": {
@@ -224,7 +224,7 @@
     "kind": "route",
     "id": "sobieskiego",
     "branch": "south",
-    "name": "Od ul. Sobieskiego, od strony torów",
+    "name": "Od ul. Sobieskiego, od strony wiaduktu kolejowego",
     "length": "ok. 140 m"
    },
    "geometry": {

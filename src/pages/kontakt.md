@@ -22,7 +22,7 @@ Wejście jest **z boku budynku 18B, od strony południowej**, bezpośrednio nad 
 {% mapaDojazdu %}
 
 1. **Od ul. Królowej Jadwigi** (ciągła linia). Od strony przejazdu kolejowego: między budynkami 22 i 24 skręć w głąb osiedla (przez tunel), przejdź obok parkingu, a potem ścieżką obok budynku 16a i 18b do wejścia (ok. 260 m). Od strony Galerii Jeziorak: przy budynku Królowej Jadwigi 14 skręć w drogę osiedlową i idź nią w górę, do tej samej ścieżki (ok. 220 m).
-2. **Od ul. Sobieskiego** (przerywana linia). Od strony jeziora / wiaduktu kolejowego: idź przez „Małpi Gaj” (obok „Domu Weterana”), obie ścieżki spotykają się przed budynkiem 24a. Dalej na północ do wejścia (ok. 140 m).
+2. **Od ul. Sobieskiego** (przerywana linia). Od strony jeziora albo od strony wiaduktu kolejowego: idź przez „Małpi Gaj” (obok „Domu Weterana”), obie ścieżki spotykają się przed budynkiem 24a. Dalej na północ do wejścia (ok. 140 m).
 
 W Małpim Gaju wybierz chodnik dalej od Domu Weterana: ten tuż przy budynku jest ciemniejszy.
 
