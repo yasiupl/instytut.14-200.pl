@@ -8,7 +8,8 @@
     "build": "eleventy",
     "postbuild": "node scripts/vercel-config.mjs",
     "start": "eleventy --serve",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "regulamin": "nix shell nixpkgs#tectonic -c tectonic -o src/static/dokumenty dokumenty/regulamin.tex"
   },
   "license": "UNLICENSED",
   "devDependencies": {

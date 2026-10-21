@@ -28,6 +28,12 @@ DecapBridge commits to `yasiupl/instytut.14-200.pl` on GitHub with the site's ac
 - Uploaded images are converted to WebP (quality 80) but not resized: shrink large photos to about 1600 px before uploading.
 - Pages (`src/pages/`) can be edited but not created or deleted in the CMS: their addresses are linked from everywhere.
 
+## Regulamin (statut)
+
+`dokumenty/regulamin.tex` is a verbatim transcription of the registered document (spelling and numbering unchanged, including the missing point 24).
+`npm run regulamin` builds `src/static/dokumenty/regulamin.pdf` with Tectonic from nixpkgs. Commit the PDF, because Vercel does not build it.
+The web version `src/pages/regulamin.md` has the same text: change both together.
+
 ## Layout
 
 | Path | What |

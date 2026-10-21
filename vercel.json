@@ -160,6 +160,11 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/statut",
+      "destination": "/regulamin/",
+      "permanent": true
     }
   ],
   "headers": [
