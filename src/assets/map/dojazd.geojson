@@ -80,7 +80,7 @@
    "properties": {
     "kind": "route",
     "id": "tunel",
-    "name": "Od tunelu na ul. Królowej Jadwigi",
+    "name": "Od ul. Królowej Jadwigi, od strony przejazdu kolejowego (przez tunel)",
     "length": "ok. 260 m"
    },
    "geometry": {
@@ -165,7 +165,7 @@
     "kind": "route",
     "id": "tunel",
     "branch": "north",
-    "name": "Od ul. Królowej Jadwigi, od strony Kasy Stefczyka",
+    "name": "Od ul. Królowej Jadwigi, od strony Galerii Jeziorak",
     "length": "ok. 220 m"
    },
    "geometry": {

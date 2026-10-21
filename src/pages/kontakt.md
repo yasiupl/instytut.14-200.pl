@@ -1,6 +1,6 @@
 ---
 title: "Kontakt"
-description: "Kontakt i dojście do Iławskiego Instytutu Idei: ul. Królowej Jadwigi 18B, Iława. Mapa z trasami od tunelu i od ul. Sobieskiego."
+description: "Kontakt i dojście do Iławskiego Instytutu Idei: ul. Królowej Jadwigi 18B, Iława. Mapa z trasami od ul. Królowej Jadwigi i od ul. Sobieskiego."
 date: "2025-01-01"
 lang: "pl"
 permalink: "/kontakt/"
@@ -21,8 +21,8 @@ Wejście jest **z boku budynku 18B, od strony południowej**, bezpośrednio nad 
 
 {% mapaDojazdu %}
 
-1. **Od ul. Królowej Jadwigi** (ciągła linia). Od strony tunelu: między budynkami 22 i 24 skręć w głąb osiedla, przejdź obok parkingu, a potem ścieżką obok budynku 16a i 18b do wejścia (ok. 260 m). Od strony Kasy Stefczyka: przy budynku 14 skręć w drogę osiedlową i idź nią w dół, do tej samej ścieżki (ok. 220 m).
-2. **Od ul. Sobieskiego** (przerywana linia). Od strony wiaduktu albo od strony torów: idź przez zieleń w stronę osiedla, obie ścieżki spotykają się przed budynkiem 24a. Dalej na północ do wejścia (ok. 140 m).
+1. **Od ul. Królowej Jadwigi** (ciągła linia). Od strony przejazdu kolejowego: między budynkami 22 i 24 skręć w głąb osiedla (przez tunel), przejdź obok parkingu, a potem ścieżką obok budynku 16a i 18b do wejścia (ok. 260 m). Od strony Galerii Jeziorak: przy budynku Królowej Jadwigi 14 skręć w drogę osiedlową i idź nią w górę, do tej samej ścieżki (ok. 220 m).
+2. **Od ul. Sobieskiego** (przerywana linia). Od strony jeziora / wiaduktu kolejowego: idź przez „Małpi Gaj” (obok „Domu Weterana”), obie ścieżki spotykają się przed budynkiem 24a. Dalej na północ do wejścia (ok. 140 m).
 
 Prosimy nie iść chodnikiem bezpośrednio obok Domu Weterana, bo jest tam ciemniej. Wybierz chodnik obok.
 
