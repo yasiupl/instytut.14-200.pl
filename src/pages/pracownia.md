@@ -66,7 +66,9 @@ Obie pracownie należą do Iławskiego Instytutu Idei i dzielą jedną ideę: wi
 
 ## Skąd ten pomysł
 
-Pracownia wyrasta z koncepcji [Otwartych Pracowni Eksperymentu](/aktualnosci/otwarte-pracownie-eksperymentu/), dla której od lipca 2026 zbieramy poparcie mieszkańców. Tam opisaliśmy duży cel na lata. Pracownia politechniczna to pierwszy, mały krok, który możemy zrobić od razu, razem.
+Pracownia wyrasta z koncepcji [Otwartych Pracowni Eksperymentu](/aktualnosci/otwarte-pracownie-eksperymentu/), dla której od lipca 2026 zbieramy poparcie mieszkańców. To duży cel na lata. Pracownia politechniczna to pierwszy, mały krok, który możemy zrobić od razu, razem.
+
+Nie jesteśmy pierwsi. W latach 80. przy Miejskim Domu Kultury działała pracownia politechniczna i klub komputerowy, a z domu kultury wyrosło pierwsze lokalne radio.
 
 <h2 id="jak-dolaczyc">Jak dołączyć</h2>
 

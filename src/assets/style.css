@@ -265,3 +265,5 @@ label { display: block; margin-bottom: .25rem; font-size: .9375rem; }
   .site-header nav, .theme-toggle, .interact, .skip { display: none; }
   body { background: #fff; color: #000; }
 }
+.prose figure { margin: 1.5rem 0; }
+.prose figure img { margin: 0 auto; }
