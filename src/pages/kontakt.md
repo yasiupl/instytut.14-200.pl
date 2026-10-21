@@ -4,7 +4,7 @@ description: "Kontakt i dojście do Iławskiego Instytutu Idei: ul. Królowej Ja
 date: "2025-01-01"
 lang: "pl"
 permalink: "/kontakt/"
-image: "/assets/img/4369ec4e10c7.webp"
+image: "/assets/img/223afce23723.webp"
 map: true
 linksNewTab: true
 ---
@@ -25,12 +25,6 @@ Wejście jest **z boku budynku 18B, od strony południowej**, bezpośrednio nad 
 2. **Od ul. Sobieskiego** (przerywana linia). Od strony wiaduktu albo od strony torów: idź przez zieleń w stronę osiedla, obie ścieżki spotykają się przed budynkiem 24a. Dalej na północ do wejścia (ok. 140 m).
 
 Prosimy nie iść chodnikiem bezpośrednio obok Domu Weterana, bo jest tam ciemniej. Wybierz chodnik obok.
-
-### Oryginalne mapki dojścia
-
-![Zdjęcie satelitarne: trasa od tunelu na ul. Królowej Jadwigi między blokami do wejścia od strony Domu Weterana](/assets/img/4369ec4e10c7.webp)
-
-![Zdjęcie satelitarne: trasa od ul. Sobieskiego przez zieleń, obok Domu Weterana i Małpiego Gaju, do wejścia](/assets/img/8bc04a0eed67.webp)
 
 ### Nasza przestrzeń
 
