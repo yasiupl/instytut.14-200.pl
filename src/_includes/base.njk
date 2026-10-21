@@ -105,9 +105,11 @@
         {%- for m in site.me %}
         <li><a href="{{ m.url }}" rel="me">{{ m.name }}</a></li>
         {%- endfor %}
-        <li><a href="/regulamin-rodo/">Regulamin / RODO</a></li>
+        <li><a href="https://sites.google.com/view/instytut-idei/home">Stara strona</a></li>
         <li><a href="{{ site.ai.policy }}">Polityka AI</a></li>
       </ul>
+      <p class="small">Stowarzyszenie {{ site.title }} jest wpisane do {{ site.legal.register }}, numer wpisu: {{ site.legal.entry }}.<br>
+        NIP: {{ site.legal.nip }} · REGON: {{ site.legal.regon }}</p>
       <p class="small">Strona statyczna, bez śledzenia. Obserwuj nas przez <a href="/fediverse/">fediwersum</a>, RSS lub <a href="https://indieweb.org/">IndieWeb</a>.</p>
     </div>
   </footer>

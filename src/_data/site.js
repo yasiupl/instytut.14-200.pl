@@ -14,6 +14,14 @@ export default {
   },
   logo: "/assets/icon.svg",
 
+  // Registration data shown in the footer.
+  legal: {
+    register: "Ewidencji Stowarzyszeń Zwykłych Starosty Powiatu Iławskiego",
+    entry: "OSO.512.3.2021",
+    nip: "744-18-28-909",
+    regon: "520470170",
+  },
+
   // rel="me" identities – shown in the footer h-card and used for IndieAuth / Mastodon verification.
   me: [
     { name: "Facebook", url: "https://www.facebook.com/ilawski.instytut.idei" },
