@@ -18,13 +18,14 @@ npm run build    # output in _site/, then regenerates vercel.json
 
 ## Editing in the browser
 
-`https://instytut.14-200.pl/admin/` runs [Sveltia CMS](https://github.com/sveltia/sveltia-cms) (config: `src/static/admin/config.yml`).
-Every save is a commit to `yasiupl/instytut.14-200.pl` on GitHub, and Vercel deploys it in about a minute.
+`https://instytut.14-200.pl/admin/` runs [Decap CMS](https://decapcms.org) (config: `src/static/admin/config.yml`).
+Sign-in goes through [DecapBridge](https://decapbridge.com), so editors need no GitHub account.
+DecapBridge commits to `yasiupl/instytut.14-200.pl` on GitHub with the site's access token, and Vercel deploys every commit in about a minute.
 
-- Editors need a GitHub account with write access to the repository.
-- Sign in: "Sign In with Token" with a fine-grained GitHub token (repository: this one; permission: Contents read/write).
-- Optional "Sign In with GitHub" button: deploy [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth) as a Cloudflare Worker and set `backend.base_url` in the config.
-- Uploaded images are converted to WebP, max 1600 px, like the rest of the site.
+- Editors are invited by e-mail from the DecapBridge dashboard and sign in with a password or Google/Microsoft.
+- The site in DecapBridge holds a fine-grained GitHub token (repository: this one; permission: Contents read/write). Renew it there before it expires.
+- The `backend` block of the config comes from the DecapBridge dashboard.
+- Uploaded images are converted to WebP (quality 80) but not resized: shrink large photos to about 1600 px before uploading.
 - Pages (`src/pages/`) can be edited but not created or deleted in the CMS: their addresses are linked from everywhere.
 
 ## Layout

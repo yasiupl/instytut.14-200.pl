@@ -1,18 +1,31 @@
-# Sveltia CMS – browser editing for instytut.14-200.pl. Docs: https://github.com/sveltia/sveltia-cms
-# Every save is a commit to GitHub; Vercel deploys it in about a minute.
+# Decap CMS – browser editing for instytut.14-200.pl. Docs: https://decapcms.org/docs/
+# Editors sign in through DecapBridge (https://decapbridge.com): e-mail/password or Google/Microsoft,
+# no GitHub account needed. Site settings and invitations: DecapBridge dashboard.
+# DecapBridge commits to GitHub with the site's access token;
+# Vercel deploys every commit in about a minute.
 backend:
-  name: github
+  name: git-gateway
   repo: yasiupl/instytut.14-200.pl
   branch: main
-  # Without base_url, editors sign in with a GitHub token ("Sign In with Token").
-  # For a "Sign In with GitHub" button, deploy sveltia-cms-auth (Cloudflare Worker) and set:
-  # base_url: https://sveltia-cms-auth.<account>.workers.dev
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/00cae113-8334-4764-977b-53e17a192c8b/pkce
+  auth_token_endpoint: /sites/00cae113-8334-4764-977b-53e17a192c8b/token
+  gateway_url: https://gateway.decapbridge.com
+  # Author name only: the repository is public, so no e-mail ({{author-login}}) in the history.
   commit_messages:
-    create: "Nowy wpis: {{slug}}"
-    update: "Edycja: {{slug}}"
-    delete: "Usunięcie: {{slug}}"
-    uploadMedia: "Nowy plik: {{path}}"
-    deleteMedia: "Usunięcie pliku: {{path}}"
+    create: "Nowy wpis: {{slug}} ({{author-name}})"
+    update: "Edycja: {{slug}} ({{author-name}})"
+    delete: "Usunięcie: {{slug}} ({{author-name}})"
+    uploadMedia: "Nowy plik: {{path}} ({{author-name}})"
+    deleteMedia: "Usunięcie pliku: {{path}} ({{author-name}})"
+
+# Editor's name, e-mail and avatar from the DecapBridge sign-in
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
 
 site_url: https://instytut.14-200.pl
 display_url: https://instytut.14-200.pl
@@ -22,17 +35,12 @@ locale: pl
 media_folder: src/assets/img
 public_folder: /assets/img
 
-# Same as the rest of the site: WebP, at most 1600 px.
-media_libraries:
-  default:
-    config:
-      max_file_size: 15000000
-      transformations:
-        raster_image:
-          format: webp
-          quality: 80
-          width: 1600
-          height: 1600
+# Uploaded raster images become WebP, like the rest of the site.
+# Decap resizes to an exact width (it would also enlarge small images), so size is left as is.
+media_processing:
+  enabled: true
+  format: { enabled: true, default: webp }
+  quality: 80
 
 slug:
   encoding: ascii
@@ -80,7 +88,7 @@ collections:
     create: true
     slug: "{{title}}"
     preview_path: "aktualnosci/{{slug}}/"
-    sortable_fields: { fields: [date, title], default: { field: date, direction: descending } }
+    sortable_fields: [ { field: date, default_sort: desc }, title ]
     summary: "{{date}} · {{title}}"
     fields:
       - { label: "Tytuł", name: title, widget: string }
@@ -103,7 +111,7 @@ collections:
     create: true
     slug: "{{title}}"
     preview_path: "projekty/{{slug}}/"
-    sortable_fields: { fields: [date, title], default: { field: date, direction: descending } }
+    sortable_fields: [ { field: date, default_sort: desc }, title ]
     summary: "{{date}} · {{title}}"
     fields:
       - { label: "Tytuł", name: title, widget: string }
