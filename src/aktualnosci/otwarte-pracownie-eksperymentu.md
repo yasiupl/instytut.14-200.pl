@@ -27,7 +27,7 @@ Poparcie i propozycje zbieramy do końca 2026 roku. W formularzu można też pod
 
 Do czasu realizacji, która potrwa kilka lat, prowadzimy podobną działalność na mniejszą skalę w [Laboratorium](/laboratorium/) i w [Pracowni politechnicznej](/pracownia/).
 
-{% form "https://forms.gle/KCrEhJLVn9QECQGP9", "Popieram projekt „Otwarte Pracownie Eksperymentu”" %}
+{% form "https://forms.gle/KCrEhJLVn9QECQGP9", "Popieram projekt „Otwarte Pracownie Eksperymentu”", "Popieram" %}
 
 <!-- Miejsce na wizualizację Otwartych Pracowni Eksperymentu. -->
 
@@ -65,7 +65,7 @@ Na wzór hackerspace'ów pracownia ma być prowadzona przez ludzi, którzy z nie
   <figcaption>Hackerspace Pomorze w Gdańsku. Hackerspace to nie tylko warsztat, ale też miejsce, w którym można posiedzieć i pogadać.</figcaption>
 </figure>
 
-{% form "https://forms.gle/KCrEhJLVn9QECQGP9", "Popieram projekt „Otwarte Pracownie Eksperymentu”" %}
+{% form "https://forms.gle/KCrEhJLVn9QECQGP9", "Popieram projekt „Otwarte Pracownie Eksperymentu”", "Popieram" %}
 
 ## Sześć pracowni na początek. Inne według potrzeb
 
@@ -148,7 +148,7 @@ Na razie nie zbieramy pieniędzy. Najpierw chcemy sprawdzić, czy mieszkańcy wi
 
 Podpis w formularzu nie jest wpłatą, zapisem na zajęcia ani umową. Pokazuje tylko, że warto o takie miejsce zabiegać.
 
-{% form "https://forms.gle/KCrEhJLVn9QECQGP9", "Popieram projekt „Otwarte Pracownie Eksperymentu”" %}
+{% form "https://forms.gle/KCrEhJLVn9QECQGP9", "Popieram projekt „Otwarte Pracownie Eksperymentu”", "Popieram" %}
 
 ## Kontakt
 

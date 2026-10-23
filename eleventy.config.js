@@ -41,9 +41,11 @@ export default function (eleventyConfig) {
   });
 
   // Google Forms are linked instead of embedded: lighter, and accessible without third-party iframes.
-  eleventyConfig.addShortcode("form", (url, title = "Formularz") =>
-    `<p class="cta"><a class="button" href="${escapeAttr(url)}">→ ${escapeAttr(title || "Otwórz formularz")}</a></p>`
-  );
+  // Optional `goal`: name of a Plausible custom event sent on click (spaces become "+", as Plausible requires).
+  eleventyConfig.addShortcode("form", (url, title = "Formularz", goal = "") => {
+    const goalClass = goal ? ` plausible-event-name=${escapeAttr(String(goal).trim().replace(/\s+/g, "+"))}` : "";
+    return `<p class="cta"><a class="button${goalClass}" href="${escapeAttr(url)}">→ ${escapeAttr(title || "Otwórz formularz")}</a></p>`;
+  });
 
   // Walking-directions map for the contact page (Leaflet + OSM, data in assets/map/dojazd.geojson).
   eleventyConfig.addShortcode("mapaDojazdu", () => `<figure class="map-figure">
