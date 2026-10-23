@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
   "image": (post.data.image | absUrl) if post.data.image else undefined,
   "language": post.data.lang,
   "date_published": post.date | isoDate,
-  "content_html": post.content
+  "content_html": (post.data.ai | aiNotice(post.data.ai_note)) + post.content
 }), items) -%}
 {%- endfor -%}
 {{ {

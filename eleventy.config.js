@@ -1,4 +1,4 @@
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import rssPlugin from "@11ty/eleventy-plugin-rss";
 import { createHash } from "node:crypto";
 import { access, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
@@ -17,18 +17,9 @@ export default function (eleventyConfig) {
   // src/static is copied as is (e.g. the CMS in /admin/), never rendered as a template.
   eleventyConfig.ignores.add("src/static/**");
 
-  eleventyConfig.addPlugin(feedPlugin, {
-    type: "atom",
-    outputPath: "/feed.xml",
-    collection: { name: "news", limit: 20 },
-    metadata: {
-      language: site.lang,
-      title: site.title,
-      subtitle: site.description,
-      base: site.url + "/",
-      author: { name: site.title, email: site.email },
-    },
-  });
+  // Date filters for the Atom feed (src/feed-xml.njk). The feed is a normal template, not the
+  // plugin's virtual one, so each entry can carry the AI notice that is outside its e-content.
+  eleventyConfig.addPlugin(rssPlugin);
 
   // Privacy-friendly YouTube embed (no cookies until played), with a plain link fallback.
   // Optional `caption` (HTML) follows the video link, e.g. a source or author.
@@ -61,16 +52,16 @@ export default function (eleventyConfig) {
 </p>
 </figure>`);
 
-  // AI use labels (see site.ai and /polityka-ai/). The notice is part of the content, so feeds carry it too.
-  const aiNotice = (level, note) => {
+  // AI use labels (see site.ai and /polityka-ai/). The notice is metadata about the text, not the text:
+  // page.njk shows it outside e-content, so microformats parsers (Webmention receivers) do not quote it.
+  // The feeds (feed-xml.njk, feed-json.njk) put it before the content, so feed readers show it too.
+  eleventyConfig.addFilter("aiNotice", (level, note) => {
+    if (!level) return "";
     const l = site.ai.levels[level];
     if (!l) throw new Error(`Unknown ai level "${level}", expected one of: ${Object.keys(site.ai.levels).join(", ")}`);
     return `<aside class="ai-note" aria-label="Wykorzystanie AI"><p><strong>${l.label}.</strong> ${escapeAttr(note || l.text)}
-<a href="${site.url}${site.ai.policy}">Jak korzystamy z AI</a></p></aside>\n\n`;
-  };
-  eleventyConfig.addPreprocessor("ai-notice", "md", (data, content) =>
-    data.ai ? aiNotice(data.ai, data.ai_note) + content : content
-  );
+<a href="${site.url}${site.ai.policy}">Jak korzystamy z AI</a></p></aside>\n`;
+  });
   // A single AI-assisted fragment inside a human-written text. Blank lines keep the inner Markdown rendered.
   eleventyConfig.addPairedShortcode("ai", (content, note = "") => `<div class="ai-content">
 <p class="ai-label">Fragment przygotowany z pomocą AI${note ? ": " + escapeAttr(note) : ""}</p>

@@ -52,7 +52,7 @@ Wpis lub strona z udziałem AI ma na górze ramkę z przerywaną linią i jeden 
 - **{{ l.label }}**: {{ l.text }}
 {%- endfor %}
 
-Ramka może też krótko mówić, co dokładnie zrobiło AI. Na liście wpisów takie teksty mają znaczek <span class="ai-tag">AI</span>. Oznaczenie jest częścią treści, więc trafia też do kanałów RSS i JSON Feed.
+Ramka może też krótko mówić, co dokładnie zrobiło AI. Na liście wpisów takie teksty mają znaczek <span class="ai-tag">AI</span>. Oznaczenie trafia też do kanałów RSS i JSON Feed.
 
 Pojedynczy fragment w tekście napisanym przez człowieka wygląda tak:
 
