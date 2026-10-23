@@ -58,6 +58,8 @@
   {%- endif %}
   <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
   <script src="/assets/site.js" defer></script>
+  {#- Analytics: Plausible (no cookies). The site must exist in the dashboard under this domain. #}
+  <script defer data-domain="{{ site.url | replace('https://', '') }}" src="https://plausible.yasiu.pl/js/script.js"></script>
   <script type="application/ld+json">{{ {
     "@context": "https://schema.org",
     "@type": "Organization",
