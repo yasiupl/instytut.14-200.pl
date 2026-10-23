@@ -2,6 +2,7 @@
 // Vercel reads vercel.json from the repository, not from the build output, so commit the result.
 // Run: npm run build (this script runs as "postbuild").
 import { readFileSync, writeFileSync } from "node:fs";
+import site from "../src/_data/site.js";
 
 const lines = readFileSync("_site/_redirects", "utf8").split("\n");
 const seen = new Set();
@@ -15,6 +16,16 @@ for (const line of lines) {
   redirects.push({ source, destination: to, permanent: status === "301" });
 }
 
+// Other domains of the project redirect to the canonical one, path kept.
+// /admin/ stays on every domain, so the CMS works while its sign-in (DecapBridge) still has the old address.
+const canonical = new URL(site.url).host;
+const hostRedirects = (site.aliases || []).map((host) => ({
+  source: "/:path((?!admin(?:/|$)).*)",
+  has: [{ type: "host", value: host }],
+  destination: `https://${canonical}/:path`,
+  permanent: true,
+}));
+
 const config = {
   $schema: "https://openapi.vercel.sh/vercel.json",
   framework: null,
@@ -22,7 +33,7 @@ const config = {
   buildCommand: "npm run build",
   outputDirectory: "_site",
   trailingSlash: true,
-  redirects,
+  redirects: [...hostRedirects, ...redirects],
   headers: [
     {
       // Image names are content hashes, so they never change.

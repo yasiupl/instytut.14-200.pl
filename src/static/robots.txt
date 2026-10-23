@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://instytut.14-200.pl/sitemap.xml
+Sitemap: https://www.instytut.ilawa.pl/sitemap.xml

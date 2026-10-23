@@ -1,7 +1,13 @@
 export default {
   title: "Iławski Instytut Idei",
-  shortTitle: "instytut.14-200.pl",
-  url: "https://instytut.14-200.pl",
+  shortTitle: "www.instytut.ilawa.pl",
+  // Canonical address. Other domains of the same Vercel project redirect here (`aliases`).
+  // Vercel (domain settings) also sends instytut.ilawa.pl to www: keep both the same, or the redirects loop.
+  url: "https://www.instytut.ilawa.pl",
+  aliases: ["instytut.ilawa.pl", "instytut.14-200.pl"],
+  // Base of the item ids in /feed.json. Ids must never change: the fediverse feed-poster
+  // posts every unknown id. Keep this value when the domain changes.
+  feedIdBase: "https://instytut.14-200.pl",
   lang: "pl",
   description:
     "Iławski Instytut Idei – edukacja przyrodnicza, biologia syntetyczna i otwarte pracownie eksperymentu w Iławie.",
@@ -31,8 +37,8 @@ export default {
 
   // IndieWeb: receive webmentions via webmention.io (sign in once at https://webmention.io with this domain).
   webmention: {
-    endpoint: "https://webmention.io/instytut.14-200.pl/webmention",
-    pingback: "https://webmention.io/instytut.14-200.pl/xmlrpc",
+    endpoint: "https://webmention.io/www.instytut.ilawa.pl/webmention",
+    pingback: "https://webmention.io/www.instytut.ilawa.pl/xmlrpc",
   },
 
   // ActivityPub / Fediverse: the account @instytut@14-200.pl on the 14-200.pl hub (GoToSocial).

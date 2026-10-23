@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 {%- set items = [] -%}
 {%- for post in collections.news | reverse -%}
 {%- set items = (items.push({
-  "id": post.url | absUrl,
+  "id": site.feedIdBase + post.url,
   "url": post.url | absUrl,
   "title": post.data.title,
   "summary": post.data.description,

@@ -1,4 +1,4 @@
-# Decap CMS – browser editing for instytut.14-200.pl. Docs: https://decapcms.org/docs/
+# Decap CMS – browser editing for www.instytut.ilawa.pl. Docs: https://decapcms.org/docs/
 # Editors sign in through DecapBridge (https://decapbridge.com): e-mail/password or Google/Microsoft,
 # no GitHub account needed. Site settings and invitations: DecapBridge dashboard.
 # DecapBridge commits to GitHub with the site's access token;
@@ -27,8 +27,8 @@ auth:
   last_name_claim: last_name
   avatar_url_claim: avatar_url
 
-site_url: https://instytut.14-200.pl
-display_url: https://instytut.14-200.pl
+site_url: https://www.instytut.ilawa.pl
+display_url: https://www.instytut.ilawa.pl
 logo_url: /assets/icon.svg
 locale: pl
 
