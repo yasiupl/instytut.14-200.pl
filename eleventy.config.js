@@ -1,4 +1,7 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import { mkdir, stat } from "node:fs/promises";
+import path from "node:path";
+import sharp from "sharp";
 import site from "./src/_data/site.js";
 
 const escapeAttr = (s = "") =>
@@ -78,6 +81,32 @@ ${content.trim()}
   );
   eleventyConfig.addFilter("head", (arr = [], n) => arr.slice(0, n));
   eleventyConfig.addFilter("pluck", (arr = [], key) => arr.map((o) => o[key]));
+  // Link previews (og:image): WebP and odd aspect ratios are cropped badly or ignored by some apps
+  // (Facebook, LinkedIn, messengers). Each used image gets a 1200×630 JPEG copy in /og/, made after the build.
+  const OG = { width: 1200, height: 630, dir: "og" };
+  const ogQueue = new Map();
+  eleventyConfig.addFilter("ogImage", (src) => {
+    const file = src || site.ogImage;
+    const out = `/${OG.dir}/${path.parse(file).name}.jpg`;
+    ogQueue.set(out, file);
+    return out;
+  });
+  eleventyConfig.addGlobalData("og", { width: OG.width, height: OG.height });
+  eleventyConfig.on("eleventy.after", async ({ dir }) => {
+    await mkdir(path.join(dir.output, OG.dir), { recursive: true });
+    for (const [out, src] of ogQueue) {
+      const input = path.join("src", src);
+      const output = path.join(dir.output, out);
+      const done = await stat(output).catch(() => null);
+      if (done && done.mtimeMs >= (await stat(input)).mtimeMs) continue;
+      await sharp(input)
+        .resize(OG.width, OG.height, { fit: "cover", position: sharp.strategy.attention })
+        .flatten({ background: "#ffffff" })
+        .jpeg({ quality: 82, mozjpeg: true })
+        .toFile(output);
+    }
+  });
+
   eleventyConfig.addFilter("absUrl", (p) => new URL(p || "/", site.url).href);
 
   // Every old Google Sites path (front matter `redirect_from`) gets a redirect to its new URL.

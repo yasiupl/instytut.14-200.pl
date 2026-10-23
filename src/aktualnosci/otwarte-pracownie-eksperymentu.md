@@ -5,6 +5,9 @@ area: "pracownia"
 summary: "Chcemy stworzyć w Iławie Otwarte Pracownie Eksperymentu – wspólny warsztat dla dzieci, młodzieży i dorosłych. Poparcie zbieramy do końca 2026 roku."
 description: "Chcemy stworzyć w Iławie Otwarte Pracownie Eksperymentu – wspólny warsztat dla dzieci, młodzieży i dorosłych. Poparcie zbieramy do końca 2026 roku."
 image: "/assets/img/7982342e6b83.webp"
+image_alt: "Zagracony warsztat z narzędziami, kablami i stołami roboczymi"
+hero: true
+image_caption: "Tak wygląda żywy warsztat: przestrzeń hackerspace'u w Zurychu."
 ai: wspolpraca
 ai_note: "Koncepcję opracował zespół Instytutu. Tekst przeredagowało narzędzie AI (Claude) na podstawie historii iławskiego majsterkowania i relacji z wizyt w hackerspace'ach."
 redirect_from: ["/poprzyj-otwarte-pracownie-eksperymentu", "/poprzyj-otwarte-pracownie-eksperymentu/otwarte-pracownie-eksperymentu"]
@@ -25,11 +28,6 @@ Poparcie i propozycje zbieramy do końca 2026 roku. W formularzu można też pod
 Do czasu realizacji, która potrwa kilka lat, prowadzimy podobną działalność na mniejszą skalę w [Laboratorium](/laboratorium/) i w [Pracowni politechnicznej](/pracownia/).
 
 {% form "https://forms.gle/KCrEhJLVn9QECQGP9", "Popieram projekt „Otwarte Pracownie Eksperymentu”" %}
-
-<figure>
-  <img src="/assets/img/7982342e6b83.webp" alt="Zagracony warsztat z narzędziami, kablami i stołami roboczymi" loading="lazy">
-  <figcaption>Tak wygląda żywy warsztat: przestrzeń hackerspace'u w Zurychu.</figcaption>
-</figure>
 
 <!-- Miejsce na wizualizację Otwartych Pracowni Eksperymentu. -->
 
@@ -105,8 +103,8 @@ Odbiorniki, anteny, krótkofalarstwo, odbiór zdjęć z satelitów pogodowych. N
 Drukarki 3D, ploter, laser, komputer z programem CAD. Od pomysłu do pierwszego prototypu w jedno popołudnie.
 
 <figure>
-  <img src="/assets/img/b3c5f34183cb.webp" alt="Drukarki 3D na stole warsztatowym" loading="lazy">
-  <figcaption>Drukarki 3D w MAKE Barcelona.</figcaption>
+  <img src="/assets/img/45c08a5c51e2.webp" alt="Trzy drukarki 3D i szpule filamentu na stole warsztatowym, w tle plansza ProtoLAB" loading="lazy">
+  <figcaption>Drukarki 3D w ProtoLabie Politechniki Gdańskiej. Fot. <a href="https://excento.pl/protolab/">Excento</a>.</figcaption>
 </figure>
 
 ### Komputery, dane i AI

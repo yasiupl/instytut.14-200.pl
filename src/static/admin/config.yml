@@ -62,6 +62,13 @@ _fields:
       hint: "Puste = takie samo jak „Jedno zdanie na listę”." }
   image: &image
     { label: "Obrazek (miniatura)", name: image, widget: image, required: false }
+  image_alt: &image_alt
+    { label: "Opis obrazka (alt)", name: image_alt, widget: string, required: false,
+      hint: "Co widać na obrazku. Używany też w podglądzie linku." }
+  hero: &hero
+    { label: "Pokaż obrazek w nagłówku", name: hero, widget: boolean, required: false, default: false }
+  image_caption: &image_caption
+    { label: "Podpis obrazka w nagłówku", name: image_caption, widget: string, required: false }
   redirects: &redirects
     { label: "Stare adresy (przekierowania)", name: redirect_from, widget: list, required: false,
       hint: "Np. /stara-strona. Nie usuwaj – stare linki przestaną działać." }
@@ -97,6 +104,9 @@ collections:
       - *summary
       - *description
       - *image
+      - *image_alt
+      - *hero
+      - *image_caption
       - *redirects
       - *ai
       - *ai_note
@@ -120,6 +130,9 @@ collections:
       - *summary
       - *description
       - *image
+      - *image_alt
+      - *hero
+      - *image_caption
       - { label: "Adres strony", name: permalink, widget: string, required: false,
           hint: "Puste = /projekty/<nazwa-pliku>/. Zmiana adresu psuje linki." }
       - *redirects
@@ -144,6 +157,9 @@ collections:
       - *description
       - *area
       - *image
+      - *image_alt
+      - *hero
+      - *image_caption
       - { label: "Adres strony", name: permalink, widget: string, hint: "Nie zmieniaj – psuje linki." }
       - { label: "Język", name: lang, widget: select, options: [pl, en], default: pl }
       - *redirects

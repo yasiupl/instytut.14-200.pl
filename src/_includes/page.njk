@@ -16,6 +16,12 @@ layout: base.njk
       · <a class="u-url" href="{{ page.url }}">#</a>
       · <a class="p-author h-card" href="{{ site.url }}/">{{ site.title }}</a></p>
     {%- endif %}
+    {%- if hero and image %}
+    <figure class="page-hero">
+      <img class="u-photo" src="{{ image }}" alt="{{ image_alt }}" fetchpriority="high" decoding="async">
+      {%- if image_caption %}<figcaption>{{ image_caption | safe }}</figcaption>{% endif %}
+    </figure>
+    {%- endif %}
   </header>
   <div class="e-content prose">
     {{ content | safe }}

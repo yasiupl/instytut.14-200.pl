@@ -13,6 +13,8 @@ export default {
     country: "Polska",
   },
   logo: "/assets/icon.svg",
+  // Link preview image for pages without their own `image` (front matter).
+  ogImage: "/assets/og-default.png",
 
   // Registration data shown in the footer.
   legal: {

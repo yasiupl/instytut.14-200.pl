@@ -42,12 +42,19 @@ The web version `src/pages/regulamin.md` has the same text: change both together
 | `src/projekty/*.md` | Projects → `/projekty/<slug>/`, listed on `/projekty/` |
 | `src/pages/*.md` | Standing pages (Laboratorium, Pracownia, O nas, Kontakt…) |
 
-Front matter: `title`, `date`, `summary` (one line for lists), `image` (thumbnail), `area: "lab" \| "pracownia"`, `redirect_from`.
+Front matter: `title`, `date`, `summary` (one line for lists), `image` (thumbnail), `image_alt`, `hero: true` (show `image` above the text, with `image_caption`), `area: "lab" \| "pracownia"`, `redirect_from`.
 | `src/_data/site.js` | Site config: nav, contact, rel=me links, webmention + fediverse settings |
 | `src/_includes/` | `base.njk` (shell), `page.njk` (article / h-entry), `home.njk` (h-feed) |
 | `src/assets/` | `style.css`, `site.js`, images (WebP, ≤1600 px) |
 
 Shortcodes inside Markdown: `{% youtube "ID", "title" %}`, `{% form "url", "title" %}`.
+
+## Link previews (og:image)
+
+- The build makes a 1200×630 JPEG copy of each preview image in `_site/og/` (`sharp`, crop at the most important part of the image). Do not link to `/og/` from content.
+- The source is the page's `image`. A page without `image` uses `site.ogImage` (`src/assets/og-default.png`).
+- `scripts/og-default.svg` is the source of the default card. To change the card, edit the SVG and render it to PNG again with `sharp`.
+- To test a preview, use the Facebook Sharing Debugger or opengraph.xyz. They also clear the old cached image.
 
 ## Old URLs
 
