@@ -1,7 +1,8 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
-import { mkdir, stat } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { access, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
-import sharp from "sharp";
+import { OG, makeOgImage } from "./scripts/og-image.mjs";
 import site from "./src/_data/site.js";
 
 const escapeAttr = (s = "") =>
@@ -81,30 +82,32 @@ ${content.trim()}
   );
   eleventyConfig.addFilter("head", (arr = [], n) => arr.slice(0, n));
   eleventyConfig.addFilter("pluck", (arr = [], key) => arr.map((o) => o[key]));
-  // Link previews (og:image): WebP and odd aspect ratios are cropped badly or ignored by some apps
-  // (Facebook, LinkedIn, messengers). Each used image gets a 1200×630 JPEG copy in /og/, made after the build.
-  const OG = { width: 1200, height: 630, dir: "og" };
+  // Link previews (og:image): a 1200×630 JPEG per page, made after the build (scripts/og-image.mjs).
+  // Photo: front matter `image`, else the first local image in the page content, else none (plain background).
+  // The page title is written over the photo. Pages without their own title (home) get the photo only,
+  // or `site.ogImage` when they have no photo either.
+  const OG_VERSION = 3; // change it when the look changes, to make all images again
   const ogQueue = new Map();
-  eleventyConfig.addFilter("ogImage", (src) => {
-    const file = src || site.ogImage;
-    const out = `/${OG.dir}/${path.parse(file).name}.jpg`;
-    ogQueue.set(out, file);
+  const firstImage = (html = "") =>
+    (String(html).match(/<img\b[^>]*\bsrc="(\/assets\/[^"]+\.(?:webp|jpe?g|png))"/i) || [])[1];
+  eleventyConfig.addFilter("ogImage", function (image, title, html) {
+    const src = image || firstImage(html) || (title ? "" : site.ogImage);
+    const slug = (this.page?.url || "/").replace(/^\/|\/$/g, "").replace(/[^a-z0-9]+/gi, "-") || "index";
+    const hash = createHash("sha1").update(JSON.stringify([OG_VERSION, src, title])).digest("hex").slice(0, 8);
+    const out = `/og/${slug}-${hash}.jpg`;
+    ogQueue.set(out, { src: src && path.join("src", src), title });
     return out;
   });
-  eleventyConfig.addGlobalData("og", { width: OG.width, height: OG.height });
+  eleventyConfig.addGlobalData("og", OG);
   eleventyConfig.on("eleventy.after", async ({ dir }) => {
-    await mkdir(path.join(dir.output, OG.dir), { recursive: true });
-    for (const [out, src] of ogQueue) {
-      const input = path.join("src", src);
-      const output = path.join(dir.output, out);
-      const done = await stat(output).catch(() => null);
-      if (done && done.mtimeMs >= (await stat(input)).mtimeMs) continue;
-      await sharp(input)
-        .resize(OG.width, OG.height, { fit: "cover", position: sharp.strategy.attention })
-        .flatten({ background: "#ffffff" })
-        .jpeg({ quality: 82, mozjpeg: true })
-        .toFile(output);
-    }
+    await mkdir(path.join(dir.output, "og"), { recursive: true });
+    await Promise.all([...ogQueue].map(async ([out, { src, title }]) => {
+      const file = path.join(dir.output, out);
+      const done = await stat(file).catch(() => null);
+      if (done && (!src || done.mtimeMs >= (await stat(src)).mtimeMs)) return;
+      if (src) await access(src); // a missing photo fails the build instead of making a broken preview
+      await makeOgImage({ src, title, label: title && site.title, out: file });
+    }));
   });
 
   eleventyConfig.addFilter("absUrl", (p) => new URL(p || "/", site.url).href);

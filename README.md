@@ -51,10 +51,14 @@ Shortcodes inside Markdown: `{% youtube "ID", "title" %}`, `{% form "url", "titl
 
 ## Link previews (og:image)
 
-- The build makes a 1200×630 JPEG copy of each preview image in `_site/og/` (`sharp`, crop at the most important part of the image). Do not link to `/og/` from content.
-- The source is the page's `image`. A page without `image` uses `site.ogImage` (`src/assets/og-default.png`).
-- `scripts/og-default.svg` is the source of the default card. To change the card, edit the SVG and render it to PNG again with `sharp`.
-- To test a preview, use the Facebook Sharing Debugger or opengraph.xyz. They also clear the old cached image.
+The build makes one 1200×630 JPEG for each page in `_site/og/` (`scripts/og-image.mjs`, `sharp`). Do not link to `/og/` from content.
+
+- Photo: the page's `image`. If the page has no `image`, the first local image in its content. If there is no image, a plain dark background.
+- Text: the page title over the photo, with the site name above it. Pages without their own title (the home page) get the photo only.
+- A page without a title and without a photo uses `site.ogImage` (`src/assets/og-default.png`, source `scripts/og-default.svg`).
+- The fonts are in `scripts/fonts/` (Inter, SIL Open Font License), so the result does not depend on the build machine.
+- The file name contains a hash of the photo and the title. A new title gives a new address, so apps show the new image. To make all images again after you change their look, increase `OG_VERSION` in `eleventy.config.js`.
+- To test a preview, use the Facebook Sharing Debugger or opengraph.xyz.
 
 ## Old URLs
 

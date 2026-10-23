@@ -25,12 +25,12 @@
   <meta property="og:url" content="{{ canonical }}">
   <meta property="og:type" content="{{ 'article' if 'news' in (tags or []) else 'website' }}">
   <meta property="og:locale" content="{{ 'en_GB' if pageLang == 'en' else 'pl_PL' }}">
-  {%- set ogImg = (image | ogImage | absUrl) %}
+  {%- set ogImg = (image | ogImage(pageTitle, content) | absUrl) %}
   <meta property="og:image" content="{{ ogImg }}">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="{{ og.width }}">
   <meta property="og:image:height" content="{{ og.height }}">
-  <meta property="og:image:alt" content="{{ image_alt or (title if image else site.title) }}">
+  <meta property="og:image:alt" content="{{ pageTitle or image_alt or site.title }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ ogImg }}">
 
