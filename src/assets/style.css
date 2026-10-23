@@ -249,8 +249,12 @@ label { display: block; margin-bottom: .25rem; font-size: .9375rem; }
 .interact { margin-top: 3.5rem; border-top: 1px solid var(--line); padding-top: 1rem; }
 .interact h2 { font-size: 1.1rem; margin-top: .5rem; }
 .webmentions ul { list-style: none; padding: 0; }
-.webmentions li { padding: .5rem 0; border-bottom: 1px solid var(--line); }
+.webmentions li { padding: .75rem 0; border-bottom: 1px solid var(--line); }
 .webmentions img { width: 1.5rem; height: 1.5rem; vertical-align: middle; margin-right: .5ch; border-radius: 50%; }
+.webmentions .wm-head { margin: 0; }
+.webmentions time { color: var(--muted); font-size: .875rem; margin-left: .5ch; }
+.webmentions blockquote { margin: .4rem 0 0 2rem; padding-left: .75rem; border-left: 2px solid var(--line); color: var(--muted); }
+.webmentions .wm-more { white-space: nowrap; }
 .wm-form { margin-top: 1rem; }
 
 /* footer */

@@ -24,6 +24,7 @@
   const target = box.dataset.target;
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const safeUrl = (u) => (/^https?:\/\//.test(u || "") ? u : "#");
+  const MAX = 280; // characters of a mention's text shown before "Czytaj dalej"
   const verbs = { "like-of": "polubił(a)", "repost-of": "udostępnił(a)", "in-reply-to": "odpowiedział(a)", "mention-of": "wspomniał(a)", "bookmark-of": "zapisał(a)" };
   fetch("https://webmention.io/api/mentions.jf2?per-page=100&target=" + encodeURIComponent(target))
     .then((r) => (r.ok ? r.json() : { children: [] }))
@@ -32,8 +33,21 @@
       box.innerHTML = "<ul>" + children.map((m) => {
         const a = m.author || {};
         const photo = a.photo ? `<img src="${esc(safeUrl(a.photo))}" alt="" loading="lazy">` : "";
-        const text = m.content && m.content.text ? `: ${esc(m.content.text.slice(0, 280))}` : "";
-        return `<li class="h-cite">${photo}<a class="p-author h-card" href="${esc(safeUrl(a.url))}">${esc(a.name || "ktoś")}</a> <a class="u-url" href="${esc(safeUrl(m.url))}">${verbs[m["wm-property"]] || "wspomniał(a)"}</a>${text}</li>`;
+        const url = esc(safeUrl(m.url));
+        const date = m.published || m["wm-received"];
+        const when = date ? ` <time class="dt-published" datetime="${esc(date)}">${new Date(date).toLocaleDateString("pl-PL", { day: "numeric", month: "short", year: "numeric" })}</time>` : "";
+        const head = `<p class="wm-head">${photo}<a class="p-author h-card" href="${esc(safeUrl(a.url))}">${esc(a.name || "ktoś")}</a> <a class="u-url" href="${url}">${verbs[m["wm-property"]] || "wspomniał(a)"}</a>${when}</p>`;
+        // Long texts (a blog post that mentions this page) are cut at a word, with a link to the whole text.
+        const full = ((m.content && m.content.text) || "").replace(/\s+/g, " ").trim();
+        if (!full) return `<li class="h-cite">${head}</li>`;
+        const title = m.name && !full.startsWith(m.name.trim()) ? `<strong class="p-name">${esc(m.name)}</strong> ` : "";
+        let text = full;
+        if (full.length > MAX) {
+          const cut = full.slice(0, MAX);
+          text = cut.slice(0, Math.max(cut.lastIndexOf(" "), MAX * 0.6)).replace(/[\s,.;:–-]+$/, "") + "…";
+        }
+        const more = text !== full ? ` <a class="wm-more" href="${url}">Czytaj dalej →</a>` : "";
+        return `<li class="h-cite">${head}<blockquote class="p-content">${title}${esc(text)}${more}</blockquote></li>`;
       }).join("") + "</ul>";
     })
     .catch(() => {});
