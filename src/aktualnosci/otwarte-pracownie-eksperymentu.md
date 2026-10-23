@@ -89,11 +89,6 @@ Lutownice, mierniki, oscyloskopy, zapas części. Tu naprawiamy stary sprzęt, z
   <figcaption>Warsztat elektroniczny <a href="https://hsp.sh/about/">Hackerspace Pomorze</a> w Gdańsku.</figcaption>
 </figure>
 
-<figure>
-  <img src="/assets/img/399aeff7600c.webp" alt="Warsztat zastawiony wyświetlaczami flipdot z autobusów" loading="lazy">
-  <figcaption>Wyświetlacze flipdot z autobusów, uratowane ze złomowiska przez Hackerspace Pomorze i Warszawski Hackerspace w 2026 roku.</figcaption>
-</figure>
-
 ### Radio i łączność
 
 Odbiorniki, anteny, krótkofalarstwo, odbiór zdjęć z satelitów pogodowych. Nawiązujemy do klubu łączności w domu kultury, do Radia Komunalnego Iława i do iławskich krótkofalowców.
