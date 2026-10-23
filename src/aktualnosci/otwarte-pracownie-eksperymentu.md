@@ -77,7 +77,7 @@ Wiertarki, piły, pilniki, imadła. Miejsce do budowania modeli, obudów, mebli 
 
 <figure>
   <img src="/assets/img/4281c330b2da.webp" alt="Warsztat mechaniczny z wiertarką stołową i tokarką" loading="lazy">
-  <figcaption>Warsztat mechaniczny w Makerspace Stockholm.</figcaption>
+  <figcaption>Warsztat mechaniczny w Makerspace Stockholm. ▶ <a href="https://www.youtube.com/watch?v=L5uXUtAjQf0">Film ze zwiedzania</a> (<a href="https://yasiu.pl/blog/zwiedzamy-makerspace-stockholm/">relacja na yasiu.pl</a>).</figcaption>
 </figure>
 
 ### Elektronika i naprawy
