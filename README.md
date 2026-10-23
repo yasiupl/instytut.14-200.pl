@@ -70,7 +70,7 @@ Every Google Sites path is kept. A page's `redirect_from` produces:
 ## IndieWeb & ActivityPub
 
 - microformats2: `h-card` (footer), `h-entry` (news pages), `h-feed` (home page).
-- Webmentions via [webmention.io](https://webmention.io): log in there once with `https://instytut.14-200.pl` (uses the `rel=me` links). Mentions are shown under each news post.
+- Webmentions via [webmention.io](https://webmention.io). The account exists only after the first sign-in: sign in at webmention.io with `https://instytut.14-200.pl` and select the e-mail address (`rel="me" mailto:`). The code goes to that mailbox. Until then the endpoint answers `account … not found`. Mentions are shown under each news post.
 - Feeds: `/feed.xml` (Atom), `/feed.json` (JSON Feed).
 - Fediverse: the account `@instytut@14-200.pl` on the 14-200.pl hub (GoToSocial), no Bridgy Fed.
   Plan: `14-200.pl/docs/plan-instytut.md`. Until the account exists, `site.fediverse.active` is `false`

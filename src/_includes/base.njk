@@ -37,6 +37,8 @@
   {#- IndieWeb #}
   <link rel="webmention" href="{{ site.webmention.endpoint }}">
   <link rel="pingback" href="{{ site.webmention.pingback }}">
+  {#- E-mail lets the site sign in to webmention.io (IndieLogin accepts GitHub, GitLab, Codeberg or e-mail). #}
+  <link rel="me" href="mailto:{{ site.email }}">
   {%- for m in site.me %}
   <link rel="me" href="{{ m.url }}">
   {%- endfor %}
@@ -98,7 +100,7 @@
           <a class="p-name u-url u-uid" href="{{ site.url }}/" rel="me">{{ site.title }}</a><br>
           <span class="p-adr h-adr"><span class="p-street-address">{{ site.address.street }}</span>,
           <span class="p-postal-code">{{ site.address.postalCode }}</span> <span class="p-locality">{{ site.address.locality }}</span></span><br>
-          <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+          <a class="u-email" href="mailto:{{ site.email }}" rel="me">{{ site.email }}</a>
           <img class="u-logo" src="{{ site.logo }}" alt="" hidden>
         </p>
       </div>
