@@ -31,11 +31,12 @@ export default function (eleventyConfig) {
   });
 
   // Privacy-friendly YouTube embed (no cookies until played), with a plain link fallback.
-  eleventyConfig.addShortcode("youtube", (id, title = "Wideo YouTube") => {
+  // Optional `caption` (HTML) follows the video link, e.g. a source or author.
+  eleventyConfig.addShortcode("youtube", (id, title = "Wideo YouTube", caption = "") => {
     const t = escapeAttr(title);
     return `<figure class="embed video">
 <iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${t}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<figcaption>▶ <a href="https://www.youtube.com/watch?v=${id}">${t}</a></figcaption>
+<figcaption>▶ <a href="https://www.youtube.com/watch?v=${id}">${t}</a>${caption ? " · " + caption : ""}</figcaption>
 </figure>`;
   });
 

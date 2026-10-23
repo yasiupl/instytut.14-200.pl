@@ -47,7 +47,7 @@ Front matter: `title`, `date`, `summary` (one line for lists), `image` (thumbnai
 | `src/_includes/` | `base.njk` (shell), `page.njk` (article / h-entry), `home.njk` (h-feed) |
 | `src/assets/` | `style.css`, `site.js`, images (WebP, ≤1600 px) |
 
-Shortcodes inside Markdown: `{% youtube "ID", "title" %}`, `{% form "url", "title" %}`.
+Shortcodes inside Markdown: `{% youtube "ID", "title", "caption (HTML, optional)" %}`, `{% form "url", "title" %}`.
 
 ## Link previews (og:image)
 

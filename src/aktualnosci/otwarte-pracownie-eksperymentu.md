@@ -133,10 +133,7 @@ Dla każdego, kto chce coś zrobić: uczniów, którym nie wystarcza lekcja, dor
 
 Nie trzeba niczego umieć na start. W pracowni politechnicznej w latach 80. też nikt nie przychodził jako specjalista.
 
-<figure>
-  <img src="/assets/img/2dbaee67b4db.webp" alt="Jasne wnętrze makerspace'u z czerwoną figurą robota i roślinami" loading="lazy">
-  <figcaption>Human Made w San Francisco: makerspace z kursami druku 3D i CNC oraz zajęciami dla licealistów.</figcaption>
-</figure>
+{% youtube "nsiYTBQpIJ8", "Noisebridge, hackerspace w San Francisco", "Noisebridge jest otwarty dla każdego i prowadzony przez swoich członków. Więcej: <a href=\"https://www.noisebridge.net/wiki\">wiki Noisebridge</a>." %}
 
 ## Jak to może wyglądać?
 
