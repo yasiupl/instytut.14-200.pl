@@ -23,6 +23,7 @@ layout: base.njk
     </figure>
     {%- endif %}
   </header>
+  {{- ai | aiNotice(ai_note) | safe }}
   <div class="e-content prose">
     {{ content | safe }}
   </div>
