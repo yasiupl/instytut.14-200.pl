@@ -85,6 +85,11 @@ Wiertarki, piły, pilniki, imadła. Miejsce do budowania modeli, obudów, mebli 
 Lutownice, mierniki, oscyloskopy, zapas części. Tu naprawiamy stary sprzęt, zamiast go wyrzucać, i budujemy własne urządzenia na mikrokontrolerach.
 
 <figure>
+  <img src="/assets/img/15a642ecd78d.webp" alt="Warsztat elektroniczny ze stołami roboczymi, regałami pełnymi pudełek z częściami i ścianą szufladek na elementy" loading="lazy">
+  <figcaption>Warsztat elektroniczny <a href="https://hsp.sh/about/">Hackerspace Pomorze</a> w Gdańsku.</figcaption>
+</figure>
+
+<figure>
   <img src="/assets/img/399aeff7600c.webp" alt="Warsztat zastawiony wyświetlaczami flipdot z autobusów" loading="lazy">
   <figcaption>Wyświetlacze flipdot z autobusów, uratowane ze złomowiska przez Hackerspace Pomorze i Warszawski Hackerspace w 2026 roku.</figcaption>
 </figure>
