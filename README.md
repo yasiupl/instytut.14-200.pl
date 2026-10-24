@@ -47,11 +47,19 @@ The web version `src/pages/regulamin.md` has the same text: change both together
 | `src/pages/*.md` | Standing pages (Laboratorium, Pracownia, O nas, Kontakt…) |
 
 Front matter: `title`, `date`, `summary` (one line for lists), `image` (thumbnail), `image_alt`, `hero: true` (show `image` above the text, with `image_caption`), `area: "lab" \| "pracownia"`, `redirect_from`.
+
 | `src/_data/site.js` | Site config: nav, contact, rel=me links, webmention + fediverse settings |
 | `src/_includes/` | `base.njk` (shell), `page.njk` (article / h-entry), `home.njk` (h-feed) |
 | `src/assets/` | `style.css`, `site.js`, images (WebP, ≤1600 px) |
 
 Shortcodes inside Markdown: `{% youtube "ID", "title", "caption (HTML, optional)" %}`, `{% form "url", "title" %}`.
+
+## Drafts
+
+Set `draft: true` and `eleventyExcludeFromCollections: ["news"]` (or `["projekt"]` for a project).
+The page is built and has its own address, so you can share the link. It does not show in lists, feeds or the sitemap, and search engines get `noindex`.
+Do not use `eleventyExcludeFromCollections: true` for a draft: the page then also leaves `collections.all`, and its `redirect_from` stops working.
+To publish, remove both lines.
 
 ## Link previews (og:image)
 

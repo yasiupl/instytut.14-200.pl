@@ -8,7 +8,8 @@ summary: "Pracownia politechniczna, modelarnie, krótkofalowcy i pierwsze lokaln
 image_alt: "Dwa gokarty zbudowane w pracowni i grupa chłopców za budynkiem"
 image: "/assets/img/fae3f20792ad.webp"
 draft: true
-eleventyExcludeFromCollections: true
+redirect_from: ["/majsterkowanie"]
+eleventyExcludeFromCollections: ["news"]
 ai: generowane
 ai_note: "Tematy wskazał zespół Instytutu. Źródła wyszukało i streściło narzędzie AI (Claude), korzystając też z nagranej rozmowy z byłym pracownikiem MDK; każdy fakt ma odnośnik w sekcji Źródła."
 ---

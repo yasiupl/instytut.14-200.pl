@@ -39,48 +39,8 @@
       "permanent": true
     },
     {
-      "source": "/kurs-na-przyszłość-20252026",
-      "destination": "/kurs-na-przyszlosc-2025-2026/",
-      "permanent": true
-    },
-    {
-      "source": "/kurs-na-przysz%C5%82o%C5%9B%C4%87-20252026",
-      "destination": "/kurs-na-przyszlosc-2025-2026/",
-      "permanent": true
-    },
-    {
-      "source": "/synbio_lab",
-      "destination": "/laboratorium/",
-      "permanent": true
-    },
-    {
-      "source": "/publications/deer-ked-lipoptena-cervi-attack-human-field-genetic-study",
-      "destination": "/publications/deer-ked-lipoptena-cervi/",
-      "permanent": true
-    },
-    {
-      "source": "/regulaminrodo",
-      "destination": "/regulamin-rodo/",
-      "permanent": true
-    },
-    {
-      "source": "/wakacyjny-kurs-na-przyszłość-2025",
-      "destination": "/wakacyjny-kurs-na-przyszlosc-2025/",
-      "permanent": true
-    },
-    {
-      "source": "/wakacyjny-kurs-na-przysz%C5%82o%C5%9B%C4%87-2025",
-      "destination": "/wakacyjny-kurs-na-przyszlosc-2025/",
-      "permanent": true
-    },
-    {
-      "source": "/współpraca",
-      "destination": "/wspolpraca/",
-      "permanent": true
-    },
-    {
-      "source": "/wsp%C3%B3%C5%82praca",
-      "destination": "/wspolpraca/",
+      "source": "/majsterkowanie",
+      "destination": "/aktualnosci/majsterkowanie-w-ilawie/",
       "permanent": true
     },
     {
@@ -176,6 +136,51 @@
     {
       "source": "/lasy/path",
       "destination": "/projekty/lasy/path/",
+      "permanent": true
+    },
+    {
+      "source": "/kurs-na-przyszłość-20252026",
+      "destination": "/kurs-na-przyszlosc-2025-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/kurs-na-przysz%C5%82o%C5%9B%C4%87-20252026",
+      "destination": "/kurs-na-przyszlosc-2025-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/synbio_lab",
+      "destination": "/laboratorium/",
+      "permanent": true
+    },
+    {
+      "source": "/publications/deer-ked-lipoptena-cervi-attack-human-field-genetic-study",
+      "destination": "/publications/deer-ked-lipoptena-cervi/",
+      "permanent": true
+    },
+    {
+      "source": "/regulaminrodo",
+      "destination": "/regulamin-rodo/",
+      "permanent": true
+    },
+    {
+      "source": "/wakacyjny-kurs-na-przyszłość-2025",
+      "destination": "/wakacyjny-kurs-na-przyszlosc-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/wakacyjny-kurs-na-przysz%C5%82o%C5%9B%C4%87-2025",
+      "destination": "/wakacyjny-kurs-na-przyszlosc-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/współpraca",
+      "destination": "/wspolpraca/",
+      "permanent": true
+    },
+    {
+      "source": "/wsp%C3%B3%C5%82praca",
+      "destination": "/wspolpraca/",
       "permanent": true
     },
     {
