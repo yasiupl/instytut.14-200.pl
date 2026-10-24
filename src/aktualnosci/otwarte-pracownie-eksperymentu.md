@@ -1,20 +1,25 @@
 ---
-title: "Iława potrzebuje miejsca dla ludzi, którzy chcą więcej"
-date: "2026-07-01"
-area: "pracownia"
-summary: "Chcemy stworzyć w Iławie Otwarte Pracownie Eksperymentu – wspólny warsztat dla dzieci, młodzieży i dorosłych. Poparcie zbieramy do końca 2026 roku."
-description: "Chcemy stworzyć w Iławie Otwarte Pracownie Eksperymentu – wspólny warsztat dla dzieci, młodzieży i dorosłych. Poparcie zbieramy do końca 2026 roku."
-image: "/assets/img/7982342e6b83.webp"
-image_alt: "Zagracony warsztat z narzędziami, kablami i stołami roboczymi"
+title: Iława potrzebuje miejsca dla ludzi, którzy chcą więcej
+date: 2026-07-01
+area: pracownia
+summary: Chcemy stworzyć w Iławie Otwarte Pracownie Eksperymentu – wspólny
+  warsztat dla dzieci, młodzieży i dorosłych. Poparcie zbieramy do końca 2026
+  roku.
+description: Chcemy stworzyć w Iławie Otwarte Pracownie Eksperymentu – wspólny
+  warsztat dla dzieci, młodzieży i dorosłych. Poparcie zbieramy do końca 2026
+  roku.
+image: /assets/img/7982342e6b83.webp
+image_alt: Zagracony warsztat z narzędziami, kablami i stołami roboczymi
 hero: true
 image_caption: "Tak wygląda żywy warsztat: przestrzeń hackerspace'u w Zurychu."
+redirect_from:
+  - /poprzyj-otwarte-pracownie-eksperymentu
+  - /poprzyj-otwarte-pracownie-eksperymentu/otwarte-pracownie-eksperymentu
 ai: wspolpraca
-ai_note: "Koncepcję opracował zespół Instytutu. Tekst przeredagowało narzędzie AI (Claude) na podstawie historii iławskiego majsterkowania i relacji z wizyt w hackerspace'ach."
-redirect_from: ["/poprzyj-otwarte-pracownie-eksperymentu", "/poprzyj-otwarte-pracownie-eksperymentu/otwarte-pracownie-eksperymentu"]
+ai_note: Koncepcję opracował zespół Instytutu. Tekst przeredagowało narzędzie AI
+  (Claude) na podstawie historii iławskiego majsterkowania i relacji z wizyt w
+  hackerspace'ach.
 ---
-
-> **Aktualizacja:** pomysł rozwijamy dalej jako [Pracownię politechniczną](/pracownia/).
-
 W latach 80. w iławskim domu kultury działała pracownia politechniczna i klub komputerowy. Z tego samego domu kultury wyrosło pierwsze lokalne radio, a w osiedlowej Polance działała modelarnia. Iława miała miejsca, w których można było coś zbudować własnymi rękami. Dziś ich brakuje.
 
 Chcemy to zmienić. **Otwarte Pracownie Eksperymentu** to wspólny warsztat dla dzieci, młodzieży i dorosłych, z narzędziami, których nikt nie musi mieć w domu, i z ludźmi, którzy pomogą przy projekcie. Wzorujemy się na hackerspace'ach i makerspace'ach, które od lat działają w Gdańsku, Warszawie, Sztokholmie czy Chicago.
@@ -31,7 +36,7 @@ Do czasu realizacji, która potrwa kilka lat, prowadzimy podobną działalność
 
 <!-- Miejsce na wizualizację Otwartych Pracowni Eksperymentu. -->
 
-<h2 id="koncepcja">Pełna koncepcja</h2>
+## Pełna koncepcja
 
 ### Wiedza jest w internecie. Warsztatu w telefonie nie ma.
 
@@ -41,12 +46,12 @@ Dziś o elektronice, biologii czy programowaniu można się wiele nauczyć z int
 
 Majsterkowanie ma w Iławie długą historię:
 
-- w latach 50. w domu kultury działał młodzieżowy klub modelarski,
-- później klub łączności, pracownia modelarska i fotograficzna,
-- w 1987 roku klub komputerowy i pracownia politechniczna,
-- od 1991 roku z domu kultury nadawało Radio Komunalne Iława, zbudowane przez pasjonatów,
-- w Spółdzielczym Domu Kultury „Polanka” działała modelarnia,
-- do dziś działa klub krótkofalowców SP4KVA, a modelarze kolejowi co roku zjeżdżają do Iławy na wystawę.
+* w latach 50. w domu kultury działał młodzieżowy klub modelarski,
+* później klub łączności, pracownia modelarska i fotograficzna,
+* w 1987 roku klub komputerowy i pracownia politechniczna,
+* od 1991 roku z domu kultury nadawało Radio Komunalne Iława, zbudowane przez pasjonatów,
+* w Spółdzielczym Domu Kultury „Polanka” działała modelarnia,
+* do dziś działa klub krótkofalowców SP4KVA, a modelarze kolejowi co roku zjeżdżają do Iławy na wystawę.
 
 Otwarte Pracownie Eksperymentu mają być następnym rozdziałem tej historii.
 
@@ -54,11 +59,11 @@ Otwarte Pracownie Eksperymentu mają być następnym rozdziałem tej historii.
 
 Na wzór hackerspace'ów pracownia ma być prowadzona przez ludzi, którzy z niej korzystają.
 
-- **Członkowie.** Kto chce korzystać z pracowni regularnie, zostaje członkiem, płaci niewielką składkę i dostaje dostęp do narzędzi.
-- **Dni otwarte.** Raz w tygodniu drzwi są otwarte dla wszystkich. Można przyjść, rozejrzeć się i zapytać.
-- **Każdy może coś zorganizować.** Masz pomysł na warsztat, kurs albo wspólny projekt? Zgłaszasz go i robisz.
-- **Wspólne narzędzia.** Sprzęt należy do wszystkich i wszyscy o niego dbają. Część przyniosą sami członkowie.
-- **Otwarta wiedza.** Projekty dokumentujemy i publikujemy na otwartych licencjach, tak żeby ktoś inny mógł je powtórzyć.
+* **Członkowie.** Kto chce korzystać z pracowni regularnie, zostaje członkiem, płaci niewielką składkę i dostaje dostęp do narzędzi.
+* **Dni otwarte.** Raz w tygodniu drzwi są otwarte dla wszystkich. Można przyjść, rozejrzeć się i zapytać.
+* **Każdy może coś zorganizować.** Masz pomysł na warsztat, kurs albo wspólny projekt? Zgłaszasz go i robisz.
+* **Wspólne narzędzia.** Sprzęt należy do wszystkich i wszyscy o niego dbają. Część przyniosą sami członkowie.
+* **Otwarta wiedza.** Projekty dokumentujemy i publikujemy na otwartych licencjach, tak żeby ktoś inny mógł je powtórzyć.
 
 <figure>
   <img src="/assets/img/97fa2e3ff715.webp" alt="Kącik w hackerspace'ie z tablicą kredową, telewizorem i skrzynkami napojów" loading="lazy">
@@ -119,7 +124,7 @@ Pomiary jezior, lasów i powietrza razem z [Laboratorium](/laboratorium/), hodow
 
 <figure>
   <img src="/assets/img/933ecaeef492.webp" alt="Szklarnia z folii w ogrodzie, obok pies" loading="lazy">
-  <figcaption>Szklarnia, która zbiera wodę z dachu, w tuBazie przy FabLabie Trójmiasto w Gdańsku.</figcaption>
+  <figcaption>Szklarnia z hydroponiką, w tuBazie przy FabLabie Trójmiasto w Gdańsku (<a href="https://yasiu.pl/blog/zwiedzamy-tubaza-i-fablab-trojmiasto/">relacja na yasiu.pl</a>).</figcaption>
 </figure>
 
 ## Dla kogo?
@@ -128,7 +133,7 @@ Dla każdego, kto chce coś zrobić: uczniów, którym nie wystarcza lekcja, dor
 
 Nie trzeba niczego umieć na start. W pracowni politechnicznej w latach 80. też nikt nie przychodził jako specjalista.
 
-{% youtube "nsiYTBQpIJ8", "Noisebridge, hackerspace w San Francisco", "Noisebridge jest otwarty dla każdego i prowadzony przez swoich członków. Więcej: <a href=\"https://www.noisebridge.net/wiki\">wiki Noisebridge</a>." %}
+{% youtube "nsiYTBQpIJ8", "Noisebridge, hackerspace w San Francisco", "Noisebridge jest otwarty dla każdego i prowadzony przez swoich członków. Więcej: <a href="https://www.noisebridge.net/wiki">wiki Noisebridge</a>." %}
 
 ## Jak to może wyglądać?
 
