@@ -4,7 +4,8 @@ description: "Pracownia politechniczna, modelarnie, krótkofalowcy i pierwsze lo
 date: "2026-10-19"
 lang: "pl"
 area: "pracownia"
-permalink: "/majsterkowanie/"
+summary: "Pracownia politechniczna, modelarnie, krótkofalowcy i pierwsze lokalne radio: krótka historia iławskiego majsterkowania."
+image_alt: "Dwa gokarty zbudowane w pracowni i grupa chłopców za budynkiem"
 image: "/assets/img/fae3f20792ad.webp"
 draft: true
 eleventyExcludeFromCollections: true
@@ -12,11 +13,11 @@ ai: generowane
 ai_note: "Tematy wskazał zespół Instytutu. Źródła wyszukało i streściło narzędzie AI (Claude), korzystając też z nagranej rozmowy z byłym pracownikiem MDK; każdy fakt ma odnośnik w sekcji Źródła."
 ---
 
-<p class="status"><strong>Strona w budowie.</strong> Zbieramy wspomnienia, zdjęcia i dokumenty. Jeśli pamiętasz którąś z opisanych tu pracowni albo masz zdjęcia z tamtych lat, <a href="#pomoz">napisz do nas</a>.</p>
+<p class="status"><strong>Tekst w budowie.</strong> Zbieramy wspomnienia, zdjęcia i dokumenty. Jeśli pamiętasz którąś z opisanych tu pracowni albo masz zdjęcia z tamtych lat, <a href="#pomoz">napisz do nas</a>.</p>
 
 Dziś mówi się o makerspace'ach, fablabach i hackerspace'ach. W Iławie na to samo mówiło się po prostu: majsterkowanie. Modelarze, krótkofalowcy, ludzie od elektroniki i pierwszych komputerów spotykali się w domu kultury, w osiedlowych świetlicach i w klubach na długo przed tym, jak pojawiły się drukarki 3D.
 
-[Pracownia politechniczna](/pracownia/) Iławskiego Instytutu Idei nie zaczyna więc od zera. Ta strona zbiera to, co udało się ustalić o jej poprzedniczkach.
+[Pracownia politechniczna](/pracownia/) Iławskiego Instytutu Idei nie zaczyna więc od zera. Ten tekst zbiera to, co udało się ustalić o jej poprzedniczkach.
 
 <h2 id="haker">Haker, pirat, majsterkowicz</h2>
 
@@ -63,6 +64,11 @@ W 1984 roku dyrektorem Miejskiego Domu Kultury został Jerzy Kalisz. MDK zajmowa
 Około 1985 roku jeden z pracowników MDK założył w piwnicy budynku pracownię politechniczną. Dom kultury kupił do niej spawarkę, szlifierkę, wiertarki, piłę tarczową i strugarkę, a także akumulatory samochodowe i prądnice od Syrenki. Zapisy były otwarte dla wszystkich. Przyszło około 30 chłopców, a zajęcia odbywały się codziennie po południu.
 
 Pierwszym projektem była elektryczna deskorolka. Ramę zrobiono z grubościennych rurek, które dało się giąć na zimno. Silnikiem była prądnica od Syrenki z przekładnią pasową, a zasilał ją akumulator 12 V. Deskorolka miała tylko wyłącznik, a hamowała sama prądnica. Potem powstały druga deskorolka i czterokołowy pojazd z kierownicą, podobny do gokarta.
+
+<figure>
+  <img src="/assets/img/9ab3b00bbb9c.webp" alt="Chłopiec jedzie na elektrycznej deskorolce po sali, inni chłopcy patrzą z brzegu sceny" loading="lazy">
+  <figcaption>Pokaz elektrycznej deskorolki z pracowni politechnicznej w ODK. Fot. <a href="https://ick.miastoilawa.pl/w-ick/historia-ick">Iławskie Centrum Kultury</a>.</figcaption>
+</figure>
 
 <figure>
   <img src="/assets/img/fae3f20792ad.webp" alt="Dwa gokarty zbudowane w pracowni i grupa chłopców za budynkiem" loading="lazy">
@@ -131,8 +137,8 @@ Iławskie majsterkowanie nie zniknęło, tylko się rozproszyło.
 Wzorem dla nowej pracowni są też otwarte warsztaty z innych miast, takie jak Hackerspace Pomorze w Gdańsku: stowarzyszenie z własnym warsztatem elektronicznym, cotygodniowymi dniami otwartymi i wspólnymi projektami.
 
 <figure>
-  <img src="/assets/img/5e0f4d29ae44.webp" alt="Warsztat elektroniczny z regałami pełnymi części" loading="lazy">
-  <figcaption>Warsztat elektroniczny Hackerspace Pomorze w Gdańsku.</figcaption>
+  <img src="/assets/img/15a642ecd78d.webp" alt="Warsztat elektroniczny ze stołami roboczymi, regałami pełnymi pudełek z częściami i ścianą szufladek na elementy" loading="lazy">
+  <figcaption>Warsztat elektroniczny <a href="https://hsp.sh/about/">Hackerspace Pomorze</a> w Gdańsku.</figcaption>
 </figure>
 
 <h2 id="pomoz">Pomóż uzupełnić tę historię</h2>
@@ -160,3 +166,5 @@ Napisz na [instytutidei@gmail.com](mailto:instytutidei@gmail.com). Zdjęcia zesk
 - [Polanka](https://smpraca.ilawa.pl/polanka/), Spółdzielnia Mieszkaniowa „Praca” w Iławie.
 - [„Absolwenci «Żeromka» puszczają balon (naukowy!)”](https://gazetaolsztynska.pl/ilawa/940869,ILAWA-Absolwenci-quotZeromkaquot-puszczaja-balon-naukowy.html), „Gazeta Olsztyńska”, maj 2023.
 - [Hackerspace Pomorze](https://hsp.sh/).
+
+Zdjęcie elektrycznej deskorolki pochodzi z [Historii ICK](https://ick.miastoilawa.pl/w-ick/historia-ick) na stronie Iławskiego Centrum Kultury. Pozostałe zdjęcia: archiwum własne.

@@ -11,7 +11,7 @@ ai: generowane
 ai_note: "Wpis streszcza roboczą notatkę o programie. Streszczenie przygotowało narzędzie AI (Claude)."
 ---
 
-W latach 80. przy iławskim Miejskim Domu Kultury działała [pracownia politechniczna](/majsterkowanie/). Chcemy wrócić do tej tradycji z programem **„Od pomysłu do realizacji – Sztafeta Młodych Inżynierów”** dla uczniów szkół średnich z powiatu iławskiego.
+W latach 80. przy iławskim Miejskim Domu Kultury działała [pracownia politechniczna](/aktualnosci/majsterkowanie-w-ilawie/). Chcemy wrócić do tej tradycji z programem **„Od pomysłu do realizacji – Sztafeta Młodych Inżynierów”** dla uczniów szkół średnich z powiatu iławskiego.
 
 Zamiast jednorazowych warsztatów chcemy zbudować trwałą strukturę. Każdy rocznik korzysta ze sprzętu, kodu i dokumentacji poprzedników, a absolwenci i studenci zostają mentorami młodszych. Stąd sztafeta.
 
