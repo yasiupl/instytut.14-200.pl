@@ -6,7 +6,6 @@ summary: "Program dla uczniów szkół średnich z powiatu iławskiego: rok prac
 description: "„Od pomysłu do realizacji – Sztafeta Młodych Inżynierów”: program zajęć politechnicznych dla uczniów szkół średnich z powiatu iławskiego."
 image: "/assets/img/6496efc65462.webp"
 draft: true
-eleventyExcludeFromCollections: ["news"]
 ai: generowane
 ai_note: "Wpis streszcza roboczą notatkę o programie. Streszczenie przygotowało narzędzie AI (Claude)."
 ---

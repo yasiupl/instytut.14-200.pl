@@ -69,6 +69,9 @@ _fields:
     { label: "Pokaż obrazek w nagłówku", name: hero, widget: boolean, required: false, default: false }
   image_caption: &image_caption
     { label: "Podpis obrazka w nagłówku", name: image_caption, widget: string, required: false }
+  draft: &draft
+    { label: "Szkic", name: draft, widget: boolean, required: false, default: false,
+      hint: "Zaznaczone = strona działa tylko z linku: nie ma jej na listach, w kanałach RSS ani w wyszukiwarkach. Odznacz, aby opublikować." }
   redirects: &redirects
     { label: "Stare adresy (przekierowania)", name: redirect_from, widget: list, required: false,
       hint: "Np. /stara-strona. Nie usuwaj – stare linki przestaną działać." }
@@ -96,9 +99,10 @@ collections:
     slug: "{{title}}"
     preview_path: "aktualnosci/{{slug}}/"
     sortable_fields: [ { field: date, default_sort: desc }, title ]
-    summary: "{{date}} · {{title}}"
+    summary: "{{date}} · {{title}}{{draft | ternary(' (szkic)', '')}}"
     fields:
       - { label: "Tytuł", name: title, widget: string }
+      - *draft
       - *date
       - *area
       - *summary
@@ -122,9 +126,10 @@ collections:
     slug: "{{title}}"
     preview_path: "projekty/{{slug}}/"
     sortable_fields: [ { field: date, default_sort: desc }, title ]
-    summary: "{{date}} · {{title}}"
+    summary: "{{date}} · {{title}}{{draft | ternary(' (szkic)', '')}}"
     fields:
       - { label: "Tytuł", name: title, widget: string }
+      - *draft
       - *date
       - *area
       - *summary

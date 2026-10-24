@@ -8,7 +8,7 @@ layout: base.njk
 </header>
 <section class="h-feed">
   <span class="p-name" hidden>{{ site.title }} – {{ title }}</span>
-  {%- set entries = collections[listOf] | reverse %}
+  {%- set entries = collections[listOf] | published | reverse %}
   {%- set showYear = true %}
   {%- include "partials/entry-list.njk" %}
 </section>

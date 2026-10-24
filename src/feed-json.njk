@@ -3,7 +3,7 @@ permalink: /feed.json
 eleventyExcludeFromCollections: true
 ---
 {%- set items = [] -%}
-{%- for post in collections.news | reverse -%}
+{%- for post in collections.news | published | reverse -%}
 {%- set items = (items.push({
   "id": site.feedIdBase + post.url,
   "url": post.url | absUrl,

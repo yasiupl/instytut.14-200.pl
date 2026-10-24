@@ -74,6 +74,8 @@ ${content.trim()}
   eleventyConfig.addFilter("plDate", (d) =>
     new Date(d).toLocaleDateString("pl-PL", { year: "numeric", month: "long", day: "numeric" })
   );
+  // Drafts (front matter `draft: true`) have their own address but are left out of lists, feeds and the sitemap.
+  eleventyConfig.addFilter("published", (arr = []) => arr.filter((p) => !p.data.draft));
   eleventyConfig.addFilter("head", (arr = [], n) => arr.slice(0, n));
   eleventyConfig.addFilter("pluck", (arr = [], key) => arr.map((o) => o[key]));
   // Link previews (og:image): a 1200×630 JPEG per page, made after the build (scripts/og-image.mjs).

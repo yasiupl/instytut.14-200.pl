@@ -56,10 +56,11 @@ Shortcodes inside Markdown: `{% youtube "ID", "title", "caption (HTML, optional)
 
 ## Drafts
 
-Set `draft: true` and `eleventyExcludeFromCollections: ["news"]` (or `["projekt"]` for a project).
-The page is built and has its own address, so you can share the link. It does not show in lists, feeds or the sitemap, and search engines get `noindex`.
-Do not use `eleventyExcludeFromCollections: true` for a draft: the page then also leaves `collections.all`, and its `redirect_from` stops working.
-To publish, remove both lines.
+Set `draft: true` (in the CMS: the "Szkic" checkbox).
+The page is built and has its own address, so you can share the link.
+It does not show in lists, feeds or the sitemap, and search engines get `noindex`. Its `redirect_from` still works.
+To publish, remove the line or set it to `false` (in the CMS: clear the checkbox).
+Templates that list entries must pass the collection through the `published` filter.
 
 ## Link previews (og:image)
 

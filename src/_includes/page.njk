@@ -28,7 +28,7 @@ layout: base.njk
     {{ content | safe }}
   </div>
   {%- if parent %}
-  {%- set coll = collections.news if parent == "/aktualnosci/" else collections.projekt %}
+  {%- set coll = (collections.news if parent == "/aktualnosci/" else collections.projekt) | published %}
   {%- set prev = coll | getPreviousCollectionItem(page) %}
   {%- set next = coll | getNextCollectionItem(page) %}
   <nav class="pager" aria-label="{{ 'Sąsiednie wpisy' }}">

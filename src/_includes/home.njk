@@ -20,14 +20,14 @@ layout: base.njk
 
 <section class="h-feed" aria-labelledby="news-title">
   <h2 id="news-title" class="p-name section-title">Aktualności <a class="feed-link" href="/feed.xml">RSS</a></h2>
-  {%- set entries = collections.news | reverse | head(5) %}
+  {%- set entries = collections.news | published | reverse | head(5) %}
   {%- include "partials/entry-list.njk" %}
   <p class="all"><a href="/aktualnosci/">Wszystkie aktualności →</a></p>
 </section>
 
 <section aria-labelledby="proj-title">
   <h2 id="proj-title" class="section-title">Projekty</h2>
-  {%- set entries = collections.projekt | reverse | head(6) %}
+  {%- set entries = collections.projekt | published | reverse | head(6) %}
   {%- set compact = true %}
   {%- include "partials/entry-list.njk" %}
   <p class="all"><a href="/projekty/">Wszystkie projekty →</a></p>
