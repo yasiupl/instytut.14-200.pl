@@ -1,5 +1,5 @@
 ---
-title: "Otwarte Pracownie Eksperymentu – poprzyj pomysł"
+title: "Iława potrzebuje miejsca dla ludzi, którzy chcą więcej"
 date: "2026-07-01"
 area: "pracownia"
 summary: "Chcemy stworzyć w Iławie Otwarte Pracownie Eksperymentu – wspólny warsztat dla dzieci, młodzieży i dorosłych. Poparcie zbieramy do końca 2026 roku."
