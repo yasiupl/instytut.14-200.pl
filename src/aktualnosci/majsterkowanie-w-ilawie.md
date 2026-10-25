@@ -121,6 +121,16 @@ W internecie nie znaleźliśmy o niej żadnych wzmianek. Dzisiejsza Polanka prow
 
 **Czego jeszcze nie wiemy:** prawie wszystkiego. Kiedy działała modelarnia, kto ją prowadził, czy budowano tam modele latające, pływające czy kartonowe, czy jej wychowankowie startowali w zawodach.
 
+## Modelarnia w Szkole Podstawowej nr 3
+
+Modelarnie działały też w szkołach. W iławskiej Szkole Podstawowej nr 3 modelarnię prowadził nauczyciel Ignacy Warzecha.
+
+W internecie nie znaleźliśmy o niej żadnych wzmianek.
+
+<!-- Miejsce na zdjęcia: modelarnia w SP3, modele, zawody. -->
+
+**Czego jeszcze nie wiemy:** w jakich latach działała modelarnia, jakie modele tam budowano i czy uczniowie startowali w zawodach.
+
 ## Dziś
 
 Iławskie majsterkowanie nie zniknęło, tylko się rozproszyło.
@@ -145,7 +155,7 @@ Wzorem dla nowej pracowni są też otwarte warsztaty z innych miast, takie jak H
 
 Szukamy:
 
-- wspomnień osób, które chodziły na zajęcia do MDK, Polanki albo do klubu łączności,
+- wspomnień osób, które chodziły na zajęcia do MDK, Polanki, modelarni w SP3 albo do klubu łączności,
 - zdjęć z pracowni, z radia i z zawodów modelarskich,
 - wycinków z gazet, dyplomów, programów zajęć, starych modeli i urządzeń.
 
@@ -154,6 +164,7 @@ Napisz na [instytutidei@gmail.com](mailto:instytutidei@gmail.com). Zdjęcia zesk
 ## Źródła
 
 - Rozmowa z Markiem Jasiukowiczem, pracownikiem MDK w latach ok. 1985–1998, nagranie z 2026 roku. Prywatnie jest ojcem Marcina Jasiukowicza, który współtworzy tę stronę.
+- Relacja ustna o modelarni w SP3, zebrana przez zespół Instytutu w 2026 roku.
 - Wiesław Niesiobędzki, [„Od Kołakowskiego do Kalisza”](https://www.kurier-ilawski.pl/informacje/Od-Kolakowskiego-do-Kalisza/791), „Kurier Iławski”, 13 kwietnia 2005.
 - Urszula Doliwa, [*Piraci w eterze. Proces transformacji radiofonii prywatnej w Polsce w latach 1989–1995*](http://wydawnictwo.uwm.edu.pl/uploads/documents/czytelnia/emonografie/Piraci-w-eterze.pdf), Wydawnictwo UWM, Olsztyn 2023 (PDF). Iława: s. 53, 80, 84, 99, 127, 204. Doliwa powołuje się m.in. na tekst „Jednoosobowe radio” („Gazeta Olsztyńska”, 6 października 1992) i protokoły wysłuchań KRRiT z 1994 roku.
 - [Historia ICK](https://ick.miastoilawa.pl/w-ick/historia-ick), Iławskie Centrum Kultury.
