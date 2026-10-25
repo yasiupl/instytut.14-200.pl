@@ -133,7 +133,7 @@ Dla każdego, kto chce coś zrobić: uczniów, którym nie wystarcza lekcja, dor
 
 Nie trzeba niczego umieć na start. W pracowni politechnicznej w latach 80. też nikt nie przychodził jako specjalista.
 
-{% youtube "nsiYTBQpIJ8", "Noisebridge, hackerspace w San Francisco", "Noisebridge jest otwarty dla każdego i prowadzony przez swoich członków. Więcej: <a href="https://www.noisebridge.net/wiki">wiki Noisebridge</a>." %}
+{% youtube "nsiYTBQpIJ8", "Noisebridge, hackerspace w San Francisco", "Noisebridge jest otwarty dla każdego i prowadzony przez swoich członków. Więcej: <a href='https://www.noisebridge.net/wiki'>wiki Noisebridge</a>." %}
 
 ## Jak to może wyglądać?
 
