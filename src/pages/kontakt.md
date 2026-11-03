@@ -9,7 +9,7 @@ map: true
 linksNewTab: true
 ---
 
-- e-mail: [instytutidei@gmail.com](mailto:instytutidei@gmail.com)
+- e-mail: [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl)
 - Facebook: [ilawski.instytut.idei](https://www.facebook.com/ilawski.instytut.idei)
 - fediwersum: [obserwuj nas](/fediverse/)
 

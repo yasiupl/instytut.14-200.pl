@@ -39,4 +39,4 @@ Nasza przestrzeń aktywności znajduje się na ul. Królowej Jadwigi 18B w Iław
 
 ![](/assets/img/9621d7658a17.webp)
 
-Jeśli chcesz dołącz do nas, napisz wiadomość na **instytutidei@gmail.com**
+Jeśli chcesz dołącz do nas, napisz wiadomość na **kontakt@instytut.ilawa.pl**

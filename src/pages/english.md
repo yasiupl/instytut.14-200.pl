@@ -35,7 +35,7 @@ image: "/assets/img/9ef28cd9f975.webp"
 
 We are located in Iława - Poland.
 
-contact us: instytutidei@gmail.com
+contact us: kontakt@instytut.ilawa.pl
 
 or via FB messenger: https://www.facebook.com/ilawski.instytut.idei
 

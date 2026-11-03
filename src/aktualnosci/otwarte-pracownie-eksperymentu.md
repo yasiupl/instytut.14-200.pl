@@ -157,7 +157,7 @@ Podpis w formularzu nie jest wpłatą, zapisem na zajęcia ani umową. Pokazuje 
 
 ## Kontakt
 
-Masz sprzęt, wiedzę, lokal albo pomysł? A może pamiętasz pracownię politechniczną w domu kultury albo modelarnię w Polance? Napisz: **instytutidei@gmail.com**
+Masz sprzęt, wiedzę, lokal albo pomysł? A może pamiętasz pracownię politechniczną w domu kultury albo modelarnię w Polance? Napisz: **kontakt@instytut.ilawa.pl**
 
 ## FAQ
 

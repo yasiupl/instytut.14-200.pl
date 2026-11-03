@@ -20,7 +20,7 @@ Zapraszamy na kolejną edycję **[KURSU na PRZYSZŁOŚĆ](/kurs-na-przyszlosc-20
 
 Formularz do zapisów na dole strony. Ilość miejsc ograniczona. 
 
-Pierwsze zajęcia: 15.11.2025 , Osoby zainteresowane prosimy o wypełnienie formularza rekrutacyjnego lub kontakt na e-mail: instytutidei@gmail.com lub przez Messengera.
+Pierwsze zajęcia: 15.11.2025 , Osoby zainteresowane prosimy o wypełnienie formularza rekrutacyjnego lub kontakt na e-mail: kontakt@instytut.ilawa.pl lub przez Messengera.
 
 ![](/assets/img/a8392444f244.webp)
 

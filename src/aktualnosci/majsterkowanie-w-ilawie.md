@@ -159,7 +159,7 @@ Szukamy:
 - zdjęć z pracowni, z radia i z zawodów modelarskich,
 - wycinków z gazet, dyplomów, programów zajęć, starych modeli i urządzeń.
 
-Napisz na [instytutidei@gmail.com](mailto:instytutidei@gmail.com). Zdjęcia zeskanujemy i oddamy.
+Napisz na [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl). Zdjęcia zeskanujemy i oddamy.
 
 ## Źródła
 

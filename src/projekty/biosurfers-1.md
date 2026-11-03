@@ -16,7 +16,7 @@ ZESTAW JUŻ NIE JEST DOSTĘPNY W SPRZEDAŻY. EKSPERYMENT PRZEPROWADZAMY W TRAKCI
 
 [ZESTAW BIOSURFERS #1 DO PRAKTYCZNEJ NAUKI BIOLOGII SYNTETYCZNEJ. AKTYWACJA FUNKCJI BAKTERII POPRZEZ DODANIE MATERIAŁU GENETYCZNEGO](#h.ymit44chbo1y)[1 KRÓTKI OPIS EKSPERYMENTU](#h.gdw0a0stmlxb)[2 INSTRUKCJA PRZEPROWADZENIA EKSPERYMENTU](#h.ju8mvtf3mewa)[2.1 SKŁAD ZESTAWU I SPIS DODATKOWYCH RZECZY](#h.jzo74s4ebf2k)[2.2 PRZYGOTOWANIE AGARU Z DODATKAMI](#h.x5az9jx6nqxx)[2.3 DODAWANIE AMPICILYNY, IPTG, X-GAL DO AGARU O TEMPERATURZE 50st. C.](#h.iwpgh27pqbht)[2.4 WPROWADZENIE OBCEGO DNA (PLAZMID) DO BAKTERII](#h.fni56pxrhfge)[2.5 WYNIKI](#h.9tvcnfyjc5t7)[2.6 ZASTOSOWANA PRAKTYCZNE](#h.eap4nr8hesaz)
 
-Chętnych do przeprowadzenia zajęć z tym zestawem w swojej szkole, organizacji, itp. prosimy o kontakt pod adresem: [instytutidei@gmail.com](mailto:instytutidei@gmail.com) , poinformujemy o możliwych terminach i warunkach. Aktualnie możliwe poprowadzenie zajęć w lutym 2024.
+Chętnych do przeprowadzenia zajęć z tym zestawem w swojej szkole, organizacji, itp. prosimy o kontakt pod adresem: [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl) , poinformujemy o możliwych terminach i warunkach. Aktualnie możliwe poprowadzenie zajęć w lutym 2024.
 
 Cena zestawu, wraz z przeprowadzeniem zajęć dla 6 osób (3 pary) przez instruktora - 599zł, dla miejscowości: Iława, Ostróda, Lubawa, Kisielice, Susz, Nowe Miasto Lubawskie, Zalewo i bezpośrednie okolice. W przypadku zajęć w innych miastach obowiązuje dodatkowa dopłata - zależna od odległości od Iławy. Szkoły i instytucje mogą zamawiać zestaw bez instruktora. Należy wtedy przechowywać elementy zestawu w lodówce/zamrażarce i zużyć w okresie 30 dni od nabycia.
 
@@ -72,7 +72,7 @@ Jeśli nie masz do dyspozycji laboratorium poproś kogoś kto Ci pomoże w utrzy
 
 Przetestowaliśmy nasz zestaw w warunkach domowych. Działa.
 
-Osoba odpowiedzialna za projekt BIOSURFERS: Krzysztof Kurpiecki ( kontakt: [instytutidei@gmail.com](mailto:instytutidei@gmail.com) ).
+Osoba odpowiedzialna za projekt BIOSURFERS: Krzysztof Kurpiecki ( kontakt: [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl) ).
 
 #### 2 INSTRUKCJA PRZEPROWADZENIA EKSPERYMENTU
 
@@ -252,7 +252,7 @@ Możesz poszukać też schematów w wyszukiwarkach obrazów np. wpisując: lacZ 
 
 ![](/assets/img/3f9ab059bbdb.webp)
 
-Powyżej przykładowe wyniki eksperymentu. Zestawu używamy podczas naszego [KURSU BIOLOGII SYNTETYCZNEJ](/kurs/). Obecnie istnieje możliwość przeprowadzenia zajęć z tym zestawem dla uczniów szkół czy innych organizacji. Kontakt: [instytutidei@gmail.com](mailto:instytutidei@gmail.com)
+Powyżej przykładowe wyniki eksperymentu. Zestawu używamy podczas naszego [KURSU BIOLOGII SYNTETYCZNEJ](/kurs/). Obecnie istnieje możliwość przeprowadzenia zajęć z tym zestawem dla uczniów szkół czy innych organizacji. Kontakt: [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl)
 
 **Sprzedaż zestawu i prowadzenie zajęć będzie realizowane przez firmę zewnętrzną.**
 

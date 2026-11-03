@@ -13,7 +13,7 @@ image: "/assets/img/5f052b29457c.webp"
 
 Zapraszamy do wypełnienia **formularza rekrutacyjnego na stronie:** [PRAKTYCZNY KURS BIOLOGII SYNTETYCZNEJ I GENOMIKI](/kurs/)
 
-**Pierwsze zajęcia: 15.11.2025 , Osoby zainteresowane prosimy o wypełnienie formularza rekrutacyjnego lub kontakt na e-mail: instytutidei@gmail.com** lub przez Messengera.
+**Pierwsze zajęcia: 15.11.2025 , Osoby zainteresowane prosimy o wypełnienie formularza rekrutacyjnego lub kontakt na e-mail: kontakt@instytut.ilawa.pl** lub przez Messengera.
 
 {% youtube "h4H-YHBqyVo", "Kurs na Przyszłość. 2025/26. Genomika. Biologia Syntetyczna. III LAB Iława" %}
 

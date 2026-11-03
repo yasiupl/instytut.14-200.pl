@@ -228,7 +228,7 @@ KLAUZULA INFORMACYJNA RODO - Piknik Naukowy bioIŁAWA
 
 Informujemy, że:
 
-- Administratorem danych osobowych jest stowarzyszenie „Iławski Instytut Idei”. Z administratorem można skontaktować się poprzez adres e-mail: instytutidei@gmail.com.
+- Administratorem danych osobowych jest stowarzyszenie „Iławski Instytut Idei”. Z administratorem można skontaktować się poprzez adres e-mail: kontakt@instytut.ilawa.pl.
 
 - Wszelkie dane osobowe będą przetwarzane w celach związanych z uczestnictwem w imprezie plenerowej o nazwie „Piknik Naukowy bioIŁAWA”, jak również w celach archiwalnych, informacyjnych, dowodowych - podstawę prawną przetwarzania danych stanowi art. 6 ust. 1 lit a) RODO.
 

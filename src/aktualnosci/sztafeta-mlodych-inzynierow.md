@@ -52,4 +52,4 @@ Pierwsza edycja potrwa dłużej, półtora do dwóch lat, bo trzeba zbudować po
 
 Wszystko, co powstanie (kod, schematy, modele 3D, raporty), będzie dostępne na otwartych licencjach.
 
-Pełny opis programu jest w [notatce na wiki](https://wiki.yasiu.pl/s/32f8e880-b0b7-4b25-b831-9b2b685c73e4). Chcesz pomóc? Napisz: [instytutidei@gmail.com](mailto:instytutidei@gmail.com).
+Pełny opis programu jest w [notatce na wiki](https://wiki.yasiu.pl/s/32f8e880-b0b7-4b25-b831-9b2b685c73e4). Chcesz pomóc? Napisz: [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl).

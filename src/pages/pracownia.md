@@ -72,7 +72,7 @@ Nie jesteśmy pierwsi. W latach 80. przy Miejskim Domu Kultury działała pracow
 
 <h2 id="jak-dolaczyc">Jak dołączyć</h2>
 
-1. **Napisz do nas** na [instytutidei@gmail.com](mailto:instytutidei@gmail.com). Powiedz, co chcesz robić albo czego chcesz się nauczyć.
+1. **Napisz do nas** na [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl). Powiedz, co chcesz robić albo czego chcesz się nauczyć.
 2. **Podziel się narzędziami.** Masz w szafie lutownicę, drukarkę 3D albo oscyloskop, który się kurzy? Może przydać się innym.
 3. **Zaproponuj projekt albo warsztat.** Pierwsze spotkania zorganizujemy wokół tego, co zgłosicie.
 4. **Obserwuj [aktualności](/aktualnosci/).** Tam ogłosimy pierwsze spotkanie.

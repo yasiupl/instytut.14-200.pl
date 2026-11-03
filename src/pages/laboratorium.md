@@ -64,7 +64,7 @@ Dzięki temu mieszkańcy Iławy otrzymają dostęp do praktycznej, nowoczesnej e
 
 Zajęcia w laboratorium prowadzone będą przez Krzysztofa Kurpieckiego, po kursie biologii syntetycznej HTGAA 22 ( kurs MIT Media Labs dla studentów MIT/Harvard ). Nad organizacją zajęć czuwać będzie Justyna Jaskólska – magister biologii, z wykształcenia również diagnosta laboratoryjny.
 
-Szukamy wsparcia dla tego projektu. Jeżeli możesz pomóc, napisz do nas: [instytutidei@gmail.com](mailto:instytutidei@gmail.com)
+Szukamy wsparcia dla tego projektu. Jeżeli możesz pomóc, napisz do nas: [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl)
 
 (aktualizacja - 2025 - obecnie szukamy już wsparcia na bardziej zaawansowany sprzęt. Obecnie przydałaby się zamrażarka do -80st. C i urządzenie do sekwencjonowania DNA)
 

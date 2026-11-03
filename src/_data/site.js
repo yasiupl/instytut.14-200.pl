@@ -11,7 +11,7 @@ export default {
   lang: "pl",
   description:
     "Iławski Instytut Idei – edukacja przyrodnicza, biologia syntetyczna i otwarte pracownie eksperymentu w Iławie.",
-  email: "instytutidei@gmail.com",
+  email: "kontakt@instytut.ilawa.pl",
   address: {
     street: "ul. Królowej Jadwigi 18B",
     postalCode: "14-200",

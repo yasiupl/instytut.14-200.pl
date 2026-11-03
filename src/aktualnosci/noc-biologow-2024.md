@@ -15,7 +15,7 @@ Lubicie zagadki i spacery w ciemności? Interesujecie się przyrodą albo chceci
 
 Zabawcie się w detektywów – naukowców. Odkrywajcie z nami "Tajemnice życia: od komórki do biosfery!" Obiecujemy, że to będzie dobrze spędzony wspólnie czas – pospacerujecie, pokombinujecie i macie szansę zgarnąć nagrody! Zagadki będą na Was czekać od godz. 16.00 w sobotę 13 stycznia do godziny 18.00 w niedzielę 14 stycznia.
 
-Możecie wystartować przy Kuźni Talentów (tam będzie zagadka numer 1) lub na Wyspie Młyńskiej (umieścimy tam zagadkę numer 6) – to nie ma znaczenia, bo każda z zagadek jest ponumerowana. Z pierwszych liter rozwiązań ułóżcie 6-literowe hasło i prześlijcie je wraz z Waszym selfie z trasy na mail: instytutidei@gmail.com
+Możecie wystartować przy Kuźni Talentów (tam będzie zagadka numer 1) lub na Wyspie Młyńskiej (umieścimy tam zagadkę numer 6) – to nie ma znaczenia, bo każda z zagadek jest ponumerowana. Z pierwszych liter rozwiązań ułóżcie 6-literowe hasło i prześlijcie je wraz z Waszym selfie z trasy na mail: kontakt@instytut.ilawa.pl
 
 Zabierzcie ze sobą telefon z czytnikiem QR kodów!
 
