@@ -6,8 +6,6 @@ lang: "pl"
 area: "pracownia"
 permalink: "/spejsy/"
 spejsyFeed: true
-ai: generowane
-ai_note: "Tekst strony i kod, który pobiera wydarzenia i wpisy, przygotowało narzędzie AI. Człowiek je sprawdził."
 ---
 
 Hakerspejs to wspólna pracownia, w której ludzie razem budują, naprawiają, programują i uczą się od siebie. W Polsce działa ich kilkanaście. Nasza [pracownia politechniczna](/pracownia/) chce do nich dołączyć. Tu widać, co się u nich dzieje.
