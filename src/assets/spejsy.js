@@ -31,32 +31,40 @@
       const data = await r.json();
       const list = (data.events || []).filter((e) => Date.parse(e.end) > Date.now()).slice(0, limit);
       if (!list.length) { status.textContent = "Brak zaplanowanych wydarzeń."; return; }
-      // data-collapse="N": events after the first N get the class "feed-extra". CSS hides them on wide screens
-      // until "Pokaż więcej" is clicked; on narrow screens (tabs) all events stay visible.
+      // data-collapse="N": only the first N events show on wide screens, the rest after "Pokaż więcej".
+      // balance() can raise N later. On narrow screens (tabs) all events show.
       const collapse = +box.dataset.collapse || 0;
       let html = "", last = "";
       list.forEach((e, i) => {
         const start = new Date(e.start), end = new Date(e.end);
         const k = dayKey.format(start);
-        if (k !== last) { html += `${last ? "</ul>" : ""}<h3 class="feed-day${collapse && i >= collapse ? " feed-extra" : ""}">${esc(label(start))}</h3><ul class="feed-list">`; last = k; }
+        if (k !== last) { html += `${last ? "</ul>" : ""}<h3 class="feed-day" data-i="${i}">${esc(label(start))}</h3><ul class="feed-list">`; last = k; }
         const when = e.allDay ? "cały dzień" : hm.format(start) + (end > start && dayKey.format(end) === k ? "–" + hm.format(end) : "");
         const href = safeUrl(e.url) || safeUrl(e.site);
         const title = href ? `<a href="${esc(href)}" rel="noopener">${esc(e.title)}</a>` : esc(e.title);
-        html += `<li class="feed-event${collapse && i >= collapse ? " feed-extra" : ""}"><span class="feed-time">${esc(when)}</span>
+        html += `<li class="feed-event" data-i="${i}"><span class="feed-time">${esc(when)}</span>
 <span class="feed-body"><span class="feed-title">${title}</span>
 <span class="feed-meta">${esc(e.space)}${e.recurring ? ' · <span title="wydarzenie cykliczne">⟳</span>' : ""}${e.location ? " · " + esc(e.location) : ""}</span></span></li>`;
       });
       const items = box.querySelector(".feed-items");
       items.innerHTML = html + "</ul>";
-      const hidden = collapse ? Math.max(0, list.length - collapse) : 0;
-      if (hidden) {
+      if (collapse && list.length > collapse) {
         items.classList.add("collapsed");
-        items.insertAdjacentHTML("afterend", `<p class="feed-more-wrap"><button type="button" class="feed-more-btn" aria-expanded="false">Pokaż więcej (${hidden})</button></p>`);
+        items.insertAdjacentHTML("afterend", '<p class="feed-more-wrap"><button type="button" class="feed-more-btn" aria-expanded="false"></button></p>');
         const btn = box.querySelector(".feed-more-btn");
+        let shown = collapse;
+        // Shows the first n events (and the day headings they need) while the list is collapsed.
+        box.show = (n) => {
+          shown = Math.min(Math.max(n, collapse), list.length);
+          for (const el of items.querySelectorAll("[data-i]")) el.classList.toggle("feed-extra", +el.dataset.i >= shown);
+          btn.parentElement.hidden = shown >= list.length;
+          if (items.classList.contains("collapsed")) btn.textContent = `Pokaż więcej (${list.length - shown})`;
+        };
+        box.show(collapse);
         btn.addEventListener("click", () => {
           const open = items.classList.toggle("collapsed") === false;
           btn.setAttribute("aria-expanded", open);
-          btn.textContent = open ? "Pokaż mniej" : `Pokaż więcej (${hidden})`;
+          btn.textContent = open ? "Pokaż mniej" : `Pokaż więcej (${list.length - shown})`;
         });
       }
       status.remove();
@@ -154,7 +162,39 @@ ${img ? `<img class="feed-image" src="${esc(img.preview_url)}" alt="${esc(img.de
     root.classList.add("tabs-ready");
   }
 
+  // Rule for the full page on wide screens (two columns): the events column is as long as the posts column.
+  // It shows as many events as fit next to the posts (at least data-collapse), the rest after "Pokaż więcej".
+  // The posts column is short on purpose (data-limit, data-chars, small photos), so the page stays short.
+  const wide = matchMedia("(min-width: 44rem)");
+  function balance(root) {
+    const ev = root.querySelector("[data-spejsy-events]"), po = root.querySelector("[data-spejsy-posts]");
+    if (!ev?.show || !po) return;
+    const items = ev.querySelector(".feed-items");
+    const fit = () => {
+      if (!wide.matches || !items.classList.contains("collapsed")) return;
+      const target = po.getBoundingClientRect().bottom;
+      const all = items.querySelectorAll(".feed-event").length;
+      let n = +ev.dataset.collapse;
+      ev.show(n);
+      // Add events while the events column stays above the bottom of the posts column.
+      while (n < all) {
+        ev.show(n + 1);
+        if (ev.getBoundingClientRect().bottom > target) { ev.show(n); break; }
+        n++;
+      }
+    };
+    fit();
+    // Photos in posts load later and make the posts column longer.
+    let t;
+    new ResizeObserver(() => { clearTimeout(t); t = setTimeout(fit, 150); }).observe(po);
+    wide.addEventListener("change", fit);
+  }
+
   document.querySelectorAll("[data-spejsy-tabs]").forEach(tabs);
-  document.querySelectorAll("[data-spejsy-events]").forEach(events);
-  document.querySelectorAll("[data-spejsy-posts]").forEach(posts);
+  document.querySelectorAll(".spejsy-feed.full").forEach((root) => {
+    const ev = root.querySelector("[data-spejsy-events]"), po = root.querySelector("[data-spejsy-posts]");
+    Promise.allSettled([ev && events(ev), po && posts(po)]).then(() => balance(root));
+  });
+  document.querySelectorAll(".spejsy-feed:not(.full) [data-spejsy-events]").forEach(events);
+  document.querySelectorAll(".spejsy-feed:not(.full) [data-spejsy-posts]").forEach(posts);
 })();

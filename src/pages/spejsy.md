@@ -14,6 +14,7 @@ Wydarzenia pochodzą z kalendarzy zebranych na [hakerzy.info](https://hakerzy.in
 
 {% set full = true %}
 {% set postImages = true %}
+{% set postsLimit = 10 %}
 {% include "partials/spejsy.njk" %}
 
 ## Jak współpracują spejsy

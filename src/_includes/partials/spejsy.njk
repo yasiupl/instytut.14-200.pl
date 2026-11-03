@@ -18,7 +18,7 @@
     <p class="feed-status small" aria-live="polite">Wczytuję kalendarze… <noscript>Kalendarze są na <a href="https://hakerzy.info">hakerzy.info</a>.</noscript></p>
     <div class="feed-items"></div>
   </section>
-  <section class="feed-col" id="spejsy-posts-panel-{{ sfx }}" data-spejsy-posts data-limit="{{ postsLimit or 20 }}"{% if postImages %} data-images{% endif %} data-accounts="{{ spejsy | fediAccounts | dump | escape }}" aria-labelledby="spejsy-posts-{{ sfx }}">
+  <section class="feed-col" id="spejsy-posts-panel-{{ sfx }}" data-spejsy-posts data-limit="{{ postsLimit or 20 }}"{% if full %} data-chars="220"{% endif %}{% if postImages %} data-images{% endif %} data-accounts="{{ spejsy | fediAccounts | dump | escape }}" aria-labelledby="spejsy-posts-{{ sfx }}">
     <h3 id="spejsy-posts-{{ sfx }}" class="feed-head">Z fediwersum</h3>
     <p class="feed-status small" aria-live="polite">Wczytuję wpisy… <noscript>Linki do kont są na <a href="/spejsy/#spejsy-spaces-panel-full">liście spejsów</a>.</noscript></p>
     <div class="feed-items"></div>
