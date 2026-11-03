@@ -175,6 +175,7 @@ collections:
       - { label: "Lista", name: listOf, widget: hidden, required: false }
       - { label: "Mapa", name: map, widget: hidden, required: false }
       - { label: "Linki w nowej karcie", name: linksNewTab, widget: hidden, required: false }
+      - { label: "Wydarzenia i wpisy hakerspejsów", name: spejsyFeed, widget: hidden, required: false }
       - { label: "Tagi", name: tags, widget: hidden, required: false }
       - *ai
       - *ai_note

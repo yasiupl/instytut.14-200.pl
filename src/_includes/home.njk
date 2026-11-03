@@ -26,9 +26,19 @@ layout: base.njk
 </section>
 
 <section aria-labelledby="proj-title">
-  <h2 id="proj-title" class="section-title">Projekty</h2>
+  <h2 id="proj-title" class="section-title">Nasze projekty</h2>
   {%- set entries = collections.projekt | published | reverse | head(6) %}
   {%- set compact = true %}
   {%- include "partials/entry-list.njk" %}
   <p class="all"><a href="/projekty/">Wszystkie projekty →</a></p>
+</section>
+
+<section class="spejsy" aria-labelledby="spejsy-title">
+  <h2 id="spejsy-title" class="section-title">W innych hakerspejsach</h2>
+  <p>Hakerspejs to otwarta pracownia, którą prowadzą sami jej członkowie. Ludzie dzielą się w niej miejscem, narzędziami i wiedzą, żeby razem budować, naprawiać, programować i uczyć się od siebie. W Polsce działa kilkanaście takich miejsc. Na ich wzór tworzymy naszą <a href="/pracownia/">pracownię politechniczną</a>: miejsce, w którym w Iławie można razem coś zbudować, naprawić i zaprogramować. Zobacz, co się dzieje w spejsach, od których się uczymy.</p>
+  <p class="cta"><a class="button" href="/spejsy/">Wydarzenia i wpisy hakerspejsów →</a></p>
+  {%- set eventsLimit = 5 %}
+  {%- set postsLimit = 3 %}
+  {%- include "partials/spejsy.njk" %}
+  <p class="small">Dane: <a href="https://hakerzy.info">hakerzy.info</a> i konta spejsów w fediwersum.</p>
 </section>

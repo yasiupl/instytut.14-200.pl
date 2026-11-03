@@ -1,0 +1,43 @@
+{#- Events and fediverse posts of other hackerspaces, filled in by /assets/spejsy.js.
+    The page needs `spejsyFeed: true` in front matter (base.njk then loads the script).
+    Optional: eventsLimit, postsLimit, postImages (true = show the first photo of a post),
+    full (true = full page: adds the list of spaces; tabs on narrow screens; on wide screens
+    the events column is cut at the height of the posts column, the rest after "Pokaż wszystkie wydarzenia").
+    Without JS all parts are shown one below the other, and the links still lead to the sources. -#}
+{%- set sfx = 'full' if full else 'short' %}
+<div class="spejsy-feed{% if full %} full{% endif %}"{% if full %} data-spejsy-tabs{% endif %}>
+  {%- if full %}
+  <div class="feed-tabs" role="tablist" aria-label="Co pokazać">
+    <button type="button" role="tab" id="tab-events-{{ sfx }}" aria-controls="spejsy-events-panel-{{ sfx }}" aria-selected="true">Wydarzenia</button>
+    <button type="button" role="tab" id="tab-posts-{{ sfx }}" aria-controls="spejsy-posts-panel-{{ sfx }}" aria-selected="false" tabindex="-1">Wpisy</button>
+    <button type="button" role="tab" id="tab-spaces-{{ sfx }}" aria-controls="spejsy-spaces-panel-{{ sfx }}" aria-selected="false" tabindex="-1">Spejsy</button>
+  </div>
+  {%- endif %}
+  <section class="feed-col" id="spejsy-events-panel-{{ sfx }}" data-spejsy-events data-limit="{{ eventsLimit or 100 }}"{% if full %} data-full data-clip{% endif %} aria-labelledby="spejsy-events-{{ sfx }}">
+    <h3 id="spejsy-events-{{ sfx }}" class="feed-head">Najbliższe wydarzenia</h3>
+    <p class="feed-status small" aria-live="polite">Wczytuję kalendarze… <noscript>Kalendarze są na <a href="https://hakerzy.info">hakerzy.info</a>.</noscript></p>
+    <div class="feed-items"></div>
+  </section>
+  <section class="feed-col" id="spejsy-posts-panel-{{ sfx }}" data-spejsy-posts data-limit="{{ postsLimit or 20 }}"{% if full %} data-chars="220"{% endif %}{% if postImages %} data-images{% endif %} data-accounts="{{ spejsy | fediAccounts | dump | escape }}" aria-labelledby="spejsy-posts-{{ sfx }}">
+    <h3 id="spejsy-posts-{{ sfx }}" class="feed-head">Z fediwersum</h3>
+    <p class="feed-status small" aria-live="polite">Wczytuję wpisy… <noscript>Linki do kont są na <a href="/spejsy/#spejsy-spaces-panel-full">liście spejsów</a>.</noscript></p>
+    <div class="feed-items"></div>
+  </section>
+  {%- if full %}
+  <section class="feed-col feed-spaces" id="spejsy-spaces-panel-{{ sfx }}" aria-labelledby="spejsy-spaces-{{ sfx }}">
+    <h3 id="spejsy-spaces-{{ sfx }}" class="feed-head">Hakerspejsy w Polsce</h3>
+    <ul class="feed-list">
+      {%- for s in spejsy %}
+      <li><a class="feed-title" href="{{ s.url }}" rel="noopener">{{ s.name }}</a> <span class="feed-meta">{{ s.city }}</span>
+        {%- if s.calendar or s.fediverse %}
+        <span class="feed-links">
+          {%- if s.calendar %}<a href="{{ s.calendar }}" rel="noopener" title="Kalendarz (iCalendar): dodaj go do swojej aplikacji kalendarza">kalendarz</a>{% endif %}
+          {%- if s.calendar and s.fediverse %} · {% endif %}
+          {%- if s.fediverse %}<a href="https://{{ s.fediverse.host }}/@{{ s.fediverse.user }}" rel="noopener" title="@{{ s.fediverse.user }}@{{ s.fediverse.host }}">fediwersum</a>{% endif %}
+        </span>
+        {%- endif %}</li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endif %}
+</div>

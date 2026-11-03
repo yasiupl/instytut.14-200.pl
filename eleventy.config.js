@@ -77,6 +77,10 @@ ${content.trim()}
   // Drafts (front matter `draft: true`) have their own address but are left out of lists, feeds and the sitemap.
   eleventyConfig.addFilter("published", (arr = []) => arr.filter((p) => !p.data.draft));
   eleventyConfig.addFilter("head", (arr = [], n) => arr.slice(0, n));
+  // Fediverse accounts of the hackerspaces (src/_data/spejsy.js) for /assets/spejsy.js.
+  eleventyConfig.addFilter("fediAccounts", (list = []) =>
+    list.filter((s) => s.fediverse).map((s) => ({ name: s.name, host: s.fediverse.host, user: s.fediverse.user }))
+  );
   eleventyConfig.addFilter("pluck", (arr = [], key) => arr.map((o) => o[key]));
   // Link previews (og:image): a 1200×630 JPEG per page, made after the build (scripts/og-image.mjs).
   // Photo: front matter `image`, else the first local image in the page content, else none (plain background).
