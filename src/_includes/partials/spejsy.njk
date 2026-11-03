@@ -1,7 +1,8 @@
 {#- Events and fediverse posts of other hackerspaces, filled in by /assets/spejsy.js.
     The page needs `spejsyFeed: true` in front matter (base.njk then loads the script).
     Optional: eventsLimit, postsLimit, postImages (true = show the first photo of a post),
-    full (true = full page: adds the list of spaces, and tabs on narrow screens).
+    full (true = full page: adds the list of spaces; tabs on narrow screens; on wide screens
+    the first 8 events and a "Pokaż więcej" button).
     Without JS all parts are shown one below the other, and the links still lead to the sources. -#}
 {%- set sfx = 'full' if full else 'short' %}
 <div class="spejsy-feed{% if full %} full{% endif %}"{% if full %} data-spejsy-tabs{% endif %}>
@@ -12,7 +13,7 @@
     <button type="button" role="tab" id="tab-spaces-{{ sfx }}" aria-controls="spejsy-spaces-panel-{{ sfx }}" aria-selected="false" tabindex="-1">Spejsy</button>
   </div>
   {%- endif %}
-  <section class="feed-col" id="spejsy-events-panel-{{ sfx }}" data-spejsy-events data-limit="{{ eventsLimit or 100 }}"{% if full %} data-full{% endif %} aria-labelledby="spejsy-events-{{ sfx }}">
+  <section class="feed-col" id="spejsy-events-panel-{{ sfx }}" data-spejsy-events data-limit="{{ eventsLimit or 100 }}"{% if full %} data-full data-collapse="8"{% endif %} aria-labelledby="spejsy-events-{{ sfx }}">
     <h3 id="spejsy-events-{{ sfx }}" class="feed-head">Najbliższe wydarzenia</h3>
     <p class="feed-status small" aria-live="polite">Wczytuję kalendarze… <noscript>Kalendarze są na <a href="https://hakerzy.info">hakerzy.info</a>.</noscript></p>
     <div class="feed-items"></div>
@@ -27,8 +28,14 @@
     <h3 id="spejsy-spaces-{{ sfx }}" class="feed-head">Hakerspejsy w Polsce</h3>
     <ul class="feed-list">
       {%- for s in spejsy %}
-      <li><a href="{{ s.url }}" rel="noopener">{{ s.name }}</a> <span class="feed-meta">{{ s.city }}</span>
-        {%- if s.fediverse %}<br><a class="feed-meta" href="https://{{ s.fediverse.host }}/@{{ s.fediverse.user }}" rel="noopener">@{{ s.fediverse.user }}@{{ s.fediverse.host }}</a>{% endif %}</li>
+      <li><a class="feed-title" href="{{ s.url }}" rel="noopener">{{ s.name }}</a> <span class="feed-meta">{{ s.city }}</span>
+        {%- if s.calendar or s.fediverse %}
+        <span class="feed-links">
+          {%- if s.calendar %}<a href="{{ s.calendar }}" rel="noopener" title="Kalendarz (iCalendar): dodaj go do swojej aplikacji kalendarza">kalendarz</a>{% endif %}
+          {%- if s.calendar and s.fediverse %} · {% endif %}
+          {%- if s.fediverse %}<a href="https://{{ s.fediverse.host }}/@{{ s.fediverse.user }}" rel="noopener" title="@{{ s.fediverse.user }}@{{ s.fediverse.host }}">fediwersum</a>{% endif %}
+        </span>
+        {%- endif %}</li>
       {%- endfor %}
     </ul>
   </section>

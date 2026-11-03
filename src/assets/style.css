@@ -301,9 +301,21 @@ label { display: block; margin-bottom: .25rem; font-size: .9375rem; }
 .feed-image { display: block; max-height: 14rem; margin-top: .5rem; border-radius: var(--radius); background: var(--code-bg); object-fit: cover; }
 .feed-tabs { display: none; }
 .feed-spaces li { line-height: 1.45; }
+.feed-spaces .feed-title { color: var(--fg); text-decoration: none; }
+.feed-spaces .feed-title:hover { color: var(--accent); text-decoration: underline; }
+.feed-links { display: block; font: .8125rem var(--mono); }
+.feed-more-wrap { display: none; margin: .75rem 0 0; }
+.feed-more-btn {
+  font: 600 .9375rem var(--sans); color: var(--accent); cursor: pointer; min-height: 2.75rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .4rem .9rem;
+}
+.feed-more-btn:hover { border-color: var(--accent); }
 @media (min-width: 44rem) {
   .spejsy-feed.full { grid-template-columns: 1fr 1fr; }
   .spejsy-feed.full .feed-spaces { grid-column: 1 / -1; }
+  /* Wide screens: the first 8 events, the rest after "Pokaż więcej". */
+  .feed-more-wrap { display: block; }
+  .collapsed .feed-extra { display: none; }
 }
 /* Narrow screens: one panel at a time, so the posts and the list of spaces are not under a long list. */
 @media (max-width: 43.99rem) {

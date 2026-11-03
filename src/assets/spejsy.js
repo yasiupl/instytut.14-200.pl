@@ -31,19 +31,34 @@
       const data = await r.json();
       const list = (data.events || []).filter((e) => Date.parse(e.end) > Date.now()).slice(0, limit);
       if (!list.length) { status.textContent = "Brak zaplanowanych wydarzeń."; return; }
+      // data-collapse="N": events after the first N get the class "feed-extra". CSS hides them on wide screens
+      // until "Pokaż więcej" is clicked; on narrow screens (tabs) all events stay visible.
+      const collapse = +box.dataset.collapse || 0;
       let html = "", last = "";
-      for (const e of list) {
+      list.forEach((e, i) => {
         const start = new Date(e.start), end = new Date(e.end);
         const k = dayKey.format(start);
-        if (k !== last) { html += `${last ? "</ul>" : ""}<h3 class="feed-day">${esc(label(start))}</h3><ul class="feed-list">`; last = k; }
+        if (k !== last) { html += `${last ? "</ul>" : ""}<h3 class="feed-day${collapse && i >= collapse ? " feed-extra" : ""}">${esc(label(start))}</h3><ul class="feed-list">`; last = k; }
         const when = e.allDay ? "cały dzień" : hm.format(start) + (end > start && dayKey.format(end) === k ? "–" + hm.format(end) : "");
         const href = safeUrl(e.url) || safeUrl(e.site);
         const title = href ? `<a href="${esc(href)}" rel="noopener">${esc(e.title)}</a>` : esc(e.title);
-        html += `<li class="feed-event"><span class="feed-time">${esc(when)}</span>
+        html += `<li class="feed-event${collapse && i >= collapse ? " feed-extra" : ""}"><span class="feed-time">${esc(when)}</span>
 <span class="feed-body"><span class="feed-title">${title}</span>
 <span class="feed-meta">${esc(e.space)}${e.recurring ? ' · <span title="wydarzenie cykliczne">⟳</span>' : ""}${e.location ? " · " + esc(e.location) : ""}</span></span></li>`;
+      });
+      const items = box.querySelector(".feed-items");
+      items.innerHTML = html + "</ul>";
+      const hidden = collapse ? Math.max(0, list.length - collapse) : 0;
+      if (hidden) {
+        items.classList.add("collapsed");
+        items.insertAdjacentHTML("afterend", `<p class="feed-more-wrap"><button type="button" class="feed-more-btn" aria-expanded="false">Pokaż więcej (${hidden})</button></p>`);
+        const btn = box.querySelector(".feed-more-btn");
+        btn.addEventListener("click", () => {
+          const open = items.classList.toggle("collapsed") === false;
+          btn.setAttribute("aria-expanded", open);
+          btn.textContent = open ? "Pokaż mniej" : `Pokaż więcej (${hidden})`;
+        });
       }
-      box.querySelector(".feed-items").innerHTML = html + "</ul>";
       status.remove();
       const missing = (data.sources || []).filter((s) => !s.ok).map((s) => s.name);
       if (missing.length && box.dataset.full !== undefined) {
