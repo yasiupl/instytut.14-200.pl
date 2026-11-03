@@ -2,7 +2,7 @@
     The page needs `spejsyFeed: true` in front matter (base.njk then loads the script).
     Optional: eventsLimit, postsLimit, postImages (true = show the first photo of a post),
     full (true = full page: adds the list of spaces; tabs on narrow screens; on wide screens
-    the first 8 events and a "Pokaż więcej" button).
+    the events column is as long as the posts column, at least 8 events, the rest after "Pokaż więcej").
     Without JS all parts are shown one below the other, and the links still lead to the sources. -#}
 {%- set sfx = 'full' if full else 'short' %}
 <div class="spejsy-feed{% if full %} full{% endif %}"{% if full %} data-spejsy-tabs{% endif %}>

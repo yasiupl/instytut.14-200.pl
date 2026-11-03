@@ -32,6 +32,7 @@ The page `/spejsy/` and a short section on the home page show the events and the
   - `npm start` does not run the function. To test it on your computer, use `vercel dev`. On Netlify or Cloudflare Pages the events list stays empty and shows a link to hakerzy.info.
   - To see why a calendar is missing, open `/api/kalendarze` and read `sources`.
 - **Posts**: `src/assets/spejsy.js` gets them in the browser from the Mastodon API of each account (`/api/v1/accounts/lookup`, `/api/v1/accounts/:id/statuses`). Replies and boosts are not shown. The text of a post is shown as plain text, never as HTML.
+- Layout of `/spejsy/`: on a wide screen the events and the posts are in two columns. The events column shows as many events as fit next to the posts column (minimum 8). The other events show after "Pokaż więcej". To make the page shorter, decrease the number of posts (`postsLimit` in `src/pages/spejsy.md`). On a narrow screen, tabs show one part at a time.
 - Markup: `src/_includes/partials/spejsy.njk`. A page that includes it must have `spejsyFeed: true` in its front matter, so that `base.njk` loads `spejsy.js`.
 
 ## Editing in the browser
