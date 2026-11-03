@@ -320,5 +320,5 @@ label { display: block; margin-bottom: .25rem; font-size: .9375rem; }
   .tabs-ready > .feed-col > .feed-head { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 }
 @media (max-width: 34rem) {
-  .feed-time { width: 5rem; }
+  .feed-time { width: 5.75rem; font-size: .75rem; }
 }
