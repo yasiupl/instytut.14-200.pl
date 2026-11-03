@@ -172,14 +172,19 @@ ${img ? `<img class="feed-image" src="${esc(img.preview_url)}" alt="${esc(img.de
     const items = ev.querySelector(".feed-items");
     const fit = () => {
       if (!wide.matches || !items.classList.contains("collapsed")) return;
-      const target = po.getBoundingClientRect().bottom;
+      // Measure the content, not the sections: grid cells stretch to the height of the row.
+      const target = po.querySelector(".feed-items").getBoundingClientRect().bottom;
+      const end = () => {
+        const more = ev.querySelector(".feed-more-wrap");
+        return (more && !more.hidden ? more : items).getBoundingClientRect().bottom;
+      };
       const all = items.querySelectorAll(".feed-event").length;
       let n = +ev.dataset.collapse;
       ev.show(n);
       // Add events while the events column stays above the bottom of the posts column.
       while (n < all) {
         ev.show(n + 1);
-        if (ev.getBoundingClientRect().bottom > target) { ev.show(n); break; }
+        if (end() > target) { ev.show(n); break; }
         n++;
       }
     };

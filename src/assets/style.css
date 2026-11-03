@@ -278,7 +278,7 @@ label { display: block; margin-bottom: .25rem; font-size: .9375rem; }
 .page-hero figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }
 
 /* Other hackerspaces: events + fediverse posts (partials/spejsy.njk, assets/spejsy.js) */
-.spejsy-feed { display: grid; gap: 0 2rem; }
+.spejsy-feed { display: grid; gap: 0 2rem; align-items: start; }
 .spejsy-feed.full { margin-top: 1.5rem; }
 .feed-head { font-size: 1rem; margin: 1.5rem 0 .25rem; font-family: var(--mono); font-weight: 600; color: var(--accent); text-transform: lowercase; }
 .feed-day { font: 500 .8125rem var(--mono); color: var(--muted); margin: 1rem 0 0; text-transform: lowercase; }
