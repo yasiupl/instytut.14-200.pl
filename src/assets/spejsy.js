@@ -31,47 +31,42 @@
       const data = await r.json();
       const list = (data.events || []).filter((e) => Date.parse(e.end) > Date.now()).slice(0, limit);
       if (!list.length) { status.textContent = "Brak zaplanowanych wydarzeń."; return; }
-      // data-collapse="N": only the first N events show on wide screens, the rest after "Pokaż więcej".
-      // balance() changes N to fit the posts column, but never below data-min (default 3).
-      // balance() can raise N later. On narrow screens (tabs) all events show.
-      const collapse = +box.dataset.collapse || 0;
       let html = "", last = "";
       list.forEach((e, i) => {
         const start = new Date(e.start), end = new Date(e.end);
         const k = dayKey.format(start);
-        if (k !== last) { html += `${last ? "</ul>" : ""}<h3 class="feed-day" data-i="${i}">${esc(label(start))}</h3><ul class="feed-list">`; last = k; }
+        if (k !== last) { html += `${last ? "</ul>" : ""}<h3 class="feed-day">${esc(label(start))}</h3><ul class="feed-list">`; last = k; }
         const when = e.allDay ? "cały dzień" : hm.format(start) + (end > start && dayKey.format(end) === k ? "–" + hm.format(end) : "");
         const href = safeUrl(e.url) || safeUrl(e.site);
         const title = href ? `<a href="${esc(href)}" rel="noopener">${esc(e.title)}</a>` : esc(e.title);
-        html += `<li class="feed-event" data-i="${i}"><span class="feed-time">${esc(when)}</span>
+        html += `<li class="feed-event"><span class="feed-time">${esc(when)}</span>
 <span class="feed-body"><span class="feed-title">${title}</span>
 <span class="feed-meta">${esc(e.space)}${e.recurring ? ' · <span title="wydarzenie cykliczne">⟳</span>' : ""}${e.location ? " · " + esc(e.location) : ""}</span></span></li>`;
       });
       const items = box.querySelector(".feed-items");
       items.innerHTML = html + "</ul>";
-      if (collapse && list.length > collapse) {
-        items.classList.add("collapsed");
-        items.insertAdjacentHTML("afterend", '<p class="feed-more-wrap"><button type="button" class="feed-more-btn" aria-expanded="false"></button></p>');
+      // data-clip: on wide screens CSS cuts the events column at the height of the posts column
+      // (see "Other hackerspaces" in style.css). The button removes the cut. The browser does the layout,
+      // so it does not matter which column loads first or when the photos load.
+      if (box.dataset.clip !== undefined) {
+        box.classList.add("clip");
+        box.insertAdjacentHTML("beforeend", `<p class="feed-more-wrap"><button type="button" class="feed-more-btn" aria-expanded="false">Pokaż wszystkie wydarzenia (${list.length})</button></p>`);
         const btn = box.querySelector(".feed-more-btn");
-        let shown = collapse;
-        // Shows the first n events (and the day headings they need) while the list is collapsed.
-        box.show = (n) => {
-          shown = Math.min(Math.max(n, +box.dataset.min || 3), list.length);
-          for (const el of items.querySelectorAll("[data-i]")) el.classList.toggle("feed-extra", +el.dataset.i >= shown);
-          btn.parentElement.hidden = shown >= list.length;
-          if (items.classList.contains("collapsed")) btn.textContent = `Pokaż więcej (${list.length - shown})`;
-        };
-        box.show(collapse);
         btn.addEventListener("click", () => {
-          const open = items.classList.toggle("collapsed") === false;
+          const open = box.classList.toggle("clip") === false;
           btn.setAttribute("aria-expanded", open);
-          btn.textContent = open ? "Pokaż mniej" : `Pokaż więcej (${list.length - shown})`;
+          btn.textContent = open ? "Pokaż mniej" : `Pokaż wszystkie wydarzenia (${list.length})`;
+          if (!open) box.scrollIntoView({ block: "nearest" });
         });
+        // The button shows only when the cut hides something.
+        new ResizeObserver(() => {
+          btn.parentElement.classList.toggle("needed", !box.classList.contains("clip") || items.scrollHeight > items.clientHeight + 1);
+        }).observe(box);
       }
       status.remove();
       const missing = (data.sources || []).filter((s) => !s.ok).map((s) => s.name);
       if (missing.length && box.dataset.full !== undefined) {
-        box.insertAdjacentHTML("beforeend", `<p class="small">Teraz nie udało się pobrać kalendarza: ${esc(missing.join(", "))}.</p>`);
+        items.insertAdjacentHTML("beforebegin", `<p class="small">Teraz nie udało się pobrać kalendarza: ${esc(missing.join(", "))}.</p>`);
       }
     } catch {
       status.innerHTML = 'Nie udało się pobrać kalendarzy. Zobacz wydarzenia na <a href="https://hakerzy.info">hakerzy.info</a>.';
@@ -170,42 +165,7 @@ ${img ? `<img class="feed-image" src="${esc(img.preview_url)}" alt="${esc(img.de
     root.classList.add("tabs-ready");
   }
 
-  // Rule for the full page on wide screens (two columns): the events column is as long as the posts column.
-  // It shows as many events as fit next to the posts (at least data-min, default 3), the rest after "Pokaż więcej".
-  // The posts column is short on purpose (data-limit, data-chars, small photos), so the page stays short.
-  const wide = matchMedia("(min-width: 44rem)");
-  function balance(root) {
-    const ev = root.querySelector("[data-spejsy-events]"), po = root.querySelector("[data-spejsy-posts]");
-    if (!ev?.show || !po) return;
-    const items = ev.querySelector(".feed-items");
-    const fit = () => {
-      if (!wide.matches || !items.classList.contains("collapsed")) return;
-      // Measure the content, not the sections: grid cells stretch to the height of the row.
-      const target = po.querySelector(".feed-items").getBoundingClientRect().bottom;
-      // The last visible part of the events column: the button, a note about missing calendars, or the list.
-      const end = () => Math.max(...[...ev.children].filter((el) => el.offsetParent).map((el) => el.getBoundingClientRect().bottom));
-      const all = items.querySelectorAll(".feed-event").length;
-      let n = +ev.dataset.min || 3;
-      ev.show(n);
-      // Add events while the events column stays above the bottom of the posts column.
-      while (n < all) {
-        ev.show(n + 1);
-        if (end() > target) { ev.show(n); break; }
-        n++;
-      }
-    };
-    fit();
-    // Photos in posts load later and make the posts column longer.
-    let t;
-    new ResizeObserver(() => { clearTimeout(t); t = setTimeout(fit, 150); }).observe(po);
-    wide.addEventListener("change", fit);
-  }
-
   document.querySelectorAll("[data-spejsy-tabs]").forEach(tabs);
-  document.querySelectorAll(".spejsy-feed.full").forEach((root) => {
-    const ev = root.querySelector("[data-spejsy-events]"), po = root.querySelector("[data-spejsy-posts]");
-    Promise.allSettled([ev && events(ev), po && posts(po)]).then(() => balance(root));
-  });
-  document.querySelectorAll(".spejsy-feed:not(.full) [data-spejsy-events]").forEach(events);
-  document.querySelectorAll(".spejsy-feed:not(.full) [data-spejsy-posts]").forEach(posts);
+  document.querySelectorAll("[data-spejsy-events]").forEach(events);
+  document.querySelectorAll("[data-spejsy-posts]").forEach(posts);
 })();

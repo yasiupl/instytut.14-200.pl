@@ -2,7 +2,7 @@
     The page needs `spejsyFeed: true` in front matter (base.njk then loads the script).
     Optional: eventsLimit, postsLimit, postImages (true = show the first photo of a post),
     full (true = full page: adds the list of spaces; tabs on narrow screens; on wide screens
-    the events column is as long as the posts column, at least 8 events, the rest after "Pokaż więcej").
+    the events column is cut at the height of the posts column, the rest after "Pokaż wszystkie wydarzenia").
     Without JS all parts are shown one below the other, and the links still lead to the sources. -#}
 {%- set sfx = 'full' if full else 'short' %}
 <div class="spejsy-feed{% if full %} full{% endif %}"{% if full %} data-spejsy-tabs{% endif %}>
@@ -13,7 +13,7 @@
     <button type="button" role="tab" id="tab-spaces-{{ sfx }}" aria-controls="spejsy-spaces-panel-{{ sfx }}" aria-selected="false" tabindex="-1">Spejsy</button>
   </div>
   {%- endif %}
-  <section class="feed-col" id="spejsy-events-panel-{{ sfx }}" data-spejsy-events data-limit="{{ eventsLimit or 100 }}"{% if full %} data-full data-collapse="8"{% endif %} aria-labelledby="spejsy-events-{{ sfx }}">
+  <section class="feed-col" id="spejsy-events-panel-{{ sfx }}" data-spejsy-events data-limit="{{ eventsLimit or 100 }}"{% if full %} data-full data-clip{% endif %} aria-labelledby="spejsy-events-{{ sfx }}">
     <h3 id="spejsy-events-{{ sfx }}" class="feed-head">Najbliższe wydarzenia</h3>
     <p class="feed-status small" aria-live="polite">Wczytuję kalendarze… <noscript>Kalendarze są na <a href="https://hakerzy.info">hakerzy.info</a>.</noscript></p>
     <div class="feed-items"></div>

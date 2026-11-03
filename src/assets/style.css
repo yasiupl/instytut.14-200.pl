@@ -313,10 +313,16 @@ label { display: block; margin-bottom: .25rem; font-size: .9375rem; }
 @media (min-width: 44rem) {
   .spejsy-feed.full { grid-template-columns: 1fr 1fr; }
   .spejsy-feed.full .feed-spaces { grid-column: 1 / -1; }
-  /* Wide screens: the first 8 events, the rest after "Pokaż więcej". */
-  .feed-more-wrap { display: block; }
-  .feed-more-wrap[hidden] { display: none; }
-  .collapsed .feed-extra { display: none; }
+  /* Wide screens: the events column is as tall as the posts column. `contain: size` takes the events out of
+     the row height, so the posts set it; `stretch` then gives the events that height. The list is cut
+     with a fade, and the button removes the cut. No script measures anything, so load order does not matter. */
+  .spejsy-feed.full > .clip { align-self: stretch; contain: size; min-height: 24rem; display: flex; flex-direction: column; }
+  .clip > .feed-items {
+    flex: 1 1 0; min-height: 0; overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 4rem), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 4rem), transparent);
+  }
+  .feed-more-wrap.needed { display: block; }
 }
 /* Narrow screens: one panel at a time, so the posts and the list of spaces are not under a long list. */
 @media (max-width: 43.99rem) {
