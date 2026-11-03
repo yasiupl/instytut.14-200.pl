@@ -111,6 +111,35 @@ ${img ? `<img class="feed-image" src="${esc(img.preview_url)}" alt="${esc(img.de
     status.remove();
   }
 
+  // Tabs (full page only). CSS shows them on narrow screens only; on wide screens all panels stay visible.
+  function tabs(root) {
+    const list = [...root.querySelectorAll('[role="tab"]')];
+    const select = (tab, focus) => {
+      for (const t of list) {
+        const on = t === tab;
+        t.setAttribute("aria-selected", on);
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute("aria-controls"))?.classList.toggle("active", on);
+      }
+      if (focus) tab.focus();
+    };
+    list.forEach((t, i) => {
+      document.getElementById(t.getAttribute("aria-controls"))?.setAttribute("role", "tabpanel");
+      t.addEventListener("click", () => select(t));
+      t.addEventListener("keydown", (e) => {
+        const k = { ArrowRight: 1, ArrowLeft: -1, Home: -i, End: list.length - 1 - i }[e.key];
+        if (k === undefined) return;
+        e.preventDefault();
+        select(list[(i + k + list.length) % list.length], true);
+      });
+    });
+    // A link to a panel (e.g. /spejsy/#spejsy-spaces-panel-full) opens its tab.
+    const fromHash = list.find((t) => location.hash === "#" + t.getAttribute("aria-controls"));
+    select(fromHash || list[0]);
+    root.classList.add("tabs-ready");
+  }
+
+  document.querySelectorAll("[data-spejsy-tabs]").forEach(tabs);
   document.querySelectorAll("[data-spejsy-events]").forEach(events);
   document.querySelectorAll("[data-spejsy-posts]").forEach(posts);
 })();

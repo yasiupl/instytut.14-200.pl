@@ -16,11 +16,7 @@ Wydarzenia pochodzą z kalendarzy zebranych na [hakerzy.info](https://hakerzy.in
 {% set postImages = true %}
 {% include "partials/spejsy.njk" %}
 
-## Hakerspejsy w Polsce
-
-{% for s in spejsy %}
-- [{{ s.name }}]({{ s.url }}) ({{ s.city }}){% if s.fediverse %} · fediwersum: [@{{ s.fediverse.user }}@{{ s.fediverse.host }}](https://{{ s.fediverse.host }}/@{{ s.fediverse.user }}){% endif %}
-{%- endfor %}
+## Jak współpracują spejsy
 
 Spejsy w Polsce nie są jedną organizacją, ale znają się i współpracują. Mają wspólny czat [międzyspejs](https://matrix.to/#/%23miedzyspejs:hackerspace.pl) i razem robią [Cebula Camp](https://cebula.camp).
 

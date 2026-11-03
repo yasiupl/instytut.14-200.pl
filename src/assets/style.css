@@ -299,8 +299,25 @@ label { display: block; margin-bottom: .25rem; font-size: .9375rem; }
 .feed-text { margin: 0; white-space: pre-line; font-size: .9375rem; color: var(--fg); }
 .feed-more { white-space: nowrap; font-size: .875rem; }
 .feed-image { display: block; max-height: 14rem; margin-top: .5rem; border-radius: var(--radius); background: var(--code-bg); object-fit: cover; }
+.feed-tabs { display: none; }
+.feed-spaces li { line-height: 1.45; }
 @media (min-width: 44rem) {
   .spejsy-feed.full { grid-template-columns: 1fr 1fr; }
+  .spejsy-feed.full .feed-spaces { grid-column: 1 / -1; }
+}
+/* Narrow screens: one panel at a time, so the posts and the list of spaces are not under a long list. */
+@media (max-width: 43.99rem) {
+  .tabs-ready .feed-tabs {
+    display: flex; gap: .25rem; position: sticky; top: 0; z-index: 2;
+    background: var(--bg); border-bottom: 1px solid var(--line); padding-top: .5rem;
+  }
+  .feed-tabs [role="tab"] {
+    flex: 1; min-height: 2.75rem; font: 600 .9375rem var(--sans); color: var(--muted); cursor: pointer;
+    background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  }
+  .feed-tabs [aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); }
+  .tabs-ready > .feed-col:not(.active) { display: none; }
+  .tabs-ready > .feed-col > .feed-head { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 }
 @media (max-width: 34rem) {
   .feed-time { width: 5rem; }
