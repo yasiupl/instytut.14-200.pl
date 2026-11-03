@@ -1,0 +1,16 @@
+{#- Events and fediverse posts of other hackerspaces, filled in by /assets/spejsy.js.
+    The page needs `spejsyFeed: true` in front matter (base.njk then loads the script).
+    Optional: eventsLimit, postsLimit, postImages (true = show the first photo of a post), full (true = full page).
+    Without JS the links below still lead to the sources. -#}
+<div class="spejsy-feed{% if full %} full{% endif %}">
+  <section class="feed-col" data-spejsy-events data-limit="{{ eventsLimit or 100 }}"{% if full %} data-full{% endif %} aria-labelledby="spejsy-events-{{ 'full' if full else 'short' }}">
+    <h3 id="spejsy-events-{{ 'full' if full else 'short' }}" class="feed-head">Najbliższe wydarzenia</h3>
+    <p class="feed-status small" aria-live="polite">Wczytuję kalendarze… <noscript>Kalendarze są na <a href="https://hakerzy.info">hakerzy.info</a>.</noscript></p>
+    <div class="feed-items"></div>
+  </section>
+  <section class="feed-col" data-spejsy-posts data-limit="{{ postsLimit or 20 }}"{% if postImages %} data-images{% endif %} data-accounts="{{ spejsy | fediAccounts | dump | escape }}" aria-labelledby="spejsy-posts-{{ 'full' if full else 'short' }}">
+    <h3 id="spejsy-posts-{{ 'full' if full else 'short' }}" class="feed-head">Z fediwersum</h3>
+    <p class="feed-status small" aria-live="polite">Wczytuję wpisy… <noscript>Linki do kont są na <a href="/spejsy/">liście spejsów</a>.</noscript></p>
+    <div class="feed-items"></div>
+  </section>
+</div>

@@ -276,3 +276,32 @@ label { display: block; margin-bottom: .25rem; font-size: .9375rem; }
 .page-hero { margin: 1.25rem 0 0; }
 .page-hero img { display: block; width: 100%; max-height: 28rem; object-fit: cover; border-radius: var(--radius); background: var(--code-bg); }
 .page-hero figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }
+
+/* Other hackerspaces: events + fediverse posts (partials/spejsy.njk, assets/spejsy.js) */
+.spejsy-feed { display: grid; gap: 0 2rem; }
+.spejsy-feed.full { margin-top: 1.5rem; }
+.feed-head { font-size: 1rem; margin: 1.5rem 0 .25rem; font-family: var(--mono); font-weight: 600; color: var(--accent); text-transform: lowercase; }
+.feed-day { font: 500 .8125rem var(--mono); color: var(--muted); margin: 1rem 0 0; text-transform: lowercase; }
+.feed-list { list-style: none; padding: 0; margin: 0; }
+.feed-list li { border-bottom: 1px solid var(--line); padding: .55rem 0; }
+.feed-event { display: flex; gap: 1rem; align-items: baseline; }
+.feed-time { flex: none; width: 6.5rem; font: .8125rem var(--mono); color: var(--muted); }
+.feed-body { display: flex; flex-direction: column; min-width: 0; }
+.feed-title { font-weight: 600; line-height: 1.35; }
+.feed-title a { color: var(--fg); text-decoration: none; }
+.feed-title a:hover { color: var(--accent); text-decoration: underline; }
+.feed-meta { font-size: .875rem; color: var(--muted); }
+.feed-post-head { display: flex; align-items: center; gap: .5rem; margin: 0 0 .25rem; font-weight: 600; font-size: .9375rem; }
+.feed-post-head a { color: var(--fg); text-decoration: none; }
+.feed-post-head a:hover { text-decoration: underline; }
+.feed-avatar { width: 1.75rem; height: 1.75rem; border-radius: 4px; background: var(--code-bg); }
+.feed-date { margin-left: auto; font: 400 .8125rem var(--mono); color: var(--muted) !important; white-space: nowrap; }
+.feed-text { margin: 0; white-space: pre-line; font-size: .9375rem; color: var(--fg); }
+.feed-more { white-space: nowrap; font-size: .875rem; }
+.feed-image { display: block; max-height: 14rem; margin-top: .5rem; border-radius: var(--radius); background: var(--code-bg); object-fit: cover; }
+@media (min-width: 44rem) {
+  .spejsy-feed.full { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 34rem) {
+  .feed-time { width: 5rem; }
+}

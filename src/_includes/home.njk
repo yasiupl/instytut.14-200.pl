@@ -32,3 +32,12 @@ layout: base.njk
   {%- include "partials/entry-list.njk" %}
   <p class="all"><a href="/projekty/">Wszystkie projekty →</a></p>
 </section>
+
+<section class="spejsy" aria-labelledby="spejsy-title">
+  <h2 id="spejsy-title" class="section-title">U innych hakerspejsów</h2>
+  <p class="small">Co się dzieje w hakerspejsach w Polsce. Dane: <a href="https://hakerzy.info">hakerzy.info</a> i konta spejsów w fediwersum.</p>
+  {%- set eventsLimit = 5 %}
+  {%- set postsLimit = 3 %}
+  {%- include "partials/spejsy.njk" %}
+  <p class="all"><a href="/spejsy/">Wszystkie wydarzenia i wpisy →</a></p>
+</section>

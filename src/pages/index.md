@@ -7,4 +7,5 @@ permalink: "/"
 redirect_from: ["/home"]
 image: "/assets/img/b5f1d59cc393.webp"
 layout: "home.njk"
+spejsyFeed: true
 ---
