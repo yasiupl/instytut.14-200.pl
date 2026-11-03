@@ -10,7 +10,7 @@ spejsyFeed: true
 
 Hakerspejs to otwarta pracownia, którą prowadzą sami jej członkowie. Ludzie dzielą się w niej miejscem, narzędziami i wiedzą, żeby razem budować, naprawiać, programować i uczyć się od siebie. W Polsce działa kilkanaście takich miejsc.
 
-Na nich wzorujemy się, kiedy planujemy w Iławie [Otwarte Pracownie Eksperymentu](/aktualnosci/otwarte-pracownie-eksperymentu/): wspólny warsztat dla dzieci, młodzieży i dorosłych. Zanim powstanie, działamy na mniejszą skalę w [pracowni politechnicznej](/pracownia/). Tu widać, co się dzieje w spejsach, od których się uczymy.
+Na ich wzór tworzymy naszą [pracownię politechniczną](/pracownia/): miejsce, w którym w Iławie można razem coś zbudować, naprawić i zaprogramować. W przyszłości chcemy z niej zrobić duży wspólny warsztat dla dzieci, młodzieży i dorosłych (nazwa robocza: [Otwarte Pracownie Eksperymentu](/aktualnosci/otwarte-pracownie-eksperymentu/)). Tu widać, co się dzieje w spejsach, od których się uczymy.
 
 Wydarzenia pochodzą z kalendarzy zebranych na [hakerzy.info](https://hakerzy.info). Wpisy pochodzą z kont spejsów w [fediwersum](/fediverse/). Obie listy odświeżają się same.
 
