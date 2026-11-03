@@ -32,6 +32,7 @@
       const list = (data.events || []).filter((e) => Date.parse(e.end) > Date.now()).slice(0, limit);
       if (!list.length) { status.textContent = "Brak zaplanowanych wydarzeń."; return; }
       // data-collapse="N": only the first N events show on wide screens, the rest after "Pokaż więcej".
+      // balance() changes N to fit the posts column, but never below data-min (default 3).
       // balance() can raise N later. On narrow screens (tabs) all events show.
       const collapse = +box.dataset.collapse || 0;
       let html = "", last = "";
@@ -55,7 +56,7 @@
         let shown = collapse;
         // Shows the first n events (and the day headings they need) while the list is collapsed.
         box.show = (n) => {
-          shown = Math.min(Math.max(n, collapse), list.length);
+          shown = Math.min(Math.max(n, +box.dataset.min || 3), list.length);
           for (const el of items.querySelectorAll("[data-i]")) el.classList.toggle("feed-extra", +el.dataset.i >= shown);
           btn.parentElement.hidden = shown >= list.length;
           if (items.classList.contains("collapsed")) btn.textContent = `Pokaż więcej (${list.length - shown})`;
@@ -86,6 +87,13 @@
     if (s.length <= max) return s;
     const c = s.slice(0, max);
     return c.slice(0, Math.max(c.lastIndexOf(" "), max * 0.6)).replace(/[\s,.;:–-]+$/, "") + "…";
+  };
+
+  // Width and height of a photo preview, so its space is kept before it loads (lazy photos below the fold
+  // would otherwise have no height, and the events column would be measured against a too short posts column).
+  const size = (m) => {
+    const w = m.meta?.small?.width, h = m.meta?.small?.height;
+    return w > 0 && h > 0 ? ` width="${Math.round(w)}" height="${Math.round(h)}"` : "";
   };
 
   async function accountId(host, user) {
@@ -129,7 +137,7 @@
 <p class="feed-post-head">${avatar}<a href="${esc(safeUrl(a.url))}" rel="noopener">${esc(a.display_name || s.space)}</a>
 <a class="feed-date" href="${esc(url)}" rel="noopener"><time datetime="${esc(s.created_at)}">${esc(shortDate.format(new Date(s.created_at)))}</time></a></p>
 <p class="feed-text">${esc(cut(body, max))} <a class="feed-more" href="${esc(url)}" rel="noopener">wpis →</a></p>
-${img ? `<img class="feed-image" src="${esc(img.preview_url)}" alt="${esc(img.description || "")}" loading="lazy" decoding="async">` : ""}</li>`;
+${img ? `<img class="feed-image" src="${esc(img.preview_url)}" alt="${esc(img.description || "")}"${size(img)} loading="lazy" decoding="async">` : ""}</li>`;
     }).join("") + "</ul>";
     status.remove();
   }
@@ -163,7 +171,7 @@ ${img ? `<img class="feed-image" src="${esc(img.preview_url)}" alt="${esc(img.de
   }
 
   // Rule for the full page on wide screens (two columns): the events column is as long as the posts column.
-  // It shows as many events as fit next to the posts (at least data-collapse), the rest after "Pokaż więcej".
+  // It shows as many events as fit next to the posts (at least data-min, default 3), the rest after "Pokaż więcej".
   // The posts column is short on purpose (data-limit, data-chars, small photos), so the page stays short.
   const wide = matchMedia("(min-width: 44rem)");
   function balance(root) {
@@ -174,12 +182,10 @@ ${img ? `<img class="feed-image" src="${esc(img.preview_url)}" alt="${esc(img.de
       if (!wide.matches || !items.classList.contains("collapsed")) return;
       // Measure the content, not the sections: grid cells stretch to the height of the row.
       const target = po.querySelector(".feed-items").getBoundingClientRect().bottom;
-      const end = () => {
-        const more = ev.querySelector(".feed-more-wrap");
-        return (more && !more.hidden ? more : items).getBoundingClientRect().bottom;
-      };
+      // The last visible part of the events column: the button, a note about missing calendars, or the list.
+      const end = () => Math.max(...[...ev.children].filter((el) => el.offsetParent).map((el) => el.getBoundingClientRect().bottom));
       const all = items.querySelectorAll(".feed-event").length;
-      let n = +ev.dataset.collapse;
+      let n = +ev.dataset.min || 3;
       ev.show(n);
       // Add events while the events column stays above the bottom of the posts column.
       while (n < all) {
