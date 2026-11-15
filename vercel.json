@@ -11,21 +11,10 @@
       "has": [
         {
           "type": "host",
-          "value": "instytut.ilawa.pl"
-        }
-      ],
-      "destination": "https://www.instytut.ilawa.pl/:path",
-      "permanent": true
-    },
-    {
-      "source": "/:path((?!admin(?:/|$)).*)",
-      "has": [
-        {
-          "type": "host",
           "value": "instytut.14-200.pl"
         }
       ],
-      "destination": "https://www.instytut.ilawa.pl/:path",
+      "destination": "https://instytut.ilawa.pl/:path",
       "permanent": true
     },
     {
