@@ -1,4 +1,4 @@
-# Iławski Instytut Idei – www.instytut.ilawa.pl
+# Iławski Instytut Idei – instytut.ilawa.pl
 
 Static website of **Iławski Instytut Idei**, migrated from Google Sites.
 Built with [Eleventy](https://www.11ty.dev/), plain HTML + one small CSS file, no frameworks or webfonts.
@@ -12,7 +12,7 @@ npm run build    # output in _site/, then regenerates vercel.json
 ## Hosting
 
 - **Vercel**, static pages and one function (`api/kalendarze.js`, see "Other hackerspaces"). Project settings come from `vercel.json`; keep the dashboard fields empty.
-- Canonical address: `https://www.instytut.ilawa.pl` (`site.url` in `src/_data/site.js`).
+- Canonical address: `https://instytut.ilawa.pl` (`site.url` in `src/_data/site.js`).
 - Other domains of the project are in `site.aliases`. `vercel.json` redirects them (301, path kept) to the canonical address, except `/admin/`.
   Vercel's domain settings also redirect `instytut.ilawa.pl` to `www`. Keep the two the same, or the redirects loop.
 - `instytut.14-200.pl`: DNS in Cloudflare (zone `14-200.pl`), `CNAME instytut → cname.vercel-dns.com`, **DNS only** (grey cloud), so Vercel issues the certificate.
@@ -37,7 +37,7 @@ The page `/spejsy/` and a short section on the home page show the events and the
 
 ## Editing in the browser
 
-`https://www.instytut.ilawa.pl/admin/` runs [Decap CMS](https://decapcms.org) (config: `src/static/admin/config.yml`).
+`https://instytut.ilawa.pl/admin/` runs [Decap CMS](https://decapcms.org) (config: `src/static/admin/config.yml`).
 Sign-in goes through [DecapBridge](https://decapbridge.com), so editors need no GitHub account.
 DecapBridge commits to `yasiupl/instytut.14-200.pl` on GitHub with the site's access token, and Vercel deploys every commit in about a minute.
 

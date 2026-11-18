@@ -27,8 +27,8 @@ auth:
   last_name_claim: last_name
   avatar_url_claim: avatar_url
 
-site_url: https://www.instytut.ilawa.pl
-display_url: https://www.instytut.ilawa.pl
+site_url: https://instytut.ilawa.pl
+display_url: https://instytut.ilawa.pl
 logo_url: /assets/icon.svg
 locale: pl
 
