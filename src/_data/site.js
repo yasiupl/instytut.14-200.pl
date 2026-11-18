@@ -2,9 +2,9 @@ export default {
   title: "Iławski Instytut Idei",
   shortTitle: "instytut.ilawa.pl",
   // Canonical address. Other domains of the same Vercel project redirect here (`aliases`).
-  // Vercel (domain settings) also sends instytut.ilawa.pl to www: keep both the same, or the redirects loop.
+  // Vercel (domain settings) also sends www to instytut.ilawa.pl: keep both the same, or the redirects loop.
   url: "https://instytut.ilawa.pl",
-  aliases: ["instytut.ilawa.pl", "instytut.14-200.pl"],
+  aliases: ["www.instytut.ilawa.pl", "instytut.14-200.pl"],
   // Base of the item ids in /feed.json. Ids must never change: the fediverse feed-poster
   // posts every unknown id. Keep this value when the domain changes.
   feedIdBase: "https://instytut.14-200.pl",
