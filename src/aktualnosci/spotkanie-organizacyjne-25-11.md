@@ -27,4 +27,6 @@ Nie musisz mieć wiedzy technicznej, wystarczy, że chcesz robić. Przyprowadź 
 - **Online:** [Google Meet](https://meet.google.com/wdq-swst-cbg)
 - **Wydarzenie w kalendarzu:** [wydarzenia.14-200.pl](https://wydarzenia.14-200.pl/event/spotkanie-organizacyjne-otwartych-pracowni)
 
+[![Plakat „Zbuduj z nami pracownię politechniczną w Iławie” z listą sześciu pracowni](/assets/img/plakat-otwarte-pracownie.webp)](/assets/img/plakat-otwarte-pracownie.webp)
+
 Nie możesz przyjść? [Poprzyj pracownię w formularzu](https://forms.gle/KCrEhJLVn9QECQGP9) – zbieramy poparcie i propozycje do końca 2026 roku.
