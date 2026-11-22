@@ -1,11 +1,11 @@
-# Every day: download webmentions (with link previews) into the repository.
+# Once a month (and by hand: Actions → Webmentions → Run workflow): download webmentions (with link previews) into the repository.
 # A commit is made only when something changed; that push triggers a normal deploy of the site.
 # Optional secret WEBMENTION_IO_TOKEN (webmention.io → Settings → API key): one request instead of one per page.
 name: Webmentions
 
 on:
   schedule:
-    - cron: "17 4 * * *" # 05:17 / 06:17 in Poland
+    - cron: "17 4 1 * *" # 1st day of the month, 05:17 / 06:17 in Poland
   workflow_dispatch:
 
 permissions:

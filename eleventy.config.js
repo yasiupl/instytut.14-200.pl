@@ -111,7 +111,7 @@ ${content.trim()}
     }));
   });
 
-  // Webmentions saved by scripts/webmentions.mjs (daily GitHub Action), rendered into the page.
+  // Webmentions saved by scripts/webmentions.mjs (monthly GitHub Action), rendered into the page.
   eleventyConfig.addFilter("webmentionsHtml", (list) => webmentionsHtml(list));
   eleventyConfig.addFilter("absUrl", (p) => new URL(p || "/", site.url).href);
 

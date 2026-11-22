@@ -18,7 +18,7 @@
 })();
 
 // Webmentions (likes, reposts, replies from the fediverse via Bridgy, and from other IndieWeb sites).
-// The build already renders the saved ones (scripts/webmentions.mjs, daily); this adds those received since then.
+// The build already renders the saved ones (scripts/webmentions.mjs, monthly or by hand); this adds those received since then.
 (() => {
   const box = document.querySelector(".webmentions[data-target]");
   if (!box || !("fetch" in window)) return;

@@ -1,6 +1,6 @@
 // Downloads webmentions from webmention.io into src/_data/webmentions.json, so Eleventy renders them
 // into the HTML (search engines see them; no request to webmention.io is needed to show them).
-// Runs every day in .github/workflows/webmentions.yml; the commit it makes triggers a normal deploy.
+// Runs monthly (or by hand) in .github/workflows/webmentions.yml; the commit it makes triggers a normal deploy.
 //
 // Many sources (e.g. news portals) have no microformats, so webmention.io knows neither the title
 // nor a picture. For those the script reads Open Graph / Twitter / <title> tags of the source page.
