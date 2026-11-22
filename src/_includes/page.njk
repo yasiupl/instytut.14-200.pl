@@ -41,7 +41,7 @@ layout: base.njk
     <h2>{{ "Reactions" if lang == "en" else "Reakcje z sieci" }}</h2>
     <p class="small">{{ "This page accepts" if lang == "en" else "Ta strona przyjmuje" }} <a href="https://indieweb.org/Webmention">webmentions</a>.
       {{ "Share it on the fediverse or reply from your own site." if lang == "en" else "Udostępnij ją w fediwersum albo odpowiedz ze swojej strony." }}</p>
-    <div class="webmentions" data-target="{{ page.url | absUrl }}" aria-live="polite"></div>
+    <div class="webmentions" data-target="{{ page.url | absUrl }}" aria-live="polite">{{ webmentions[page.url] | webmentionsHtml | safe }}</div>
     <form class="wm-form" action="{{ site.webmention.endpoint }}" method="post">
       <label for="wm-source">{{ "URL of your reply" if lang == "en" else "Adres URL twojej odpowiedzi" }}</label>
       <div class="row">

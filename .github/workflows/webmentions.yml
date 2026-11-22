@@ -1,0 +1,38 @@
+# Every day: download webmentions (with link previews) into the repository.
+# A commit is made only when something changed; that push triggers a normal deploy of the site.
+# Optional secret WEBMENTION_IO_TOKEN (webmention.io → Settings → API key): one request instead of one per page.
+name: Webmentions
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # 05:17 / 06:17 in Poland
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: webmentions
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/webmentions.mjs
+        env:
+          WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
+      - name: Commit changes
+        run: |
+          git add src/_data/webmentions.json src/assets/webmentions
+          if git diff --cached --quiet; then echo "No new webmentions."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Webmentions: aktualizacja"
+          git push

@@ -99,6 +99,9 @@ Every Google Sites path is kept. A page's `redirect_from` produces:
 
 - microformats2: `h-card` (footer), `h-entry` (news pages), `h-feed` (home page).
 - Webmentions via [webmention.io](https://webmention.io). The account exists only after the first sign-in: sign in at webmention.io with the canonical address (`https://instytut.ilawa.pl`, no `www`; the account `instytut.ilawa.pl` exists) and select the e-mail address (`rel="me" mailto:`). The account name is that host, so the endpoint in `site.webmention` must use the same host. The code goes to that mailbox. Until then the endpoint answers `account … not found`. Mentions are shown under each news post.
+  - The GitHub Action `.github/workflows/webmentions.yml` runs every day (or by hand: Actions → Webmentions → Run workflow). It runs `scripts/webmentions.mjs`, which saves the mentions to `src/_data/webmentions.json`, and commits only when something changed; that push deploys the site. Eleventy renders the saved mentions into the HTML (`scripts/webmention-html.mjs`). `site.js` adds only mentions received since the last run.
+  - Sources without microformats (e.g. news portals) get a link preview from their Open Graph / Twitter / `<title>` tags. The picture is saved as WebP in `src/assets/webmentions/`, so visitors load nothing from other sites.
+  - Optional repository secret `WEBMENTION_IO_TOKEN` (webmention.io → Settings → API key): with it the script makes one request for the whole account instead of one per page from the sitemap.
 - Feeds: `/feed.xml` (Atom), `/feed.json` (JSON Feed).
 - Fediverse: the account `@instytut@14-200.pl` on the 14-200.pl hub (GoToSocial), no Bridgy Fed.
   Plan: `14-200.pl/docs/plan-instytut.md`. Until the account exists, `site.fediverse.active` is `false`

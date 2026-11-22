@@ -18,6 +18,7 @@
 })();
 
 // Webmentions (likes, reposts, replies from the fediverse via Bridgy, and from other IndieWeb sites).
+// The build already renders the saved ones (scripts/webmentions.mjs, daily); this adds those received since then.
 (() => {
   const box = document.querySelector(".webmentions[data-target]");
   if (!box || !("fetch" in window)) return;
@@ -29,8 +30,11 @@
   fetch("https://webmention.io/api/mentions.jf2?per-page=100&target=" + encodeURIComponent(target))
     .then((r) => (r.ok ? r.json() : { children: [] }))
     .then(({ children = [] }) => {
-      if (!children.length) { box.innerHTML = '<p class="small">Brak reakcji. Bądź pierwszy!</p>'; return; }
-      box.innerHTML = "<ul>" + children.map((m) => {
+      const seen = new Set([...box.querySelectorAll("[data-wm-id]")].map((li) => li.dataset.wmId));
+      const fresh = children.filter((m) => !seen.has(String(m["wm-id"])));
+      if (!seen.size && !fresh.length) { box.innerHTML = '<p class="small">Brak reakcji. Bądź pierwszy!</p>'; return; }
+      if (!fresh.length) return;
+      const html = fresh.map((m) => {
         const a = m.author || {};
         // Sources without an h-card author (e.g. news portals) are labelled with their domain.
         const host = (() => { try { return new URL(m.url).hostname.replace(/^www\./, ""); } catch { return ""; } })();
@@ -51,7 +55,9 @@
         }
         const more = text !== full ? ` <a class="wm-more" href="${url}">Czytaj dalej →</a>` : "";
         return `<li class="h-cite">${head}<blockquote class="p-content">${title}${esc(text)}${more}</blockquote></li>`;
-      }).join("") + "</ul>";
+      }).join("");
+      const ul = box.querySelector("ul");
+      if (ul) ul.insertAdjacentHTML("beforeend", html); else box.innerHTML = "<ul>" + html + "</ul>";
     })
     .catch(() => {});
 })();

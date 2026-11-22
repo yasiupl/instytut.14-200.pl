@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { access, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { OG, makeOgImage } from "./scripts/og-image.mjs";
+import webmentionsHtml from "./scripts/webmention-html.mjs";
 import site from "./src/_data/site.js";
 
 const escapeAttr = (s = "") =>
@@ -110,6 +111,8 @@ ${content.trim()}
     }));
   });
 
+  // Webmentions saved by scripts/webmentions.mjs (daily GitHub Action), rendered into the page.
+  eleventyConfig.addFilter("webmentionsHtml", (list) => webmentionsHtml(list));
   eleventyConfig.addFilter("absUrl", (p) => new URL(p || "/", site.url).href);
 
   // Every old Google Sites path (front matter `redirect_from`) gets a redirect to its new URL.
