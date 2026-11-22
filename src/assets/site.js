@@ -32,11 +32,14 @@
       if (!children.length) { box.innerHTML = '<p class="small">Brak reakcji. Bądź pierwszy!</p>'; return; }
       box.innerHTML = "<ul>" + children.map((m) => {
         const a = m.author || {};
+        // Sources without an h-card author (e.g. news portals) are labelled with their domain.
+        const host = (() => { try { return new URL(m.url).hostname.replace(/^www\./, ""); } catch { return ""; } })();
+        const authorUrl = a.url || (host ? new URL(m.url).origin : "");
         const photo = a.photo ? `<img src="${esc(safeUrl(a.photo))}" alt="" loading="lazy">` : "";
         const url = esc(safeUrl(m.url));
         const date = m.published || m["wm-received"];
         const when = date ? ` <time class="dt-published" datetime="${esc(date)}">${new Date(date).toLocaleDateString("pl-PL", { day: "numeric", month: "short", year: "numeric" })}</time>` : "";
-        const head = `<p class="wm-head">${photo}<a class="p-author h-card" href="${esc(safeUrl(a.url))}">${esc(a.name || "ktoś")}</a> <a class="u-url" href="${url}">${verbs[m["wm-property"]] || "wspomniał(a)"}</a>${when}</p>`;
+        const head = `<p class="wm-head">${photo}<a class="p-author h-card" href="${esc(safeUrl(authorUrl))}">${esc(a.name || host || "ktoś")}</a> <a class="u-url" href="${url}">${verbs[m["wm-property"]] || "wspomniał(a)"}</a>${when}</p>`;
         // Long texts (a blog post that mentions this page) are cut at a word, with a link to the whole text.
         const full = ((m.content && m.content.text) || "").replace(/\s+/g, " ").trim();
         if (!full) return `<li class="h-cite">${head}</li>`;

@@ -37,8 +37,8 @@ export default {
 
   // IndieWeb: receive webmentions via webmention.io (sign in once at https://webmention.io with this domain).
   webmention: {
-    endpoint: "https://webmention.io/www.instytut.ilawa.pl/webmention",
-    pingback: "https://webmention.io/www.instytut.ilawa.pl/xmlrpc",
+    endpoint: "https://webmention.io/instytut.ilawa.pl/webmention",
+    pingback: "https://webmention.io/instytut.ilawa.pl/xmlrpc",
   },
 
   // ActivityPub / Fediverse: the account @instytut@14-200.pl on the 14-200.pl hub (GoToSocial).
