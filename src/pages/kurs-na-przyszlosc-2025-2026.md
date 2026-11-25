@@ -47,7 +47,7 @@ Zapraszamy na KURS na PRZYSZŁOŚĆ
 
 Zajęcia będą odbywać się raz w tygodniu, Czas trwania - 2-3 godziny. Większość zajęć to praktyczne zajęcia laboratoryjne. 
 
-Spotkanie informacyjne dotyczące kursu:  7 listopada, godzina 18.00. W naszej siedzibie na ul. Królowej Jadwigi 18B (wejście z boku budynku). Pierwsze zajęcia: 15.11.2025 
+Spotkanie informacyjne dotyczące kursu:  7 listopada, godzina 18.00. W naszej siedzibie na [ul. Królowej Jadwigi 18B](/kontakt/#dojscie) (wejście z boku budynku, [mapa dojścia](/kontakt/#dojscie)). Pierwsze zajęcia: 15.11.2025 
 
 ETAP I
 

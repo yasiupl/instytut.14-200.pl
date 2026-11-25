@@ -72,7 +72,7 @@ Zapraszamy na zajęcia z Genomiki, Biologii Syntetycznej, Genetyki. Mamy już lo
 
 O co chodzi? O to żeby każdy miał szanse na realizację swoich projektów związanych z DNA. Tworzymy do tego przestrzeń. Wiedza jest wszędzie, potrzebujesz tylko narzędzi i wsparcia żeby w to wejść. To nasza rola. Oferujemy wsparcie sprzętowe i informacyjne ( np. gdy masz problem ze zrozumieniem jakiejś pracy naukowej czy projektowaniem swojego eksperymentu). Jesteśmy obecnie w takiej sytuacji jak z informatyką w latach osiemdziesiątych. Ludzie chcieli się uczyć programować, a nie mieli na czym. Stąd nasza inicjatywa.
 
-Zajęcia są dla początkujących. W centrum Iławy, na ul. Królowej Jadwigi - w naszym centrum aktywności III LAB. Formularz dla zainteresowanych na dole strony.
+Zajęcia są dla początkujących. W centrum Iławy, na [ul. Królowej Jadwigi 18B](/kontakt/#dojscie) - w naszym centrum aktywności III LAB. Formularz dla zainteresowanych na dole strony.
 
 Jeżeli nie do końca wiesz o co chodzi, a czujesz że to może być to, zapraszamy do zapisów na pierwsze zajęcia. Nawet jeśli dotąd w ogóle nie interesowałaś/eś się biologią.
 
@@ -202,7 +202,7 @@ Nie. Na początkowym etapie nie będziemy mieli profesjonalnego laboratorium, ab
 
 ### Gdzie będą odbywać się zajęcia.
 
-W centrum Iławy. Na ulicy Królowej Jadwigi 18B. Wejscie z boku budynku..
+W centrum Iławy. Na [ulicy Królowej Jadwigi 18B](/kontakt/#dojscie). Wejście z boku budynku ([mapa dojścia](/kontakt/#dojscie)).
 
 Dlaczego?
 

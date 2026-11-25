@@ -39,7 +39,7 @@ contact us: kontakt@instytut.ilawa.pl
 
 or via FB messenger: https://www.facebook.com/ilawski.instytut.idei
 
-Our activity space is located at ul. Królowej Jadwigi 18B in Iława - Poland). We have three stations in our educational synthetic biology lab, along with a space for meetings and/or virtual reality. Entrance is on the side of the building. More information can be found in the [CONTACT](/kontakt/) section.
+Our activity space is located at [ul. Królowej Jadwigi 18B in Iława, Poland](/kontakt/#dojscie) ([walking map](/kontakt/#dojscie)). We have three stations in our educational synthetic biology lab, along with a space for meetings and/or virtual reality. Entrance is on the side of the building. More information can be found in the [CONTACT](/kontakt/#dojscie) section.
 
 ![](/assets/img/9ef28cd9f975.webp)
 

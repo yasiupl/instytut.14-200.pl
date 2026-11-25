@@ -46,7 +46,7 @@ Jeśli przybywasz samochodem, gdyby na parkingu leśnym nie było już miejsc, 1
 
 **Sobota - 6 i 13 lipca. Wirtualna rzeczywistość - bioluminescencja.** Przygody pod wodą, ze świecącymi istotami. Dla młodszych animowane przygody świetlika. Bezpłatnie
 
-Miejsce - przestrzeń aktywności Iławskiego Instytutu Idei - ul. Królowej Jadwigi 18B (wejście z boku budynku). Jak dojść do nas w zakładce [KONTAKT](/kontakt/)
+Miejsce - przestrzeń aktywności Iławskiego Instytutu Idei - [ul. Królowej Jadwigi 18B](/kontakt/#dojscie) (wejście z boku budynku). Jak dojść do nas w zakładce [KONTAKT – mapa dojścia](/kontakt/#dojscie)
 
 Czas: od godz. 12:00 do 16:00. Można po prostu przyjść ale jeśli chce się mieć pewność, że będzie miejsce, to lepiej zadzwonić do nas i umówić się na dokładną godzinę. tel 504 637 052
 
@@ -96,7 +96,7 @@ III sesja (grupa II)
 
 W przypadku większego zainteresowania możliwe zajęcia też w kolejnym tygodniu. Czas może ulec zmianie z przyczyn od nas niezależnych.
 
-Miejsce - przestrzeń aktywności Iławskiego Instytutu Idei - ul. Królowej Jadwigi 18B (wejście z boku budynku). Jak dojść do nas w zakładce [KONTAKT](/kontakt/)
+Miejsce - przestrzeń aktywności Iławskiego Instytutu Idei - [ul. Królowej Jadwigi 18B](/kontakt/#dojscie) (wejście z boku budynku). Jak dojść do nas w zakładce [KONTAKT – mapa dojścia](/kontakt/#dojscie)
 
 ![](/assets/img/223afce23723.webp)
 

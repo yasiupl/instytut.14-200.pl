@@ -2,7 +2,7 @@
 summary: "Edukacyjne Laboratorium Biologii Syntetycznej – III LAB na ul. Królowej Jadwigi."
 area: "lab"
 title: "Laboratorium"
-description: "Laboratorium Biologii Syntetycznej w Iławie Nasza przestrzeń aktywności - III LAB, znajduje się na ul. Królowej Jadwigi 18B w Iławie. Mamy tu 3 stanowiska w naszym edukacyjnym labo"
+description: "Laboratorium Biologii Syntetycznej w Iławie Nasza przestrzeń aktywności - III LAB, znajduje się na [ul. Królowej Jadwigi 18B w Iławie](/kontakt/#dojscie). Mamy tu 3 stanowiska w naszym edukacyjnym labo"
 date: "2025-01-01"
 lang: "pl"
 permalink: "/laboratorium/"
@@ -14,7 +14,7 @@ image: "/assets/img/77c6bcfdea1c.webp"
 
 ![](/assets/img/77c6bcfdea1c.webp)
 
-Nasza przestrzeń aktywności - III LAB, znajduje się na ul. Królowej Jadwigi 18B w Iławie. Mamy tu 3 stanowiska w naszym edukacyjnym laboratorium biologii i przestrzeń na spotkania i/lub wirtualną rzeczywistość. Wejście z boku budynku. Bezpośrednio nad Domem Weterana i Małpim Gajem. Więcej w zakładce [KONTAKT](/kontakt/)
+Nasza przestrzeń aktywności - III LAB, znajduje się na [ul. Królowej Jadwigi 18B w Iławie](/kontakt/#dojscie). Mamy tu 3 stanowiska w naszym edukacyjnym laboratorium biologii i przestrzeń na spotkania i/lub wirtualną rzeczywistość. Wejście z boku budynku. Bezpośrednio nad Domem Weterana i Małpim Gajem. Więcej w zakładce [KONTAKT – mapa dojścia](/kontakt/#dojscie)
 
 Kursy - sprawdź czy obecnie prowadzimy nabór: [PRAKTYCZNY KURS BIOLOGII SYNTETYCZNEJ I GENOMIKI](/kurs/)
 

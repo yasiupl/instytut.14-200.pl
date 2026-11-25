@@ -16,7 +16,7 @@ Tam, w ciszy larwy czekają na swój czas – maleńkie iskierki, które przetrw
 
 A to co dziś ukryte, znów rozbłyśnie, gdy nadejdzie właściwy moment.
 
-W ramach naszego projektu **Świetliki na Kamionce w Iławie** 2025 – zapraszamy Was na ostatnie – zamykające spotkanie: już 27. września widzimy się w naszym instytucie (ul. Królowej Jadwigi 18B w Iławie - wejście od strony Domu Weterana) i malujemy – warsztaty są dedykowane osobom dorosłym. **W godzinach 14-19** usiądziemy i pomalujemy na szkle, glinie i kamieniach. Napijemy się też aromatycznej herbaty czy kawy, poczęstujemy Was czymś słodkim :)
+W ramach naszego projektu **Świetliki na Kamionce w Iławie** 2025 – zapraszamy Was na ostatnie – zamykające spotkanie: już 27. września widzimy się w naszym instytucie ([ul. Królowej Jadwigi 18B w Iławie](/kontakt/#dojscie) - wejście od strony Domu Weterana, [mapa dojścia](/kontakt/#dojscie)) i malujemy – warsztaty są dedykowane osobom dorosłym. **W godzinach 14-19** usiądziemy i pomalujemy na szkle, glinie i kamieniach. Napijemy się też aromatycznej herbaty czy kawy, poczęstujemy Was czymś słodkim :)
 
 Warsztaty poprowadzi Anna Suchwałko.
 

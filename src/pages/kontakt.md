@@ -17,7 +17,7 @@ linksNewTab: true
 
 Nasza przestrzeń aktywności znajduje się na **ul. Królowej Jadwigi 18B w Iławie**. Mamy tu 3 stanowiska w naszym edukacyjnym laboratorium biologii i przestrzeń na spotkania i/lub wirtualną rzeczywistość.
 
-## Jak do nas trafić
+<h2 id="dojscie">Jak do nas trafić</h2>
 
 Wejście jest **z boku budynku 18B, od strony południowej**, bezpośrednio nad Domem Weterana i Małpim Gajem.
 

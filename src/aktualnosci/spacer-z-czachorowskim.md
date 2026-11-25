@@ -17,7 +17,7 @@ My też działamy.... Zapraszamy Was na spędzenie z nami wyjątkowego dnia:
 
 - po pierwsze wybierzemy się na przyrodniczy spacer z absolutnie fantastycznym przewodnikiem - dr hab Stanisławem Czachorowskim - ekologiem, hydrobiologiem, entomologiem.... ale także niesamowitym popularyzatorem nauki, który jak nikt inny czaruje opowieściami o przyrodzie - [tu blog](https://profesorskiegadanie.blogspot.com/) Pana Profesora - polecamy do poczytania! Na specer zapraszamy przede wszystkim dzieci, ale również dorosłych!
 
-Spacer - godz. 11-13 (spotykamy się o 10:45 w Iławskim Instytucie Idei - ul.Królowej Jadwigi 18B, wejscie od strony Domu Weterana przy Małpim Gaju) - ubierzcie się cieplutko!
+Spacer - godz. 11-13 (spotykamy się o 10:45 w Iławskim Instytucie Idei - [ul. Królowej Jadwigi 18B](/kontakt/#dojscie), wejście od strony Domu Weterana przy Małpim Gaju, [mapa dojścia](/kontakt/#dojscie)) - ubierzcie się cieplutko!
 
 Przypominamy, że będzie także atrakcja dla dorosłych! - spotkanie z Anną Suchwałko, która poprowadzi warsztaty chillLIGHT - będziemy malować na szkle, glinie i kamieniach, razem pomilczymy, porozmawiamy, posłuchamy muzyki, rozgrzejemy się herbatą i podzielimy się dobrym nastrojem. Doładujmy wspólnie baterie na jesienne dni! Warsztaty - 14-19 w siedzibie Iławskiego Instytutu Idei - rękodzieło, które stworzycie zabierzecie ze sobą! Będą też niespodzianki!
 
