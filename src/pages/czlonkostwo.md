@@ -35,4 +35,6 @@ Pełne zasady są w [Regulaminie Stowarzyszenia](/regulamin/).
 
 ## Składki członkowskie
 
-Każdy członek sam deklaruje wysokość swojej składki w porozumieniu z władzami Stowarzyszenia, czyli Zebraniem Członków i Przedstawicielem (pkt 15 Regulaminu).
+Każdy członek sam deklaruje wysokość swojej składki w porozumieniu z władzami Stowarzyszenia, czyli Zebraniem Członków i Przedstawicielem (pkt 15 Regulaminu). Wysokość składki wpisujesz w [deklaracji członkowskiej](/deklaracja).
+
+Sugerowana wysokość składki to kwota na poziomie potrzebnym do utrzymania bieżących kosztów naszej przestrzeni.
