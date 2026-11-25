@@ -13,6 +13,8 @@ Iławski Instytut Idei jest stowarzyszeniem zwykłym, a jego zasady określa reg
 
 [Pobierz regulamin (PDF)](/dokumenty/regulamin.pdf)
 
+Chcesz dołączyć do Stowarzyszenia? Przeczytaj, [jak zostać członkiem](/czlonkostwo/), i pobierz [deklarację członkowską (PDF)](/deklaracja).
+
 **1.** Stowarzyszenie zwykłe nosi nazwę „IŁAWSKI INSTYTUT IDEI”. W dalszych postanowieniach regulaminu zwane jest Stowarzyszeniem.
 
 **2.** Terenem działania Stowarzyszenia jest Polska. Dla realizacji celów statutowych Stowarzyszenie może prowadzić działania poza granicami kraju, na terenie innych państw, obszarów, z poszanowaniem tamtejszego prawa.

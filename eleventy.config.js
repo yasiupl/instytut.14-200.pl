@@ -116,10 +116,13 @@ ${content.trim()}
   eleventyConfig.addFilter("absUrl", (p) => new URL(p || "/", site.url).href);
 
   // Every old Google Sites path (front matter `redirect_from`) gets a redirect to its new URL.
+  // Short links (front matter `short_links: [{ from, to }]`) point to any address, e.g. a PDF.
+  // They use 302, so the target can change later without browsers keeping the old one.
   eleventyConfig.addCollection("redirects", (api) =>
-    api.getAll().flatMap((page) =>
-      (page.data.redirect_from || []).map((from) => ({ from, to: page.url, title: page.data.title }))
-    )
+    api.getAll().flatMap((page) => [
+      ...(page.data.redirect_from || []).map((from) => ({ from, to: page.url, title: page.data.title })),
+      ...(page.data.short_links || []).map(({ from, to }) => ({ from, to, title: page.data.title, status: 302 })),
+    ])
   );
 
   // Make Markdown images lazy and give empty-alt images an explicit decorative role.

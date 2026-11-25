@@ -33,6 +33,16 @@
       "permanent": true
     },
     {
+      "source": "/dolacz",
+      "destination": "/czlonkostwo/",
+      "permanent": true
+    },
+    {
+      "source": "/deklaracja",
+      "destination": "/dokumenty/deklaracja-czlonkowska.pdf",
+      "permanent": false
+    },
+    {
       "source": "/kurs-na-przyszłość-20252026",
       "destination": "/kurs-na-przyszlosc-2025-2026/",
       "permanent": true

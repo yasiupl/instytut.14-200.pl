@@ -53,6 +53,15 @@ DecapBridge commits to `yasiupl/instytut.14-200.pl` on GitHub with the site's ac
 `npm run regulamin` builds `src/static/dokumenty/regulamin.pdf` with Tectonic from nixpkgs. Commit the PDF, because Vercel does not build it.
 The web version `src/pages/regulamin.md` has the same text: change both together.
 
+## Deklaracja członkowska
+
+`dokumenty/deklaracja/deklaracja-czlonkowska.tex` is the membership declaration for candidates, with PDF form fields.
+`npm run deklaracja` builds `src/static/dokumenty/deklaracja-czlonkowska.pdf` with XeLaTeX (needs TeX Live with `fontspec`, `polyglossia`, `tikz`, `eso-pic`, `hyperref`). Commit the PDF, because Vercel does not build it.
+The fonts are in `dokumenty/deklaracja/fonts/` (Noto Sans, IBM Plex Mono, SIL OFL 1.1) and the logo next to the source, so the result does not depend on the build machine.
+
+- The page `/czlonkostwo/` (old path `/dolacz`) explains how to join and links to the declaration.
+- The short link `/deklaracja` goes to the PDF. It is set in the page's front matter (`short_links`) and uses a 302, so the PDF can get a new name later. The QR code `src/assets/qr-deklaracja.svg` encodes `https://instytut.ilawa.pl/deklaracja`: if you change the short link, make a new QR code.
+
 ## Layout
 
 | Path | What |
