@@ -13,6 +13,8 @@ linksNewTab: true
 - Facebook: [ilawski.instytut.idei](https://www.facebook.com/ilawski.instytut.idei)
 - fediwersum: [obserwuj nas](/fediverse/)
 
+<p class="cta"><a class="button" href="/czlonkostwo/">Dołącz do nas →</a></p>
+
 Nasza przestrzeń aktywności znajduje się na **ul. Królowej Jadwigi 18B w Iławie**. Mamy tu 3 stanowiska w naszym edukacyjnym laboratorium biologii i przestrzeń na spotkania i/lub wirtualną rzeczywistość.
 
 ## Jak do nas trafić

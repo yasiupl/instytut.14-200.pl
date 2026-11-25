@@ -5,8 +5,6 @@ summary: "Cele, członkostwo, władze i finanse stowarzyszenia."
 lang: "pl"
 permalink: "/regulamin/"
 redirect_from: ["/statut"]
-ai: redakcja
-ai_note: "Tekst przepisany z dokumentu PDF z pomocą AI (Claude) i porównany słowo w słowo z oryginałem. Treść, pisownia i numeracja punktów są bez zmian."
 ---
 
 Iławski Instytut Idei jest stowarzyszeniem zwykłym, a jego zasady określa regulamin, czyli odpowiednik statutu. Stowarzyszenie jest wpisane do Ewidencji Stowarzyszeń Zwykłych Starosty Powiatu Iławskiego pod numerem OSO.512.3.2021.
