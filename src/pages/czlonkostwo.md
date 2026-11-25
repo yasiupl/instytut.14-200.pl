@@ -35,4 +35,4 @@ Pełne zasady są w [Regulaminie Stowarzyszenia](/regulamin/).
 
 ## Składki członkowskie
 
-Wysokość składek członkowskich jest jeszcze do ustalenia. Gdy ją ustalimy, podamy ją na tej stronie.
+Każdy członek sam deklaruje wysokość swojej składki w porozumieniu z władzami Stowarzyszenia, czyli Zebraniem Członków i Przedstawicielem (pkt 15 Regulaminu).
