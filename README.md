@@ -60,7 +60,7 @@ The web version `src/pages/regulamin.md` has the same text: change both together
 The fonts are in `dokumenty/deklaracja/fonts/` (Noto Sans, IBM Plex Mono, SIL OFL 1.1) and the logo next to the source, so the result does not depend on the build machine.
 
 - The page `/czlonkostwo/` (old path `/dolacz`) explains how to join and links to the declaration.
-- The short link `/deklaracja` goes to the PDF. It is set in the page's front matter (`short_links`) and uses a 302, so the PDF can get a new name later. The QR code `src/assets/qr-deklaracja.svg` encodes `https://instytut.ilawa.pl/deklaracja`: if you change the short link, make a new QR code.
+- The short link `/deklaracja` goes to the PDF. It is set in the page's front matter (`short_links`) and uses a 302, so the PDF can get a new name later. Printed QR codes point to `https://instytut.ilawa.pl/deklaracja`: keep this short link.
 
 ## Layout
 

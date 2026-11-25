@@ -165,9 +165,6 @@ img, iframe, video { max-width: 100%; }
 .embed { margin: 1.75rem 0; }
 .embed iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius); background: #000; }
 figcaption { font-size: .875rem; color: var(--muted); margin-top: .35rem; }
-/* QR code: fixed size, white quiet zone kept in the SVG (also in the dark theme) */
-.prose figure.qr { text-align: center; }
-.prose .qr img { width: 11rem; height: 11rem; border-radius: 0; background: #fff; }
 
 /* contact map */
 .map-figure { margin: 1.5rem 0 2rem; }

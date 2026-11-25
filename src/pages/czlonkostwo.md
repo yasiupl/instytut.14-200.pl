@@ -8,8 +8,6 @@ permalink: "/czlonkostwo/"
 redirect_from: ["/dolacz"]
 short_links:
   - { from: "/deklaracja", to: "/dokumenty/deklaracja-czlonkowska.pdf" }
-ai: generowane
-ai_note: "Tekst napisało narzędzie AI (Claude) na podstawie Regulaminu Stowarzyszenia."
 ---
 
 Iławski Instytut Idei jest stowarzyszeniem zwykłym. Działamy społecznie: prowadzimy edukacyjne [laboratorium biologii](/laboratorium/) i budujemy [pracownię politechniczną](/pracownia/). Jeśli chcesz działać z nami, zostań członkiem Stowarzyszenia.
@@ -35,11 +33,6 @@ Przestrzegasz Regulaminu i uchwał władz Stowarzyszenia, aktywnie bierzesz udzi
 
 Pełne zasady są w [Regulaminie Stowarzyszenia](/regulamin/).
 
-## Kod QR do deklaracji
+## Składki członkowskie
 
-<figure class="qr">
-  <img src="/assets/qr-deklaracja.svg" width="176" height="176" alt="Kod QR z adresem instytut.ilawa.pl/deklaracja">
-  <figcaption>Zeskanuj kod telefonem, aby pobrać deklarację. Adres: <a href="/deklaracja">instytut.ilawa.pl/deklaracja</a></figcaption>
-</figure>
-
-Możesz wydrukować ten kod na plakacie albo ulotce. [Pobierz kod QR (SVG)](/assets/qr-deklaracja.svg)
+Wysokość składek członkowskich jest jeszcze do ustalenia. Gdy ją ustalimy, podamy ją na tej stronie.
