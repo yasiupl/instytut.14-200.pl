@@ -9,7 +9,8 @@
     "postbuild": "node scripts/vercel-config.mjs",
     "start": "eleventy --serve",
     "clean": "rm -rf _site",
-    "regulamin": "nix shell nixpkgs#tectonic -c tectonic -o src/static/dokumenty dokumenty/regulamin.tex"
+    "regulamin": "nix shell nixpkgs#tectonic -c tectonic -o src/static/dokumenty dokumenty/regulamin.tex",
+    "deklaracja": "cd dokumenty/deklaracja && xelatex -interaction=nonstopmode -halt-on-error deklaracja-czlonkowska.tex >/dev/null && xelatex -interaction=nonstopmode -halt-on-error deklaracja-czlonkowska.tex >/dev/null && mv deklaracja-czlonkowska.pdf ../../src/static/dokumenty/ && rm -f *.aux *.log *.out"
   },
   "license": "UNLICENSED",
   "devDependencies": {
