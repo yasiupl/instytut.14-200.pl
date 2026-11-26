@@ -7,10 +7,13 @@ permalink: "/kontakt/"
 image: "/assets/img/223afce23723.webp"
 map: true
 linksNewTab: true
+short_links:
+  - { from: "/discord", to: "https://discord.gg/rhG7dbDVhG" }
 ---
 
 - e-mail: [kontakt@instytut.ilawa.pl](mailto:kontakt@instytut.ilawa.pl)
 - Facebook: [ilawski.instytut.idei](https://www.facebook.com/ilawski.instytut.idei)
+- komunikator: [Discord](/discord)
 - fediwersum: [obserwuj nas](/fediverse/)
 
 <p class="cta"><a class="button" href="/czlonkostwo/">Dołącz do nas →</a></p>
