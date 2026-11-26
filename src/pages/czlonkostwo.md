@@ -5,6 +5,8 @@ summary: "Jak zostać członkiem Stowarzyszenia."
 date: "2026-11-25"
 lang: "pl"
 permalink: "/czlonkostwo/"
+image: "/assets/img/7d3a9ba4df26.webp"
+image_alt: "Stanowiska pracy w siedzibie Instytutu"
 redirect_from: ["/dolacz"]
 short_links:
   - { from: "/deklaracja", to: "/dokumenty/deklaracja-czlonkowska.pdf" }
