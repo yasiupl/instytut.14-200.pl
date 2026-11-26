@@ -9,11 +9,11 @@ image_alt: Plakat „Zbuduj z nami pracownię politechniczną w Iławie” z lis
 ---
 ## Aktualizacja 26.11.2026
 
-Spotkanie za nami. W środę 25 listopada w warsztacie przy Królowej Jadwigi 18B zebrało się **18 osób** – więcej, niż się spodziewaliśmy, i z bardzo różnych światów: od projektowania maszyn i elektroniki, przez edukację i architekturę, po osoby, które po prostu lubią pracować rękami. Pomysłów było mnóstwo, od druku 3D i CAD po renowację mebli. Mocno wybrzmiało też, że pracownia nie może być tylko dla „techników”: potrzebujemy tematów nietechnicznych, które wyważą całość.
+Spotkanie za nami. W środę 25 listopada w warsztacie przy Królowej Jadwigi 18B zebrało się **18 osób**, żeby razem budować pracownię politechniczną – więcej, niż się spodziewaliśmy, i z bardzo różnych światów: od projektowania maszyn i elektroniki, przez edukację i architekturę, po osoby, które po prostu lubią pracować rękami. Pomysłów było mnóstwo, od druku 3D i CAD po renowację mebli. Mocno wybrzmiało też, że pracownia nie może być tylko dla „techników”: potrzebujemy tematów nietechnicznych, które wyważą całość.
 
 **Kolejne spotkanie:** środa 2 grudnia, godz. 18:00, [ul. Królowej Jadwigi 18B](/kontakt/#dojscie). Warsztat jest otwarty w każdą środę od 18:00, można wpaść bez zapowiedzi.
 
-Więcej o wnioskach ze spotkania: [Po pierwszym spotkaniu Otwartych Pracowni](/aktualnosci/po-pierwszym-spotkaniu-otwartych-pracowni/).
+Więcej o wnioskach ze spotkania: [Po pierwszym spotkaniu – zbuduj z nami pracownię politechniczną](/aktualnosci/po-pierwszym-spotkaniu-otwartych-pracowni/).
 
 - **Discord:** [instytut.ilawa.pl/discord](https://instytut.ilawa.pl/discord)
 - **Członkostwo:** [instytut.ilawa.pl/czlonkostwo](https://instytut.ilawa.pl/czlonkostwo/)

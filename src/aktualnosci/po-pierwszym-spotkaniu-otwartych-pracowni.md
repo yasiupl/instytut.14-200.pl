@@ -1,13 +1,13 @@
 ---
-title: Po pierwszym spotkaniu Otwartych Pracowni – zapraszamy 2 grudnia
+title: Po pierwszym spotkaniu – zbuduj z nami pracownię politechniczną
 date: 2026-11-26
 area: pracownia
-summary: Na spotkaniu organizacyjnym Otwartych Pracowni Eksperymentu było 18 osób. Zapraszamy na kolejne w środę 2 grudnia o 18:00 i w każdą środę do warsztatu przy ul. Królowej Jadwigi 18B.
-description: Na spotkaniu organizacyjnym Otwartych Pracowni Eksperymentu było 18 osób. Zapraszamy na kolejne w środę 2 grudnia o 18:00 i w każdą środę do warsztatu przy ul. Królowej Jadwigi 18B.
+summary: Na spotkaniu o pracowni politechnicznej było 18 osób. Zapraszamy na kolejne w środę 2 grudnia o 18:00 i w każdą środę do warsztatu przy ul. Królowej Jadwigi 18B.
+description: Na spotkaniu o pracowni politechnicznej było 18 osób. Zapraszamy na kolejne w środę 2 grudnia o 18:00 i w każdą środę do warsztatu przy ul. Królowej Jadwigi 18B.
 ---
-W środę 25 listopada w warsztacie przy [ul. Królowej Jadwigi 18B](/kontakt/#dojscie) spotkaliśmy się, żeby porozmawiać o **Otwartych Pracowniach Eksperymentu**. Przyszło **18 osób** – więcej, niż się spodziewaliśmy. Dziękujemy wszystkim, którzy przyszli, i tym, którzy wcześniej poparli pracownię w formularzu.
+W środę 25 listopada w warsztacie przy [ul. Królowej Jadwigi 18B](/kontakt/#dojscie) spotkaliśmy się, żeby razem budować **pracownię politechniczną**. Przyszło **18 osób** – więcej, niż się spodziewaliśmy. Dziękujemy wszystkim, którzy przyszli, i tym, którzy wcześniej poparli pracownię w formularzu.
 
-Opowiedzieliśmy, czym jest Iławski Instytut Idei i jak wyobrażamy sobie Otwarte Pracownie, a potem rozmawialiśmy o tym, co chcielibyśmy robić, gdyby narzędzia i wiedza były pod ręką. Najważniejszy wniosek: pracownia w Iławie jest potrzebna, a ludzie chcą w niej coś robić, a nie tylko ją oglądać.
+Opowiedzieliśmy, czym jest Iławski Instytut Idei i jak wyobrażamy sobie tę pracownię, a potem rozmawialiśmy o tym, co chcielibyśmy robić, gdyby narzędzia i wiedza były pod ręką. Najważniejszy wniosek: pracownia politechniczna w Iławie jest potrzebna, a ludzie chcą w niej coś robić, a nie tylko ją oglądać.
 
 ## Co z tego wynika
 
@@ -24,7 +24,7 @@ Opowiedzieliśmy, czym jest Iławski Instytut Idei i jak wyobrażamy sobie Otwar
 
 ## Przynieś swoje pasje
 
-Pracownie mają powstać z tego, co przyniosą ze sobą ludzie. Jeśli coś Cię kręci, od elektroniki po szycie, ceramikę czy fotografię, albo masz narzędzie, sprzęt czy pomysł, który mógłby się przydać, zabierz je ze sobą. Nie trzeba być ekspertem. Potrzebujemy zarówno osób technicznych, jak i takich, które wniosą coś zupełnie innego.
+Pracownia ma powstać z tego, co przyniosą ze sobą ludzie. Jeśli coś Cię kręci, od elektroniki po szycie, ceramikę czy fotografię, albo masz narzędzie, sprzęt czy pomysł, który mógłby się przydać, zabierz je ze sobą. Nie trzeba być ekspertem. Potrzebujemy zarówno osób technicznych, jak i takich, które wniosą coś zupełnie innego.
 
 ## Gdzie rozmawiamy
 
