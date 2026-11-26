@@ -7,6 +7,18 @@ description: Zapraszamy na spotkanie organizacyjne Otwartych Pracowni Eksperymen
 image: /assets/img/plakat-otwarte-pracownie.webp
 image_alt: Plakat „Zbuduj z nami pracownię politechniczną w Iławie” z listą sześciu pracowni
 ---
+## Aktualizacja 26.11.2026
+
+Spotkanie za nami. W środę 25 listopada w warsztacie przy Królowej Jadwigi 18B zebrało się **18 osób** – więcej, niż się spodziewaliśmy, i z bardzo różnych światów: od projektowania maszyn i elektroniki, przez edukację i architekturę, po osoby, które po prostu lubią pracować rękami. Pomysłów było mnóstwo, od druku 3D i CAD po renowację mebli. Mocno wybrzmiało też, że pracownia nie może być tylko dla „techników”: potrzebujemy tematów nietechnicznych, które wyważą całość.
+
+**Kolejne spotkanie:** środa 2 grudnia, godz. 18:00, [ul. Królowej Jadwigi 18B](/kontakt/#dojscie). Warsztat jest otwarty w każdą środę od 18:00, można wpaść bez zapowiedzi.
+
+Więcej o wnioskach ze spotkania: [Po pierwszym spotkaniu Otwartych Pracowni](/aktualnosci/po-pierwszym-spotkaniu-otwartych-pracowni/).
+
+- **Discord:** [instytut.ilawa.pl/discord](https://instytut.ilawa.pl/discord)
+- **Członkostwo:** [instytut.ilawa.pl/czlonkostwo](https://instytut.ilawa.pl/czlonkostwo/)
+- **Deklaracja członkowska:** [pobierz PDF](/dokumenty/deklaracja-czlonkowska.pdf)
+
 Zapraszamy na **spotkanie organizacyjne Otwartych Pracowni Eksperymentu** w **środę 25 listopada o 18:00**, w warsztacie przy **[ul. Królowej Jadwigi 18B w Iławie](/kontakt/#dojscie)** ([mapa dojścia](/kontakt/#dojscie)).
 
 Otwarte Pracownie to wspólny warsztat dla dzieci, młodzieży i dorosłych. To miejsce, w którym zbudujesz, naprawisz i zmierzysz coś własnymi rękami, z narzędziami, których nie masz w domu. Na start myślimy o sześciu pracowniach:
