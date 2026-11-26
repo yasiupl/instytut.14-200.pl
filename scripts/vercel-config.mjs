@@ -41,6 +41,13 @@ const config = {
       headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
     },
     {
+      source: "/media/noindex/(.*)",
+      headers: [
+        { key: "X-Robots-Tag", value: "noindex, noimageindex" },
+        { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+      ],
+    },
+    {
       source: "/(feed.xml|feed.json)",
       headers: [{ key: "Access-Control-Allow-Origin", value: "*" }],
     },

@@ -19,6 +19,13 @@ Więcej o wnioskach ze spotkania: [Po pierwszym spotkaniu – zbuduj z nami prac
 - **Członkostwo:** [instytut.ilawa.pl/czlonkostwo](https://instytut.ilawa.pl/czlonkostwo/)
 - **Deklaracja członkowska:** [pobierz PDF](/dokumenty/deklaracja-czlonkowska.pdf)
 
+<figure>
+<video controls preload="metadata" playsinline poster="/assets/video/info-ilawa-pracownia-politechniczna.jpg" style="max-height:80vh;width:auto;max-width:100%;height:auto;" width="720" height="1280">
+<source src="/assets/video/info-ilawa-pracownia-politechniczna.mp4" type="video/mp4">
+</video>
+<figcaption>Materiał <a href="https://www.infoilawa.pl/aktualnosci/item/83633-apple-zaczynal-w-garazu-w-ilawie-startuja-w-piwnicy-co-wymyslil-marcin-jasiukowicz-ilawianin-pracujacy-w-sektorze-kosmicznym">Info Iława</a></figcaption>
+</figure>
+
 Zapraszamy na **spotkanie organizacyjne Otwartych Pracowni Eksperymentu** w **środę 25 listopada o 18:00**, w warsztacie przy **[ul. Królowej Jadwigi 18B w Iławie](/kontakt/#dojscie)** ([mapa dojścia](/kontakt/#dojscie)).
 
 Otwarte Pracownie to wspólny warsztat dla dzieci, młodzieży i dorosłych. To miejsce, w którym zbudujesz, naprawisz i zmierzysz coś własnymi rękami, z narzędziami, których nie masz w domu. Na start myślimy o sześciu pracowniach:

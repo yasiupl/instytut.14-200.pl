@@ -4,8 +4,16 @@ date: 2026-11-26
 area: pracownia
 summary: Na spotkaniu o pracowni politechnicznej było 18 osób. Zapraszamy na kolejne w środę 2 grudnia o 18:00 i w każdą środę do warsztatu przy ul. Królowej Jadwigi 18B.
 description: Na spotkaniu o pracowni politechnicznej było 18 osób. Zapraszamy na kolejne w środę 2 grudnia o 18:00 i w każdą środę do warsztatu przy ul. Królowej Jadwigi 18B.
+image: /assets/img/spotkanie-25-11-dron.webp
+image_alt: Dron na pierwszym planie, w tle monitor z prezentacją „Pracownia politechniczna”
+hero: true
 ---
 W środę 25 listopada w warsztacie przy [ul. Królowej Jadwigi 18B](/kontakt/#dojscie) spotkaliśmy się, żeby razem budować **pracownię politechniczną**. Przyszło **18 osób** – więcej, niż się spodziewaliśmy. Dziękujemy wszystkim, którzy przyszli, i tym, którzy wcześniej poparli pracownię w formularzu.
+
+<figure>
+<img src="/media/noindex/spotkanie-25-11-grupa.webp" alt="Uczestnicy spotkania w warsztacie przy stołach i narzędziach" width="1260" height="945" loading="lazy" decoding="async">
+<figcaption>Uczestnicy spotkania 25 listopada w warsztacie przy Królowej Jadwigi 18B.</figcaption>
+</figure>
 
 Opowiedzieliśmy, czym jest Iławski Instytut Idei i jak wyobrażamy sobie tę pracownię, a potem rozmawialiśmy o tym, co chcielibyśmy robić, gdyby narzędzia i wiedza były pod ręką. Najważniejszy wniosek: pracownia politechniczna w Iławie jest potrzebna, a ludzie chcą w niej coś robić, a nie tylko ją oglądać.
 
